@@ -1,0 +1,564 @@
+<!DOCTYPE html><html lang="pt"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Gestão de Reservas - Mobile</title>
+<!-- Tailwind CSS CDN with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style data-purpose="custom-typography">
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+<!-- Material Symbols for icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style data-purpose="custom-layout">
+    .card-shadow {
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+    .message-box {
+      background-color: #fffbeb;
+      border: 1px solid #fef3c7;
+    }
+    .selection-action-bar {
+      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+    .selection-action-bar.hidden-bar {
+      transform: translateY(-100%);
+      opacity: 0;
+      pointer-events: none;
+    }
+    .highlight-element {
+      outline: 3px solid #ef4444 !important;
+      outline-offset: 2px;
+      transition: outline 0.2s ease;
+    }
+    /* Custom scrollbar for KPI cards */
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-slate-800"><div class="bg-white p-4 flex justify-end">
+<button class="bg-indigo-600 text-white p-2 rounded-full shadow-lg active:scale-95 transition-transform" id="btn-add-reservation" style="">
+<svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div><section class="bg-white border-b-2 border-indigo-100 py-6 px-4 mb-2 text-center">
+<h1 class="text-3xl font-black text-indigo-900 uppercase tracking-tight" style="">
+    Zona de Reservas de Serviços TukTuk
+  </h1>
+<div class="h-1 w-24 bg-indigo-600 mx-auto mt-2 rounded-full"></div>
+</section>
+<!-- BEGIN: Selection ActionBar -->
+<div class="selection-action-bar hidden-bar fixed top-0 left-0 right-0 bg-indigo-600 text-white z-[60] p-4 flex justify-between items-center shadow-lg" id="selection-bar">
+<div class="flex items-center gap-3">
+<button class="p-1" id="cancel-selection" style="">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<span class="font-semibold" id="selection-count" style="">0 selecionados</span>
+</div>
+<button class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-2 transition-colors" style="">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+    Eliminar
+  </button>
+</div>
+<!-- END: Selection ActionBar -->
+<!-- BEGIN: MainHeader -->
+<!-- END: MainHeader -->
+<main class="p-4 space-y-6 max-w-screen-lg mx-auto">
+<!-- BEGIN: Welcome Description Section -->
+<section class="bg-blue-50 border border-blue-100 rounded-2xl p-4 shadow-sm" id="welcome-description">
+<div class="flex gap-3">
+<div class="flex-shrink-0">
+<span class="material-symbols-outlined text-blue-600 text-2xl" style="">info</span>
+</div>
+<div>
+<p class="text-sm text-slate-700 leading-relaxed" style="">
+<span class="font-bold text-blue-800" style="">Bem-vindo à Gestão de Reservas.</span> Nesta página você tem uma visão rápida do dia de atividade e pode ver as reservas de forma simples. Quando os clientes fazem uma reserva através do formulário web, o administrador recebe a notificação no WhatsApp e pode de imediato, atribuir o serviço a um dos condutores.
+        </p>
+</div>
+</div>
+</section>
+<!-- END: Welcome Description Section -->
+<!-- BEGIN: AdminDashboard -->
+<section class="space-y-4" data-purpose="admin-dashboard" id="admin-dashboard-section">
+<div class="flex flex-col items-center gap-2 mb-4">
+<h2 class="text-lg font-bold text-slate-900 flex items-center gap-2" style="">
+<span class="material-symbols-outlined text-indigo-600" style="">monitoring</span>
+      Painel Administrativo - TukFlow
+    </h2><div class="bg-cyan-50 border border-cyan-100 rounded-lg py-1 px-4 text-cyan-700 text-xs font-semibold flex items-center gap-2 w-fit mx-auto">
+<span class="material-symbols-outlined text-sm" style="">schedule</span>
+<span class="real-time-clock" style="">16/03/2026 10:58:28</span>
+</div>
+</div>
+<!-- KPI Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<!-- Total Confirmadas -->
+<div class="bg-white border border-blue-50 p-3 rounded-xl card-shadow flex flex-col">
+<div class="flex justify-between items-start mb-2">
+<span class="text-[11px] font-bold text-slate-700 uppercase leading-tight" style="">Total Confirmadas</span>
+<span class="material-symbols-outlined text-blue-500 text-lg" style="">database</span>
+</div>
+<div class="text-2xl font-black text-blue-600 mb-0.5" style="">119</div>
+<span class="text-[10px] text-gray-400" style="">Desde o início</span>
+</div>
+<!-- Pendentes (Total) -->
+<div class="bg-amber-50/30 border border-amber-100 p-3 rounded-xl card-shadow flex flex-col">
+<div class="flex justify-between items-start mb-2">
+<span class="text-[11px] font-bold text-slate-700 uppercase leading-tight" style="">Pendentes (Total)</span>
+<span class="material-symbols-outlined text-amber-500 text-lg" style="">error</span>
+</div>
+<div class="text-2xl font-black text-amber-600 mb-0.5" style="">2</div>
+<span class="text-[10px] text-gray-400" style="">Todas as datas</span>
+</div>
+<!-- Reservas (Hoje) -->
+<div class="bg-white border border-gray-100 p-3 rounded-xl card-shadow flex flex-col">
+<div class="flex justify-between items-start mb-2">
+<span class="text-[11px] font-bold text-slate-700 uppercase leading-tight" style="">Reservas (Hoje)</span>
+<span class="material-symbols-outlined text-slate-400 text-lg" style="">calendar_today</span>
+</div>
+<div class="text-2xl font-black text-slate-800 mb-0.5" style="">4</div>
+<span class="text-[10px] text-gray-400" style="">0 confirmadas</span>
+</div>
+<!-- Reservas Futuras -->
+<div class="bg-white border border-gray-100 p-3 rounded-xl card-shadow flex flex-col">
+<div class="flex justify-between items-start mb-2">
+<span class="text-[11px] font-bold text-slate-700 uppercase leading-tight" style="">Reservas Futuras</span>
+<span class="material-symbols-outlined text-slate-400 text-lg" style="">trending_up</span>
+</div>
+<div class="text-2xl font-black text-slate-800 mb-0.5" style="">18</div>
+<span class="text-[10px] text-gray-400" style="">Confirmadas e agendadas</span>
+</div>
+<!-- Faturação (Dia) -->
+<div class="bg-white border border-gray-100 p-3 rounded-xl card-shadow flex flex-col">
+<div class="flex justify-between items-start mb-2">
+<span class="text-[11px] font-bold text-slate-700 uppercase leading-tight" style="">Faturação (Dia)</span>
+<span class="material-symbols-outlined text-slate-400 text-lg" style="">euro</span>
+</div>
+<div class="text-2xl font-black text-slate-800 mb-0.5" style="">€320</div>
+<span class="text-[10px] text-gray-400 leading-tight" style="">Baseado em reservas confirmadas</span>
+</div>
+<!-- Reservas não Confirmadas -->
+<div class="bg-white border border-gray-100 p-3 rounded-xl card-shadow flex flex-col">
+<div class="flex justify-between items-start mb-2">
+<span class="text-[11px] font-bold text-slate-700 uppercase leading-tight text-right" style="">Reservas não Confirmadas</span>
+<span class="material-symbols-outlined text-amber-500 text-lg" style="">warning</span>
+</div>
+<div class="text-2xl font-black text-amber-600 mb-0.5" style="">2</div>
+<span class="text-[10px] text-gray-400" style="">Pendentes para hoje</span>
+</div>
+</div>
+<!-- Status Bar -->
+<div class="bg-white border border-gray-100 rounded-xl p-3 card-shadow">
+<div class="text-[11px] font-bold text-slate-700 uppercase mb-2" style="">Status (Hoje)</div>
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-emerald-500 text-white" style="">
+<span class="material-symbols-outlined text-xs" style="">check_circle</span>2 Confirmadas
+      </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-amber-500 text-white" style="">
+<span class="material-symbols-outlined text-xs" style="">pending</span>2 Pendentes
+      </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-red-500 text-white" style="">
+<span class="material-symbols-outlined text-xs" style="">cancel</span> 0 Canceladas
+      </span>
+</div>
+</div>
+</section>
+<!-- END: AdminDashboard -->
+<!-- BEGIN: WhatsApp Active Admin Section -->
+<section class="bg-emerald-50 border border-emerald-100 rounded-xl p-3 card-shadow flex items-center justify-between" id="whatsapp-active-admin">
+<div class="flex items-center gap-3">
+<div class="bg-emerald-500 p-1.5 rounded-full flex items-center justify-center">
+<svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.185-.573c.948.517 1.942.893 3.146.894h.001c3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.766-5.769-5.766zm3.426 8.313c-.147.414-.731.758-1.002.805-.27.047-.514.072-1.442-.266-.927-.338-1.523-1.272-1.57-1.334-.046-.062-.39-.519-.39-1 0-.481.25-.717.34-.814.089-.097.195-.122.261-.122.065 0 .13.001.187.004.059.003.14-.022.219.169.078.191.271.662.296.711.025.05.04.108.008.172-.033.064-.049.103-.1.163-.051.06-.107.135-.153.181-.051.05-.104.104-.044.207.06.104.267.44.573.712.395.352.727.461.829.513.102.052.162.043.222-.027.06-.069.256-.3.324-.4.068-.1.135-.084.227-.049.092.035.585.276.687.327.102.052.17.077.195.119.025.042.025.244-.122.658z"></path></svg>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-emerald-800" style="">WhatsApp Reservas:</span>
+<span class="bg-emerald-500 text-white text-[9px] px-1.5 py-0.5 rounded-full font-bold uppercase" style="">Ativo</span>
+</div>
+<div class="text-sm font-bold text-slate-800" style="">Carlos Barradas <span class="font-normal text-emerald-600" style="">+351965748022</span></div>
+</div>
+</div>
+<button class="bg-white border border-emerald-200 text-emerald-700 px-3 py-1.5 rounded-lg text-xs font-bold shadow-sm active:bg-emerald-100 transition-colors" style="">
+    Alterar
+  </button>
+</section>
+<!-- END: WhatsApp Active Admin Section -->
+<div class="px-1 space-y-4">
+<button class="w-full bg-[#0f172a] hover:bg-slate-800 text-white py-3 rounded-xl font-bold text-sm shadow-sm transition-all active:scale-[0.98] flex items-center justify-center gap-2" id="btn-top-add-reservation" style="">
+<svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+    Adicionar Reserva
+  </button>
+<h1 class="text-xl font-bold text-slate-900 flex items-center justify-center gap-2" style="">
+<svg class="h-6 w-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+    Gestão de Reservas
+  </h1>
+</div>
+<!-- BEGIN: SearchAndFilters -->
+<section class="space-y-4" data-purpose="search-filters" id="target-search-area">
+<div class="relative" id="target-search-field">
+<label class="block text-sm font-medium text-gray-700 mb-1" for="search" style="">Pesquise</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<input class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" id="search" name="search" placeholder="Pesquise por: nome, email ou tour" type="text">
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div id="target-status-filter">
+<label class="block text-sm font-medium text-gray-700 mb-1" for="status-filter" style="">Status</label>
+<select class="block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" id="status-filter">
+<option>Todos</option>
+<option>Pendente</option>
+<option>Confirmada</option>
+<option>Concluída</option>
+<option>Cancelada</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-1" for="tour-filter" style="">Tipo de Tour</label>
+<select class="block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" id="tour-filter">
+<option>Todas</option>
+<option>Passeio Vila</option>
+<option>Miradouros</option>
+<option>Praia</option>
+</select>
+</div>
+</div>
+</section>
+<!-- END: SearchAndFilters -->
+<!-- BEGIN: ListHeader -->
+<div class="flex items-center justify-between px-1" id="target-selection-area">
+<div class="flex items-center gap-2">
+<input class="h-5 w-5 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500" id="select-all" type="checkbox">
+<label class="text-sm font-medium text-gray-600" for="select-all" style="">Selecionar Tudo</label>
+</div>
+<span class="text-xs text-gray-400 font-medium" style="">1 Reserva Encontrada</span>
+</div>
+<!-- END: ListHeader -->
+<!-- BEGIN: ReservationList -->
+<section class="space-y-4" data-purpose="reservation-list" id="reservation-container">
+<!-- Card 1 -->
+<article class="bg-white border border-gray-100 rounded-2xl p-4 card-shadow relative" data-purpose="reservation-card" id="target-client-data">
+<div class="flex justify-between items-start mb-3">
+<div class="flex items-center gap-3">
+<input class="reservation-checkbox h-5 w-5 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500" data-id="1" type="checkbox">
+<h2 class="text-lg font-bold text-slate-900" style="">Rui Costa</h2>
+</div>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-700" id="target-status-badge" style="">
+            Concluída
+          </span>
+</div>
+<div class="space-y-2 text-sm text-slate-600 mb-4">
+<div class="flex items-center gap-3" style="">
+<svg class="h-4 w-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            3519654321
+          </div>
+<div class="flex items-center gap-3" style="">
+<svg class="h-4 w-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            rui.costa@gmail.com
+          </div>
+<div class="flex items-center gap-3" style="">
+<svg class="h-4 w-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            2 pessoas
+          </div>
+<div class="flex items-center gap-3" style="">
+<svg class="h-4 w-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            21/09/2025 às 19:15:00
+          </div>
+<p class="text-[10px] text-gray-500 mt-1" style="">Feita em: 21/09/2025 19:08</p>
+</div>
+<div class="mb-4">
+<p class="text-sm font-bold text-slate-800" style=""><span class="font-bold" style="">Tour:</span> Passeio pela Vila e Miradouros</p>
+<p class="text-xs text-gray-500" style="">45 minutos | Base: €10.00</p>
+</div>
+<div class="message-box rounded-lg p-3 mb-4 text-sm border-l-4 border-amber-400" id="target-special-message">
+<p class="text-amber-800 leading-relaxed" style="">
+<span class="font-semibold block mb-1" style="">Mensagem do cliente:</span> Gostaria de saber se é possível incluir uma paragem extra no Miradouro da Senhora do Monte para tirar algumas fotos rápidas.
+          </p>
+</div>
+<div class="flex items-center justify-between mb-4 border-b border-gray-100 pb-4">
+<div class="text-lg font-bold text-slate-900" style="">€ 20.00</div>
+<button class="text-indigo-600 font-medium text-sm hover:underline" id="btn-edit-reservation" style="">Editar</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-2 mb-2" id="target-actions-panel">
+<button class="flex items-center justify-center gap-2 bg-white border border-green-500 text-green-600 py-2.5 rounded-lg text-sm font-semibold active:bg-green-50" id="btn-whatsapp" style="">
+            WhatsApp
+          </button>
+<button class="flex items-center justify-center gap-2 bg-white border border-purple-200 text-purple-600 py-2.5 rounded-lg text-sm font-semibold" id="btn-assign-reservation" style="">
+            Atribuir
+          </button>
+</div>
+<button class="w-full bg-red-500 text-white py-2.5 rounded-lg text-sm font-bold" style="">
+          Eliminar Reserva
+        </button>
+</article>
+</section>
+<!-- END: ReservationList -->
+<!-- BEGIN: UIGuideSection -->
+<section class="bg-blue-50 border border-blue-100 rounded-xl overflow-hidden mt-8" data-purpose="ui-guide">
+<div class="bg-blue-100/50 px-4 py-3 border-b border-blue-200">
+<h3 class="font-bold text-slate-800 flex items-center gap-2" style="">
+<span class="material-symbols-outlined text-indigo-500" style="">info</span>
+          Lista de Elementos da Interface
+        </h3>
+</div>
+<div class="p-4 space-y-8">
+<div>
+<h4 class="text-xs font-bold text-indigo-700 mb-4 flex items-center uppercase tracking-widest border-b border-indigo-50 pb-2" style="">
+<span class="material-symbols-outlined text-sm mr-2" style="">touch_app</span>
+            Elementos Interativos
+          </h4>
+<div class="space-y-5">
+<!-- Item: Painel Administrativo -->
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center">
+<span class="material-symbols-outlined text-indigo-600" style="">analytics</span>
+</div>
+<div class="flex-1">
+<h3 class="text-sm font-bold text-slate-900 leading-none mb-1" style="">Painel Administrativo</h3>
+<p class="text-xs text-slate-600 leading-relaxed mb-2" style="">O painel Administrativo permite de forma rápida e em&nbsp;tempo real, ter uma visão rápida e estratégica&nbsp;da operação.&nbsp;<br>Centraliza as reservas para o dia e taturação diária.</p>
+<button class="guide-trigger inline-flex items-center px-2 py-0.5 rounded border text-[10px] font-bold uppercase bg-white/50 border-gray-200 text-slate-600 hover:bg-indigo-50 hover:border-indigo-200 hover:text-indigo-600 transition-colors" data-target="admin-dashboard-section" style="">PAINEL DASHBOARD</button>
+</div>
+</div>
+<!-- Item: WhatsApp Reservas Ativo -->
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center"><svg class="w-6 h-6 text-emerald-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.185-.573c.948.517 1.942.893 3.146.894h.001c3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.766-5.769-5.766zm3.426 8.313c-.147.414-.731.758-1.002.805-.27.047-.514.072-1.442-.266-.927-.338-1.523-1.272-1.57-1.334-.046-.062-.39-.519-.39-1 0-.481.25-.717.34-.814.089-.097.195-.122.261-.122.065 0 .13.001.187.004.059.003.14-.022.219.169.078.191.271.662.296.711.025.05.04.108.008.172-.033.064-.049.103-.1.163-.051.06-.107.135-.153.181-.051.05-.104.104-.044.207.06.104.267.44.573.712.395.352.727.461.829.513.102.052.162.043.222-.027.06-.069.256-.3.324-.4.068-.1.135-.084.227-.049.092.035.585.276.687.327.102.052.17.077.195.119.025.042.025.244-.122.658z"></path></svg></div>
+<div class="flex-1">
+<h3 class="text-sm font-bold text-slate-900 leading-none mb-1" style="">WhatsApp Reservas Ativo</h3>
+<p class="text-xs text-slate-600 leading-relaxed mb-2" style="">Este elemento serve para selecionar qual dos administradores vai receber as reservas no seu WhatsApp.</p>
+<button class="guide-trigger inline-flex items-center px-2 py-0.5 rounded border text-[10px] font-bold uppercase bg-white/50 border-gray-200 text-slate-600 hover:bg-indigo-50 hover:border-indigo-200 hover:text-indigo-600 transition-colors" data-target="whatsapp-active-admin" style="">WHATSAPP ATIVO</button>
+</div>
+</div>
+<!-- Item: Cabeçalho -->
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
+<span class="material-symbols-outlined text-blue-600" style="">dashboard</span>
+</div>
+<div class="flex-1">
+<h3 class="text-sm font-bold text-slate-900 leading-none mb-1" style="">Botão "Adicionar Reserva"</h3>
+<p class="text-xs text-slate-600 leading-relaxed mb-2" style="">Este botão permite o administrador abrir o formulário de criação de uma nova reserva.</p>
+<button class="guide-trigger inline-flex items-center px-2 py-0.5 rounded border text-[10px] font-bold uppercase bg-white/50 border-gray-200 text-slate-600 hover:bg-indigo-50 hover:border-indigo-200 hover:text-indigo-600 transition-colors" data-target="btn-add-reservation" style="">Adicionar Reserva</button>
+</div>
+</div>
+<!-- Item: Filtros -->
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center">
+<span class="material-symbols-outlined text-purple-600" style="">filter_list</span>
+</div>
+<div class="flex-1">
+<h3 class="text-sm font-bold text-slate-900 leading-none mb-1" style="">Filtros e Pesquisa</h3>
+<p class="text-xs text-slate-600 leading-relaxed mb-2" style="">Barra de busca inteligente por nome ou email, integrada com filtros de status e tipo de tour.</p>
+<button class="guide-trigger inline-flex items-center px-2 py-0.5 rounded border text-[10px] font-bold uppercase bg-white/50 border-gray-200 text-slate-600 hover:bg-indigo-50 hover:border-indigo-200 hover:text-indigo-600 transition-colors" data-target="target-search-field" style="">
+            Campo "Pesquise"
+          </button>
+</div>
+</div>
+<!-- Item: Editar -->
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-cyan-100 flex items-center justify-center">
+<span class="material-symbols-outlined text-cyan-600" style="">edit</span>
+</div>
+<div class="flex-1">
+<h3 class="text-sm font-bold text-slate-900 leading-none mb-1" style="">Botão "Editar"</h3>
+<p class="text-xs text-slate-600 leading-relaxed mb-2" style="">Permite modificar valores específicos de uma reserva como valor ou passageiros.</p>
+<button class="guide-trigger inline-flex items-center px-2 py-0.5 rounded border text-[10px] font-bold uppercase bg-white/50 border-gray-200 text-slate-600 hover:bg-indigo-50 hover:border-indigo-200 hover:text-indigo-600 transition-colors" data-target="btn-edit-reservation" style="">Editar</button>
+</div>
+</div>
+<!-- Item: WhatsApp -->
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center">
+<span class="material-symbols-outlined text-emerald-600" style="">chat</span>
+</div>
+<div class="flex-1">
+<h3 class="text-sm font-bold text-slate-900 leading-none mb-1" style="">WhatsApp</h3>
+<p class="text-xs text-slate-600 leading-relaxed mb-2" style="">Abre conversa direta com o cliente pelo WhatsApp.</p>
+<button class="guide-trigger inline-flex items-center px-2 py-0.5 rounded border text-[10px] font-bold uppercase bg-white/50 border-gray-200 text-slate-600 hover:bg-indigo-50 hover:border-indigo-200 hover:text-indigo-600 transition-colors" data-target="btn-whatsapp" style="">
+            WhatsApp
+          </button>
+</div>
+</div>
+<!-- Item: Atribuir -->
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center">
+<span class="material-symbols-outlined text-purple-600" style="">person_add</span>
+</div>
+<div class="flex-1">
+<h3 class="text-sm font-bold text-slate-900 leading-none mb-1" style="">Botão "Atribuir"</h3>
+<p class="text-xs text-slate-600 leading-relaxed mb-2" style="">Significa que o Administrador pode atribuir o serviço a um condutor a sua escolha e enviar instruções.</p>
+<button class="guide-trigger inline-flex items-center px-2 py-0.5 rounded border text-[10px] font-bold uppercase bg-white/50 border-gray-200 text-slate-600 hover:bg-indigo-50 hover:border-indigo-200 hover:text-indigo-600 transition-colors" data-target="btn-assign-reservation" style="">Atribuir</button>
+</div>
+</div></div>
+</div>
+<div>
+<h4 class="text-xs font-bold text-indigo-700 mb-4 flex items-center uppercase tracking-widest border-b border-indigo-50 pb-2" style="">
+<span class="material-symbols-outlined text-sm mr-2" style="">database</span>
+            Pontos de Dados
+          </h4>
+<div class="space-y-5">
+<!-- Item: Cliente -->
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
+<span class="material-symbols-outlined text-green-600" style="">person</span>
+</div>
+<div class="flex-1">
+<h3 class="text-sm font-bold text-slate-900 leading-none mb-1" style="">Dados do Cliente</h3>
+<p class="text-xs text-slate-600 leading-relaxed mb-2" style="">Exibição detalhada com nome completo, número de contacto e endereço de email.</p>
+<button class="guide-trigger inline-flex items-center px-2 py-0.5 rounded border text-[10px] font-bold uppercase bg-white/50 border-gray-200 text-slate-600 hover:bg-indigo-50 hover:border-indigo-200 hover:text-indigo-600 transition-colors" data-target="target-client-data" style="">
+            Dados Cliente
+          </button>
+</div>
+</div>
+<!-- Item: Mensagens -->
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center">
+<span class="material-symbols-outlined text-orange-600" style="">chat_bubble</span>
+</div>
+<div class="flex-1">
+<h3 class="text-sm font-bold text-slate-900 leading-none mb-1" style="">Mensagens Especiais</h3>
+<p class="text-xs text-slate-600 leading-relaxed mb-2" style="">Destaque visual para observações ou pedidos extras enviados pelo cliente durante a reserva.</p>
+<button class="guide-trigger inline-flex items-center px-2 py-0.5 rounded border text-[10px] font-bold uppercase bg-white/50 border-gray-200 text-slate-600 hover:bg-indigo-50 hover:border-indigo-200 hover:text-indigo-600 transition-colors" data-target="target-special-message" style="">
+            Mensagens Especiais
+          </button>
+</div>
+</div>
+<!-- Item: Status -->
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-cyan-100 flex items-center justify-center">
+<span class="material-symbols-outlined text-cyan-600" style="">label</span>
+</div>
+<div class="flex-1">
+<h3 class="text-sm font-bold text-slate-900 leading-none mb-1" style="">Indicadores de Status</h3>
+<p class="text-xs text-slate-600 leading-relaxed mb-2" style="">Badges coloridas que facilitam a identificação rápida do estado atual da reserva.</p>
+<button class="guide-trigger inline-flex items-center px-2 py-0.5 rounded border text-[10px] font-bold uppercase bg-white/50 border-gray-200 text-slate-600 hover:bg-indigo-50 hover:border-indigo-200 hover:text-indigo-600 transition-colors" data-target="target-status-badge" style="">
+            Status Badge
+          </button>
+</div>
+</div>
+<!-- Item: Ações -->
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0 w-10 h-10 rounded-full bg-red-100 flex items-center justify-center">
+<span class="material-symbols-outlined text-red-600" style="">delete</span>
+</div>
+<div class="flex-1">
+<h3 class="text-sm font-bold text-slate-900 leading-none mb-1" style="">Painel de Ações</h3>
+<p class="text-xs text-slate-600 leading-relaxed mb-2" style="">Acesso rápido para contato, atribuição de guias ou exclusão definitiva do registro.</p>
+<button class="guide-trigger inline-flex items-center px-2 py-0.5 rounded border text-[10px] font-bold uppercase bg-white/50 border-gray-200 text-slate-600 hover:bg-indigo-50 hover:border-indigo-200 hover:text-indigo-600 transition-colors" data-target="target-actions-panel" style="">
+            Painel Ações
+          </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: UIGuideSection -->
+</main>
+<!-- BEGIN: LogicScript -->
+<script data-purpose="ui-logic">
+    function updateClock() {
+      const now = new Date();
+      const options = { 
+        day: '2-digit', 
+        month: '2-digit', 
+        year: 'numeric', 
+        hour: '2-digit', 
+        minute: '2-digit', 
+        second: '2-digit' 
+      };
+      const formatted = now.toLocaleDateString('pt-PT', options).replace(',', '');
+      const clocks = document.querySelectorAll('.real-time-clock');
+      clocks.forEach(clockEl => {
+          if(clockEl) clockEl.textContent = formatted;
+      });
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    // Selection Logic
+    const selectAllCheckbox = document.getElementById('select-all');
+    const checkboxes = document.querySelectorAll('.reservation-checkbox');
+    const selectionBar = document.getElementById('selection-bar');
+    const selectionCountText = document.getElementById('selection-count');
+    const cancelSelectionBtn = document.getElementById('cancel-selection');
+
+    function updateSelectionUI() {
+      const checkedCount = document.querySelectorAll('.reservation-checkbox:checked').length;
+      
+      if (selectionBar) {
+        if (checkedCount > 0) {
+          selectionBar.classList.remove('hidden-bar');
+          selectionCountText.textContent = `${checkedCount} ${checkedCount === 1 ? 'selecionado' : 'selecionados'}`;
+        } else {
+          selectionBar.classList.add('hidden-bar');
+        }
+      }
+
+      // Sync select all checkbox state
+      if (selectAllCheckbox) {
+          selectAllCheckbox.checked = checkedCount === checkboxes.length && checkboxes.length > 0;
+          selectAllCheckbox.indeterminate = checkedCount > 0 && checkedCount < checkboxes.length;
+      }
+    }
+
+    if (selectAllCheckbox) {
+        selectAllCheckbox.addEventListener('change', () => {
+          checkboxes.forEach(cb => cb.checked = selectAllCheckbox.checked);
+          updateSelectionUI();
+        });
+    }
+
+    checkboxes.forEach(cb => {
+      cb.addEventListener('change', updateSelectionUI);
+    });
+
+    if (cancelSelectionBtn) {
+        cancelSelectionBtn.addEventListener('click', () => {
+          checkboxes.forEach(cb => cb.checked = false);
+          updateSelectionUI();
+        });
+    }
+
+    // Interactivity for UI Guide
+    const guideTriggers = document.querySelectorAll('.guide-trigger');
+    
+    guideTriggers.forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const targetId = trigger.getAttribute('data-target');
+        const targetElement = document.getElementById(targetId);
+
+        // Clear existing highlights
+        document.querySelectorAll('.highlight-element').forEach(el => {
+          el.classList.remove('highlight-element');
+        });
+
+        if (targetElement) {
+          // Add highlight
+          targetElement.classList.add('highlight-element');
+          
+          // Smooth scroll to element if not fully visible
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+          // Auto-remove highlight after a few seconds
+          setTimeout(() => {
+            targetElement.classList.remove('highlight-element');
+          }, 3000);
+        }
+      });
+    });
+  </script>
+<!-- END: LogicScript -->
+</body></html>

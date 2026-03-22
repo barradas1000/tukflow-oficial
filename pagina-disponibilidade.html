@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html lang="pt"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Disponibilidade de Reservase Gestão de Época - TukTuk</title>
+<!-- Tailwind CSS v3 CDN with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style data-purpose="custom-typography">
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+<style data-purpose="interactive-highlight">
+        .highlight-target {
+            transition: all 0.3s ease;
+        }
+        .highlight-active {
+            outline: 4px solid #ef4444 !important;
+            outline-offset: 4px;
+            border-radius: 1rem;
+        }
+        :root {
+            --safe-bottom: env(safe-area-inset-bottom, 0px);
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-900 pb-[calc(1rem+var(--safe-bottom))]">
+<div class="mx-auto w-full max-w-md min-h-screen bg-slate-50 sm:my-4 sm:rounded-3xl sm:shadow-xl overflow-hidden">
+<!-- BEGIN: MainHeader -->
+<header class="bg-white border-b border-slate-100 p-4 flex flex-col items-center gap-3 sticky top-0 z-50 shadow-sm" data-purpose="header">
+<div class="w-full flex justify-between items-center">
+<div class="w-10 h-10 bg-cyan-50 rounded-lg flex items-center justify-center border border-cyan-100 shadow-sm">
+<svg class="h-6 w-6 text-cyan-500" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</div>
+<button aria-label="Adicionar" class="bg-blue-600 text-white w-10 h-10 rounded-full shadow-lg flex items-center justify-center active:scale-95 transition-transform" type="button">
+<svg class="h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</button>
+</div>
+<h1 class="text-sm md:text-lg font-extrabold text-indigo-950 text-center uppercase tracking-tight leading-tight">
+            Disponibilidade e Gestão
+        </h1>
+</header>
+<!-- END: MainHeader -->
+<main class="p-4 space-y-5">
+<!-- BEGIN: Info Section -->
+<section class="bg-indigo-50/50 border border-indigo-100 rounded-2xl p-4 flex items-start gap-3">
+<div class="shrink-0 w-7 h-7 bg-indigo-100 rounded-full flex items-center justify-center">
+<svg class="h-4 w-4 text-indigo-600" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<p class="text-xs text-indigo-900 leading-relaxed">
+                Bem-vindo à <span class="font-bold">Gestão de Disponibilidade</span>. Configure períodos de fecho e gerencie horários.
+            </p>
+</section>
+<!-- END: Info Section -->
+<!-- BEGIN: OffSeasonManagement -->
+<section class="bg-white rounded-2xl p-4 shadow-sm border border-slate-100 highlight-target" id="section-off-season">
+<div class="flex items-center gap-2 mb-4">
+<div class="w-9 h-9 bg-coral-100 rounded-lg flex items-center justify-center" style="background-color: #fee2e2;">
+<svg class="h-5 w-5 text-red-500" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h2 class="text-base font-bold text-slate-900">Gestão de Fora de Época</h2>
+</div>
+<p class="text-xs text-slate-500 mb-4 leading-relaxed">Selecione os meses para desativar reservas.</p>
+<div class="grid grid-cols-3 gap-2 mb-4">
+<button class="py-2 px-1 text-[10px] font-bold rounded-lg border border-slate-100 text-slate-400" type="button">Jan 2026</button>
+<button class="py-2 px-1 text-[10px] font-bold rounded-lg border border-slate-100 text-slate-400" type="button">Fev 2026</button>
+<button class="py-2 px-1 text-[10px] font-bold rounded-lg border border-orange-200 bg-orange-50 text-orange-600" type="button">Mar 2026</button>
+<button class="py-2 px-1 text-[10px] font-bold rounded-lg border border-orange-200 bg-orange-50 text-orange-600" type="button">Abr 2026</button>
+<button class="py-2 px-1 text-[10px] font-bold rounded-lg border border-slate-100 text-slate-600" type="button">Mai 2026</button>
+<button class="py-2 px-1 text-[10px] font-bold rounded-lg border border-slate-100 text-slate-600" type="button">Jun 2026</button>
+<button class="py-2 px-1 text-[10px] font-bold rounded-lg border border-slate-100 text-slate-600" type="button">Jul 2026</button>
+<button class="py-2 px-1 text-[10px] font-bold rounded-lg border border-slate-100 text-slate-600" type="button">Ago 2026</button>
+<button class="py-2 px-1 text-[10px] font-bold rounded-lg border border-slate-100 text-slate-600" type="button">Set 2026</button>
+</div>
+<button class="w-full bg-emerald-500 text-white font-bold py-3 rounded-xl shadow-lg shadow-emerald-100 active:scale-95 transition-all min-h-[44px]" type="button">
+                Salvar Configuração
+            </button>
+</section>
+<!-- END: OffSeasonManagement -->
+<!-- BEGIN: AvailabilityCalendar -->
+<section class="bg-white rounded-2xl p-4 shadow-sm border border-slate-100 highlight-target" id="section-calendar">
+<div class="flex justify-between items-center gap-2 mb-4 flex-col sm:flex-row">
+<h2 class="text-base font-bold text-slate-900">Calendário</h2>
+<div class="flex items-center gap-2">
+<button class="p-1.5 bg-slate-50 rounded-lg" type="button"><svg class="h-4 w-4 text-slate-600" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg></button>
+<span class="font-bold text-indigo-700 text-sm whitespace-nowrap">março 2026</span>
+<button class="p-1.5 bg-slate-50 rounded-lg" type="button"><svg class="h-4 w-4 text-slate-600" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg></button>
+</div>
+</div>
+<div class="grid grid-cols-7 text-center text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4">
+<div>seg</div><div>ter</div><div>qua</div><div>qui</div><div>sex</div><div>sáb</div><div>dom</div>
+</div>
+<div class="grid grid-cols-7 gap-y-2 text-center">
+<!-- Prev Month -->
+<div class="py-3 text-slate-200">23</div><div class="py-3 text-slate-200">24</div><div class="py-3 text-slate-200">25</div><div class="py-3 text-slate-200">26</div><div class="py-3 text-slate-200">27</div><div class="py-3 text-slate-200">28</div><div class="py-3 font-bold text-slate-800">1</div>
+<!-- Current Month Days -->
+<div class="py-3 text-slate-800">2</div><div class="py-3 text-slate-800">3</div><div class="py-3 text-slate-800">4</div><div class="py-3 text-slate-800">5</div><div class="py-3 text-slate-800">6</div><div class="py-3 text-slate-800">7</div><div class="py-3 text-slate-800">8</div>
+<div class="py-3 text-slate-800">9</div><div class="py-3 text-slate-800">10</div><div class="py-3 text-slate-800">11</div><div class="py-3 text-slate-800">12</div><div class="py-3 text-slate-800">13</div><div class="py-3 text-slate-800">14</div><div class="py-3 text-slate-800">15</div>
+<!-- Selection -->
+<div class="py-3 text-slate-800">16</div>
+<div class="relative py-3 flex items-center justify-center">
+<div class="w-9 h-9 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold shadow-md shadow-blue-200 z-10">17</div>
+</div>
+<div class="py-3 text-slate-800">18</div><div class="py-3 text-slate-800">19</div><div class="py-3 text-slate-800">20</div><div class="py-3 text-slate-800">21</div><div class="py-3 text-slate-800">22</div>
+<div class="py-3 text-slate-800">23</div><div class="py-3 text-slate-800">24</div><div class="py-3 text-slate-800">25</div><div class="py-3 text-slate-800">26</div><div class="py-3 text-slate-800">27</div><div class="py-3 text-slate-800">28</div><div class="py-3 text-slate-800">29</div>
+</div>
+<!-- Legend Grid -->
+<div class="grid grid-cols-2 gap-4 mt-8 pt-6 border-t border-slate-50">
+<div class="flex items-center gap-2 text-[10px] font-bold text-slate-500 uppercase tracking-tighter">
+<span class="w-3.5 h-3.5 bg-white border border-slate-200 rounded-sm"></span> Disponível
+                </div>
+<div class="flex items-center gap-2 text-[10px] font-bold text-slate-500 uppercase tracking-tighter">
+<span class="w-3.5 h-3.5 bg-yellow-400 rounded-sm"></span> Com Reservas
+                </div>
+<div class="flex items-center gap-2 text-[10px] font-bold text-slate-500 uppercase tracking-tighter">
+<span class="w-3.5 h-3.5 bg-slate-300 rounded-sm"></span> Bloqueado
+                </div>
+<div class="flex items-center gap-2 text-[10px] font-bold text-slate-500 uppercase tracking-tighter">
+<span class="w-3.5 h-3.5 bg-orange-200 rounded-sm"></span> Sem Condutor
+                </div>
+</div>
+</section>
+<!-- END: AvailabilityCalendar -->
+<!-- BEGIN: TimeSlotDetails -->
+<section class="bg-white rounded-2xl p-4 shadow-sm border border-slate-100 highlight-target" id="section-timeslots">
+<div class="flex items-center justify-between gap-2 mb-4 flex-col sm:flex-row">
+<h2 class="text-base font-bold text-slate-900">Horários para 17/03</h2>
+<span class="text-[10px] bg-cyan-50 text-cyan-600 px-2 py-1 rounded-full font-extrabold uppercase tracking-wider border border-cyan-100">15'</span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<!-- Slot 1: Available -->
+<div class="border border-slate-50 rounded-lg p-3 text-center bg-slate-50/50 cursor-pointer" type="button">
+<p class="text-xs font-bold text-slate-800">09:00</p>
+<div class="w-1 h-1 bg-emerald-500 rounded-full mx-auto mt-1.5"></div>
+</div>
+<!-- Slot 2: Booked -->
+<div class="border border-yellow-100 rounded-lg p-3 text-center bg-yellow-50/50 cursor-pointer" type="button">
+<p class="text-xs font-bold text-yellow-700">09:15</p>
+<div class="w-1 h-1 bg-yellow-500 rounded-full mx-auto mt-1.5"></div>
+</div>
+<!-- Slot 3: Available -->
+<div class="border border-slate-50 rounded-lg p-3 text-center bg-slate-50/50 cursor-pointer" type="button">
+<p class="text-xs font-bold text-slate-800">09:30</p>
+<div class="w-1 h-1 bg-emerald-500 rounded-full mx-auto mt-1.5"></div>
+</div>
+<!-- Slot 4: Available -->
+<div class="border border-slate-50 rounded-lg p-3 text-center bg-slate-50/50 cursor-pointer" type="button">
+<p class="text-xs font-bold text-slate-800">09:45</p>
+<div class="w-1 h-1 bg-emerald-500 rounded-full mx-auto mt-1.5"></div>
+</div>
+<!-- Slot 5: Blocked -->
+<div class="border border-slate-200 rounded-lg p-3 text-center bg-slate-100 opacity-60 cursor-not-allowed" type="button">
+<p class="text-xs font-bold text-slate-500">10:00</p>
+<div class="w-1 h-1 bg-slate-400 rounded-full mx-auto mt-1.5"></div>
+</div>
+<!-- Slot 6: Available -->
+<div class="border border-slate-50 rounded-lg p-3 text-center bg-slate-50/50 cursor-pointer" type="button">
+<p class="text-xs font-bold text-slate-800">10:15</p>
+<div class="w-1 h-1 bg-emerald-500 rounded-full mx-auto mt-1.5"></div>
+</div>
+</div>
+<p class="text-center text-[10px] text-slate-400 mt-4 italic px-3">
+                Toque para detalhes ou bloquear horário.
+            </p>
+</section>
+<!-- END: TimeSlotDetails -->
+<!-- BEGIN: InterfaceGuide (SCREEN_51 style) -->
+<section class="bg-indigo-50 border border-indigo-100 rounded-2xl p-4 mt-8 space-y-4" id="section-guide">
+<div class="flex items-center gap-2 mb-2">
+<div class="w-7 h-7 bg-indigo-100 rounded-full flex items-center justify-center">
+<svg class="h-3.5 w-3.5 text-indigo-600" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</div>
+<h3 class="text-base font-bold text-indigo-900">Elementos da Interface</h3>
+</div>
+<!-- Guide Item 1 -->
+<div class="space-y-2">
+<div class="flex gap-3 items-start">
+<div class="shrink-0 w-9 h-9 bg-orange-100 rounded-lg flex items-center justify-center border border-orange-200">
+<svg class="h-5 w-5 text-orange-600" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div>
+<h4 class="font-bold text-indigo-950 text-xs mb-1">Gestão de Fora de Época</h4>
+<p class="text-[11px] text-indigo-700/70 leading-relaxed mb-2">
+                            Configure períodos de manutenção ou baixa estação.
+                        </p>
+<button class="text-[10px] font-bold text-blue-600 border border-blue-200 bg-white px-3 py-1.5 rounded-lg uppercase tracking-wider hover:bg-blue-50 active:bg-blue-100 transition-colors" onclick="highlightElement('section-off-season')" type="button">
+                            VER
+                        </button>
+</div>
+</div>
+</div>
+<!-- Guide Item 2 -->
+<div class="space-y-2">
+<div class="flex gap-3 items-start">
+<div class="shrink-0 w-9 h-9 bg-blue-100 rounded-lg flex items-center justify-center border border-blue-200">
+<svg class="h-5 w-5 text-blue-600" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div>
+<h4 class="font-bold text-indigo-950 text-xs mb-1">Calendário Mensal</h4>
+<p class="text-[11px] text-indigo-700/70 leading-relaxed mb-2">
+                            Visão da ocupação com status coloridos.
+                        </p>
+<button class="text-[10px] font-bold text-blue-600 border border-blue-200 bg-white px-3 py-1.5 rounded-lg uppercase tracking-wider hover:bg-blue-50 active:bg-blue-100 transition-colors" onclick="highlightElement('section-calendar')" type="button">
+                            VER
+                        </button>
+</div>
+</div>
+</div>
+<!-- Guide Item 3 -->
+<div class="space-y-2">
+<div class="flex gap-3 items-start">
+<div class="shrink-0 w-9 h-9 bg-emerald-100 rounded-lg flex items-center justify-center border border-emerald-200">
+<svg class="h-5 w-5 text-emerald-600" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div>
+<h4 class="font-bold text-indigo-950 text-xs mb-1">Slots de 15 Minutos</h4>
+<p class="text-[11px] text-indigo-700/70 leading-relaxed mb-2">
+                            Controle preciso da agenda diária.
+                        </p>
+<button class="text-[10px] font-bold text-blue-600 border border-blue-200 bg-white px-3 py-1.5 rounded-lg uppercase tracking-wider hover:bg-blue-50 active:bg-blue-100 transition-colors" onclick="highlightElement('section-timeslots')" type="button">
+                            VER
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- END: InterfaceGuide -->
+</main>
+</div>
+<!-- BEGIN: FooterScripts -->
+<script data-purpose="interaction-handlers">
+        function highlightElement(id) {
+            // Remove previous highlights
+            document.querySelectorAll('.highlight-target').forEach(el => {
+                el.classList.remove('highlight-active');
+            });
+
+            // Target and scroll
+            const target = document.getElementById(id);
+            if (target) {
+                target.classList.add('highlight-active');
+                target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                // Remove highlight after 2.5 seconds
+                setTimeout(() => {
+                    target.classList.remove('highlight-active');
+                }, 2500);
+            }
+        }
+    </script>
+<!-- END: FooterScripts -->
+</body></html>

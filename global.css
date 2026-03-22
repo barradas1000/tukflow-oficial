@@ -1,0 +1,42 @@
+/* global.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.card-shadow {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.message-box {
+  background-color: #fffbeb;
+  border: 1px solid #fef3c7;
+}
+
+.selection-action-bar {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.selection-action-bar.hidden-bar {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.highlight-element {
+  outline: 3px solid #ef4444 !important;
+  outline-offset: 2px;
+  transition: outline 0.2s ease;
+}
+
+/* Custom scrollbar for KPI cards */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
