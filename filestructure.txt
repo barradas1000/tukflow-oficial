@@ -1,9 +1,48 @@
+|-- cara velho.mp4
 |-- FireShot Capture 003 - tuktuk-milfontes - [tuktuk-milfontes.vercel.app].png
 |-- gestão de condutores.png
 |-- global.css
+|-- images.png
+|-- oficial
+    |-- logo-tukflow.svg
+    |-- pagina-marketing-apresenta-sistema.css
+    |-- pagina-marketing-apresenta-sistema.html
+    |-- pagina-marketing-apresenta-sistema.js
+    |-- public
+        |-- calendar.gif
+        |-- condutor.jpg
+        |-- dashboard.gif
+        |-- driver.gif
+        |-- mapa-celular.gif
+        |-- maps-tempo real.gif
+        |-- pagina-web.gif
+        |-- tuktuk-amarelo.png
+    |-- tuktuk-condutor.jpg
+    |-- video-tuktuk-pagina-marketing.mp4
 |-- package-lock.json
 |-- pagina-convite.html
 |-- pagina-disponibilidade.html
 |-- pagina-inicial-publico.png
+|-- Pagina-marketing-gpt-2 copy.html
+|-- Pagina-marketing-gpt-2.css
+|-- Pagina-marketing-gpt-2.html
+|-- Pagina-marketing-gpt-2.js
+|-- pagina-marketing-oficial copy.html
+|-- pagina-marketing-peplexity-2.html
+|-- pagina-marketing-perplexity.html
 |-- pagina-reservas.html
-|-- video-tuktuk-pagina-marketing.mp4
+|-- public
+    |-- calendario-condutores.gif
+    |-- gps.gif
+    |-- script.js
+    |-- styles.css
+    |-- tuktuk-amarelo.png
+|-- sem-dinheiro-2.mp4
+|-- sem-dinheiro-3.mp4
+|-- sem-dinheiro.mp4
+|-- tukruk azul , jovem.mp4
+|-- tuktuk-condutor -pensativo-01.-ok mp4.mp4
+|-- tuktuk-condutor -pensativo-01.mp4
+|-- tuktuk-video-nao-subrou-nada.mp4
+|-- tutu-fazer contas.mp4
+|-- video, ok para usar.mp4

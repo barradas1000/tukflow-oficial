@@ -1,0 +1,14 @@
+<svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="22" cy="22" r="20" fill="#008080"/>
+  <rect x="10" y="18" width="24" height="10" rx="5" fill="#fff"/>
+  <rect x="14" y="14" width="16" height="8" rx="4" fill="#93f2f2"/>
+  <circle cx="15.5" cy="31.5" r="3.5" fill="#fff" stroke="#006565" stroke-width="2"/>
+  <circle cx="28.5" cy="31.5" r="3.5" fill="#fff" stroke="#006565" stroke-width="2"/>
+  <path d="M12 28 Q13 24 22 24 Q31 24 32 28" stroke="#006565" stroke-width="2" fill="none"/>
+  <path d="M22 14 Q24 10 28 14" stroke="#008080" stroke-width="2" fill="none"/>
+  <path d="M22 14 Q20 10 16 14" stroke="#008080" stroke-width="2" fill="none"/>
+  <path d="M22 24 Q22 20 22 14" stroke="#008080" stroke-width="2" fill="none"/>
+  <path d="M10 22 Q8 22 8 24 Q8 26 10 26" stroke="#006565" stroke-width="2" fill="none"/>
+  <path d="M34 22 Q36 22 36 24 Q36 26 34 26" stroke="#006565" stroke-width="2" fill="none"/>
+  <text x="22" y="41" text-anchor="middle" font-family="Manrope, Arial, sans-serif" font-size="8" fill="#fff">flow</text>
+</svg>

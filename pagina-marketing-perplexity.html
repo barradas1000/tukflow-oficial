@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mais Clientes para o seu Tuk Tuk</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    :root {
+      --blue: #0077b6;
+      --blue-dark: #023e8a;
+      --yellow: #ffcc00;
+      --orange: #ff7b00;
+      --bg-light: #f5f7fb;
+      --text-main: #222222;
+      --text-soft: #555555;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg-light);
+      color: var(--text-main);
+      line-height: 1.5;
+    }
+
+    /* HERO */
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1.5rem;
+      background: linear-gradient(135deg, var(--blue), var(--orange));
+      color: var(--white);
+    }
+
+    .hero-content {
+      flex: 1 1 320px;
+      max-width: 580px;
+      padding: 1rem;
+    }
+
+    .hero h1 {
+      font-size: 2.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-note {
+      margin-top: 0.75rem;
+      font-size: 0.95rem;
+      color: #f1f1f1;
+    }
+
+    #hero-cta {
+      background: var(--yellow);
+      color: var(--blue-dark);
+      border: none;
+      padding: 0.9rem 1.8rem;
+      border-radius: 999px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+    }
+
+    #hero-cta:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 5px 14px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-image {
+      flex: 1 1 260px;
+      max-width: 420px;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .image-placeholder {
+      width: 100%;
+      min-height: 220px;
+      border-radius: 16px;
+      border: 2px dashed rgba(255, 255, 255, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.95rem;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    /* SECTIONS */
+
+    .section {
+      padding: 3rem 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      color: var(--blue-dark);
+    }
+
+    .section.alt {
+      background: var(--white);
+      border-radius: 20px;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .section.alt .section-content,
+    .section.alt .section-image {
+      flex: 1 1 320px;
+      padding: 1.5rem;
+    }
+
+    .section.alt .section-content p {
+      margin-bottom: 0.7rem;
+      color: var(--text-soft);
+    }
+
+    .section.alt ul {
+      margin-top: 0.5rem;
+      padding-left: 1rem;
+    }
+
+    .section.alt li {
+      margin-bottom: 0.4rem;
+      color: var(--text-soft);
+    }
+
+    .section.alt .section-image .image-placeholder {
+      border-color: #cccccc;
+      background: #f9fafc;
+      color: #777777;
+    }
+
+    /* Cards "E se...?" */
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 1.3rem;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+      border-top: 4px solid var(--orange);
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: var(--blue-dark);
+    }
+
+    .card p {
+      color: var(--text-soft);
+      font-size: 0.98rem;
+    }
+
+    /* Benefícios */
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .benefit {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 1.2rem;
+      border-left: 4px solid var(--yellow);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    }
+
+    .benefit h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+      color: var(--blue-dark);
+    }
+
+    .benefit p {
+      font-size: 0.96rem;
+      color: var(--text-soft);
+    }
+
+    /* CTA final / contacto */
+
+    .contact-section {
+      text-align: left;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .contact-card {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 1.4rem;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .contact-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: var(--blue-dark);
+    }
+
+    .contact-card p {
+      font-size: 0.96rem;
+      color: var(--text-soft);
+      margin-bottom: 0.6rem;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      margin-top: 0.4rem;
+      padding: 0.7rem 1.4rem;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.98rem;
+      font-weight: 600;
+      text-decoration: none;
+      text-align: center;
+      background: var(--blue-dark);
+      color: var(--white);
+    }
+
+    .contact-btn.whatsapp {
+      background: #25d366;
+      color: #ffffff;
+    }
+
+    .contact-btn:hover {
+      opacity: 0.92;
+    }
+
+    .contact-card form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .contact-card label {
+      font-size: 0.9rem;
+      color: var(--text-main);
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .contact-card input {
+      padding: 0.55rem 0.7rem;
+      border-radius: 8px;
+      border: 1px solid #cccccc;
+      font-size: 0.95rem;
+    }
+
+    .small-note {
+      margin-top: 0.6rem;
+      font-size: 0.8rem;
+      color: #888888;
+    }
+
+    /* FOOTER */
+
+    .footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: #888888;
+    }
+
+    /* RESPONSIVO */
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 2.5rem 1rem;
+      }
+
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+
+      .section {
+        padding: 2.5rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Menos voltas em vazio. Mais clientes no seu tuk tuk.</h1>
+      <p class="hero-subtitle">
+        Se já pensou “e se houvesse uma forma simples de ter mais clientes e
+        aproveitar melhor o meu dia?”, esta página é para si.
+      </p>
+      <button id="hero-cta">Quero saber como</button>
+      <p class="hero-note">
+        Sem complicações. Sem ninguém a mandar em si. Só uma ajuda para o seu tuk tuk trabalhar mais por si.
+      </p>
+    </div>
+    <div class="hero-image">
+      <!-- Espaço para uma imagem grande de tuk tuks com turistas felizes -->
+      <div class="image-placeholder">
+        <span>Imagem: tuk tuk com turistas felizes aqui</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Secção E SE...? -->
+    <section class="section" id="sec-ese">
+      <h2>Já se apanhou a pensar nisto?</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>E se eu tivesse mais clientes?</h3>
+          <p>
+            “E se houvesse uma forma de ter mais pessoas sentadas no tuk tuk,
+            em vez de andar às voltas à procura de sorte?”
+          </p>
+        </div>
+        <div class="card">
+          <h3>E se eu aproveitasse melhor o meu tempo?</h3>
+          <p>
+            “E se eu soubesse melhor onde e quando costuma haver mais gente
+            interessada em passeios, para não perder metade do dia parado?”
+          </p>
+        </div>
+        <div class="card">
+          <h3>E se eu ganhasse mais com o mesmo esforço?</h3>
+          <p>
+            “E se existisse uma ajuda simples que me deixasse no comando,
+            mas me ajudasse a ter mais trabalho e mais lucro?”
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Secção explicação simples -->
+    <section class="section alt" id="sec-como">
+      <div class="section-content">
+        <h2>Um parceiro ao lado, não um chefe</h2>
+        <p>
+          O tuk tuk é o seu trabalho e o seu orgulho. Aqui ninguém vem dizer
+          como deve fazer. A ideia é outra: ter um apoio simples, que lhe mostra
+          oportunidades, e é você que decide o que fazer com elas.
+        </p>
+        <p>
+          Em vez de passar o dia inteiro a “dar voltas”, o objetivo é ajudar a:
+        </p>
+        <ul>
+          <li>Fazer menos quilómetros em vazio.</li>
+          <li>Ter mais passeios pagos ao longo do dia.</li>
+          <li>Perder menos tempo parado sem saber para onde ir.</li>
+          <li>Sentir que o esforço se nota mesmo na carteira ao fim do mês.</li>
+        </ul>
+      </div>
+
+      <div class="section-image">
+        <!-- Espaço para imagem de mapa, cidade, rotas ou vista panorâmica -->
+        <div class="image-placeholder" style="border-color:#cccccc;background:#f9fafc;color:#777;">
+          <span>Imagem: mapa da cidade / rotas turísticas aqui</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Secção benefícios em linguagem simples -->
+    <section class="section" id="sec-beneficios">
+      <h2>O que pode melhorar no seu dia a dia</h2>
+      <div class="benefits">
+        <div class="benefit">
+          <h3>Mais clientes</h3>
+          <p>
+            Ideias e ferramentas para ter mais pessoas a escolher o seu tuk tuk,
+            sem depender só da sorte.
+          </p>
+        </div>
+        <div class="benefit">
+          <h3>Melhor uso do tempo</h3>
+          <p>
+            Menos tempo à procura de clientes, mais tempo a fazer passeios pagos.
+          </p>
+        </div>
+        <div class="benefit">
+          <h3>Você no comando</h3>
+          <p>
+            Não há sistema complicado. Você escolhe o que usar e como usar.
+          </p>
+        </div>
+        <div class="benefit">
+          <h3>Mais lucro</h3>
+          <p>
+            Com o mesmo tuk tuk e o mesmo esforço, o objetivo é simples:
+            ajudar a ganhar mais.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Secção contacto / próximo passo -->
+    <section class="section contact-section" id="sec-cta">
+      <h2>Quer ver, na prática, como isto o pode ajudar?</h2>
+      <p>
+        Se já se perguntou “não haverá uma forma melhor de organizar o meu dia,
+        sem me complicarem a vida?”, então vale a pena dar o próximo passo.
+      </p>
+
+      <div class="contact-grid">
+        <!-- Bloco WhatsApp -->
+        <div class="contact-card">
+          <h3>Falar pelo WhatsApp</h3>
+          <p>
+            Clique no botão em baixo e envie uma mensagem. Explique como é o seu
+            dia a dia e nós mostramos opções simples para o seu caso.
+          </p>
+          <a
+            id="whatsapp-link"
+            class="contact-btn whatsapp"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Falar no WhatsApp
+          </a>
+          <p class="small-note">
+            Pode ser só para tirar dúvidas. Sem compromisso.
+          </p>
+        </div>
+
+        <!-- Bloco telefone / formulário simples -->
+        <div class="contact-card">
+          <h3>Prefere que entremos em contacto?</h3>
+          <p>
+            Deixe o seu nome e número. Entramos em contacto para explicar, com
+            calma e em linguagem simples, como o podemos ajudar.
+          </p>
+          <form id="contact-form">
+            <label>
+              Nome
+              <input type="text" id="nome" name="nome" placeholder="O seu nome" required />
+            </label>
+            <label>
+              Telemóvel
+              <input
+                type="tel"
+                id="telefone"
+                name="telefone"
+                placeholder="Ex: 9xx xxx xxx"
+                required
+              />
+            </label>
+            <label>
+              Cidade onde trabalha
+              <input
+                type="text"
+                id="cidade"
+                name="cidade"
+                placeholder="Lisboa, Porto, etc."
+              />
+            </label>
+            <button type="submit" class="contact-btn">
+              Quero que me liguem
+            </button>
+            <p class="small-note">
+              Usamos estes dados só para lhe responder. Não vamos encher o seu telemóvel de spam.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 – Apoio ao empresário de tuk tuk. Você no comando, nós ao lado.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const heroCta = document.getElementById("hero-cta");
+      const beneficiosSection = document.getElementById("sec-beneficios");
+      const whatsappLink = document.getElementById("whatsapp-link");
+      const contactForm = document.getElementById("contact-form");
+
+      function scrollToBeneficios() {
+        if (beneficiosSection) {
+          beneficiosSection.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+
+      // Quando clica no botão do topo, vai ver os benefícios
+      if (heroCta) {
+        heroCta.addEventListener("click", scrollToBeneficios);
+      }
+
+      // Configurar link de WhatsApp (substituir pelo número real)
+      if (whatsappLink) {
+        const numero = "351912345678"; // <-- ALTERAR para o número real (com indicativo país)
+        const mensagem = encodeURIComponent(
+          "Olá, tenho um tuk tuk e gostava de saber como posso ter mais clientes e organizar melhor o meu dia."
+        );
+        const url = `https://wa.me/${numero}?text=${mensagem}`;
+        whatsappLink.href = url;
+      }
+
+      // Simular envio de formulário (aqui podes integrar com backend mais tarde)
+      if (contactForm) {
+        contactForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const nome = document.getElementById("nome").value.trim();
+          const telefone = document.getElementById("telefone").value.trim();
+          const cidade = document.getElementById("cidade").value.trim();
+
+          if (!nome || !telefone) {
+            alert("Por favor, preencha pelo menos o nome e o telemóvel.");
+            return;
+          }
+
+          // Aqui podes fazer um fetch/POST para a tua API ou um serviço de email
+          alert(
+            "Obrigado, " +
+              nome +
+              ". Vamos entrar em contacto consigo em breve para falar sobre o seu tuk tuk."
+          );
+
+          contactForm.reset();
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>TukFlow | Gestão Inteligente de TukTuks</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="pagina-marketing-apresenta-sistema.css"/>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+    <!-- Top Navigation -->
+    <header class="fixed top-0 w-full z-50 glass-nav shadow-sm">
+        <div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+            <div class="flex items-center gap-2">
+                <img src="logo-tukflow.svg" alt="Logo TukFlow" class="h-8 w-8 inline-block align-middle mr-2"/>
+                <span class="font-headline font-black text-2xl tracking-tighter text-primary">TukFlow</span>
+            </div>
+            <nav class="hidden md:flex gap-8 items-center">
+                <div class="relative group">
+                    <button class="flex items-center gap-1 font-headline font-bold text-primary border-b-2 border-primary py-1">
+                        Página de Reservas
+                        <span class="material-symbols-outlined text-sm" data-icon="expand_more">expand_more</span>
+                    </button>
+                    <!-- Dropdown Desktop -->
+                    <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 p-2">
+                        <a class="block px-4 py-3 hover:bg-surface-container-low rounded-lg transition-colors" href="#">Página Publica</a>
+                        <a class="block px-4 py-3 hover:bg-surface-container-low rounded-lg transition-colors" href="#">Ver TukTuk Tempo em Real</a>
+                        <a class="block px-4 py-3 hover:bg-surface-container-low rounded-lg transition-colors" href="#">Disponibilidade em Tempo Real</a>
+                        <a class="block px-4 py-3 hover:bg-surface-container-low rounded-lg transition-colors" href="#">Formulário de Reservas</a>
+                        <a class="block px-4 py-3 hover:bg-surface-container-low rounded-lg transition-colors" href="#">Pesquisar</a>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <button class="flex items-center gap-1 font-headline font-medium text-on-surface-variant hover:text-primary transition-colors py-1">
+                        BackOffice Administrativo
+                        <span class="material-symbols-outlined text-sm" data-icon="expand_more">expand_more</span>
+                    </button>
+                    <!-- Dropdown Desktop -->
+                    <div class="absolute top-full left-0 mt-2 w-72 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 p-2">
+                        <a class="block px-4 py-3 hover:bg-surface-container-low rounded-lg transition-colors" href="#">Reservas Ativas</a>
+                        <a class="block px-4 py-3 hover:bg-surface-container-low rounded-lg transition-colors" href="#">Disponibilidade</a>
+                        <a class="block px-4 py-3 hover:bg-surface-container-low rounded-lg transition-colors" href="#">Gestão de Condutores</a>
+                        <a class="block px-4 py-3 hover:bg-surface-container-low rounded-lg transition-colors" href="#">Tuk no Map</a>
+                        <a class="block px-4 py-3 hover:bg-surface-container-low rounded-lg transition-colors" href="#">Gestão Admin</a>
+                        <a class="block px-4 py-3 hover:bg-surface-container-low rounded-lg transition-colors" href="#">Gestão de Frota</a>
+                    </div>
+                </div>
+                <a class="signature-gradient text-on-primary px-6 py-2.5 rounded-full font-bold shadow-lg scale-100 active:scale-95 transition-transform" href="#">Contact Us</a>
+            </nav>
+            <button class="md:hidden text-primary">
+                <span class="material-symbols-outlined text-3xl" data-icon="menu">menu</span>
+            </button>
+        </div>
+        <div class="bg-outline-variant h-px w-full opacity-20"></div>
+    </header>
+
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section class="relative h-[60vh] min-h-[340px] md:h-[795px] md:min-h-[600px] w-full overflow-hidden flex items-center justify-center text-center px-2 md:px-6">
+            <div class="absolute inset-0 z-0">
+                <video src="video-tuktuk-pagina-marketing.mp4" autoplay loop muted playsinline class="w-full h-full object-cover"></video>
+                <div class="absolute inset-0 hero-overlay"></div>
+            </div>
+            <div class="relative z-10 max-w-4xl mx-auto space-y-8">
+                <h1 class="font-headline font-extrabold text-3xl xs:text-4xl sm:text-5xl md:text-7xl text-white tracking-tight leading-tight">
+                    Faça Aqui <span style="color:#FFB300">Toda a Gestão</span> do seu Negócio
+                </h1>
+                <div class="h-1 w-16 md:h-1.5 md:w-24 bg-tertiary mx-auto rounded-full"></div>
+                <div class="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center">
+                    <button class="signature-gradient text-on-primary px-6 py-3 md:px-10 md:py-4 rounded-xl font-bold text-base md:text-lg shadow-2xl hover:brightness-110 transition-all">
+                        Começar Agora
+                    </button>
+                    <button class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-6 py-3 md:px-10 md:py-4 rounded-xl font-bold text-base md:text-lg hover:bg-white/20 transition-all">
+                        Ver Demonstração
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Value Proposition Section -->
+        <section class="py-24 px-6 bg-surface">
+            <div class="max-w-4xl mx-auto text-center space-y-4">
+                <span class="font-label font-bold text-tertiary uppercase tracking-widest text-sm">Plataforma All-in-One</span>
+                <h1 class="font-headline font-bold text-3xl md:text-5xl text-secondary leading-tight">
+                    Descubra um sistema completo para o seu negócio TukTuk, simples, online e sempre acessível.
+                </h1>
+                <p class="font-body text-xl md:text-2xl text-on-surface-variant font-medium max-w-2xl mx-auto">
+                    Aumente a sua faturação e veja o seu negócio decolar com mais clientes dentro do seu tuktuk, todos os dias.
+                </p>
+                <div class="flex justify-center my-6">
+                    <img src="logo-tukflow.svg" alt="Logo TukFlow" class="h-16 w-16"/>
+                </div>
+                <div class="bg-surface-container-lowest rounded-2xl shadow-md p-6 mt-8 text-left space-y-6 max-w-2xl mx-auto">
+                    <div>
+                        <h1 class="font-headline font-bold text-xl text-primary mb-2">Já imaginou ter o seu próprio sistema?</h1>
+
+                        <p class="font-body text-base md:text-lg text-on-surface-variant">Um sistema 100% seu, sem precisar de pagamentos a  plataformas externas, fim das comissões altas e sem guerras de reviews?
+
+                         </p>
+                        </div>
+                         
+                         
+                    <div>
+                        <h3 class="font-headline font-bold text-xl text-primary mb-2">O que vais encontrar nesta pagina</h3>
+                        <p class="font-body text-base md:text-lg text-on-surface-variant">Nesta página vais conhecer um sistema online pensado para o teu dia a dia. Aqui vais ver como ter ferramentas de gestão completas, sem complicações e sempre no teu controlo.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-headline font-bold text-xl text-primary mb-2">Vais ter</h3>
+                        <p class="font-body text-base md:text-lg text-on-surface-variant">O teu próprio site personalizado, onde podes mostrar os teus passeios, preços e contactos de forma simples e clara.</p>
+                    </div>
+                    <div class="my-6"></div>
+                    <div>
+                        <h3 class="font-headline font-bold text-xl text-primary mb-2">Sistema de reservas personalizado</h3>
+                        <p class="font-body text-base md:text-lg text-on-surface-variant">Um sistema de reservas, onde o cliente pode ver o teu tuktuk no mapa, chamar-te diretamente ou marcar uma viagem para mais tarde, tudo online.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Bento Grid - Cards arrumados e sem duplicações/aninhamento errado -->
+        <section class="py-8 px-2 sm:px-4 md:px-6 w-full mb-24">
+            <div class="max-w-7xl mx-auto">
+                <!-- Grid limpo com os 6 cards (mantidos todos os elementos, textos, ícones e imagens) -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+                    <!-- Card: Site da Empresa -->
+                    <div class="bg-surface-container-lowest p-4 rounded-2xl flex flex-col space-y-3 shadow-sm border border-outline-variant/10 group hover:shadow-xl transition-all duration-500 min-h-[200px]">
+                        <div class="bg-primary/10 w-10 h-10 rounded-xl flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined text-2xl" data-icon="laptop_mac">laptop_mac</span>
+                        </div>
+                        <h3 class="font-headline font-bold text-base text-on-surface">Site da Empresa</h3>
+                        <p class="text-on-surface-variant text-xs leading-relaxed">Visualize seus tours, preços e durações em um site profissional e otimizado para conversão.</p>
+                        <div class="mt-auto">
+                            <button class="flex items-center gap-2 text-tertiary font-bold group-hover:gap-4 transition-all text-xs">
+                                Ver pormenores
+                                <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+                            </button>
+                        </div>
+                        <div class="mt-2 rounded-lg overflow-hidden">
+                            <img alt="Site" class="w-full h-40 object-contain bg-white" src="public/pagina-web.gif"/>
+                        </div>
+                    </div>
+
+                    <!-- Card: Mapa em Tempo Real -->
+                    <div class="bg-surface-container-lowest p-4 rounded-2xl flex flex-col space-y-3 shadow-sm border border-outline-variant/10 group hover:shadow-xl transition-all duration-500 min-h-[200px]">
+                        <div class="bg-secondary/10 w-10 h-10 rounded-xl flex items-center justify-center text-secondary">
+                            <span class="material-symbols-outlined text-2xl" data-icon="map">map</span>
+                        </div>
+                        <h3 class="font-headline font-bold text-base text-on-surface">Mapa em Tempo Real</h3>
+                        <p class="text-on-surface-variant text-xs leading-relaxed">Acompanhe seus TukTuks ao vivo e ofereça transparência total aos seus clientes.</p>
+                        <div class="mt-auto">
+                            <button class="flex items-center gap-2 text-tertiary font-bold group-hover:gap-4 transition-all text-xs">
+                                Ver pormenores
+                                <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+                            </button>
+                        </div>
+                        <div class="mt-2 rounded-lg overflow-hidden">
+                            <img alt="Mapa" class="w-full h-40 object-contain bg-white" src="public/maps-tempo real.gif"/>
+                        </div>
+                    </div>
+
+                    <!-- Card: Sistema de Reservas -->
+                    <div class="bg-surface-container-lowest p-4 rounded-2xl flex flex-col space-y-3 shadow-sm border border-outline-variant/10 group hover:shadow-xl transition-all duration-500 min-h-[200px]">
+                        <div class="bg-tertiary/10 w-10 h-10 rounded-xl flex items-center justify-center text-tertiary">
+                            <span class="material-symbols-outlined text-2xl" data-icon="calendar_month">calendar_month</span>
+                        </div>
+                        <h3 class="font-headline font-bold text-base text-on-surface">Sistema de Reservas</h3>
+                        <p class="text-on-surface-variant text-xs leading-relaxed">Gerencie reservas de forma simples, online e intuitiva com calendário integrado.</p>
+                        <div class="mt-auto">
+                            <button class="flex items-center gap-2 text-tertiary font-bold group-hover:gap-4 transition-all text-xs">
+                                Ver pormenores
+                                <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+                            </button>
+                        </div>
+                        <div class="mt-2 rounded-lg overflow-hidden">
+                            <img alt="Reservas" class="w-full h-40 object-contain bg-white" src="public/calendar.gif"/>
+                        </div>
+                    </div>
+
+                    <!-- Card: App de Geolocalização -->
+                    <div class="bg-surface-container-lowest p-4 rounded-2xl flex flex-col space-y-3 shadow-sm border border-outline-variant/10 group hover:shadow-xl transition-all duration-500 min-h-[200px]">
+                        <div class="bg-tertiary/10 w-10 h-10 rounded-xl flex items-center justify-center text-tertiary">
+                            <span class="material-symbols-outlined text-2xl" data-icon="location_on">location_on</span>
+                        </div>
+                        <h3 class="font-headline font-bold text-base text-on-surface">App de Geolocalização</h3>
+                        <p class="text-on-surface-variant text-xs leading-relaxed">App mobile para Tuktuks indicarem a sua localização em tempo real.</p>
+                        <div class="mt-auto">
+                            <button class="flex items-center gap-2 text-tertiary font-bold group-hover:gap-4 transition-all text-xs">
+                                Ver pormenores
+                                <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+                            </button>
+                        </div>
+                        <div class="mt-2 rounded-lg overflow-hidden">
+                            <img alt="Geolocalização" class="w-full h-40 object-contain bg-white" src="public/mapa-celular.gif"/>
+                        </div>
+                    </div>
+
+                    <!-- Card: Painel Administrativo -->
+                    <div class="bg-surface-container-lowest p-4 rounded-2xl flex flex-col space-y-3 shadow-sm border border-outline-variant/10 group hover:shadow-xl transition-all duration-500 min-h-[200px]">
+                        <div class="bg-secondary-container/20 w-10 h-10 rounded-xl flex items-center justify-center text-secondary">
+                            <span class="material-symbols-outlined text-2xl" data-icon="dashboard">dashboard</span>
+                        </div>
+                        <h3 class="font-headline font-bold text-base text-on-surface">Painel Administrativo</h3>
+                        <p class="text-on-surface-variant text-xs leading-relaxed">Controle total de frotas, histórico e faturamento em um dashboard unificado.</p>
+                        <div class="mt-auto">
+                            <button class="flex items-center gap-2 text-tertiary font-bold group-hover:gap-4 transition-all text-xs">
+                                Ver pormenores
+                                <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+                            </button>
+                        </div>
+                        <div class="mt-2 rounded-lg overflow-hidden">
+                            <img alt="Dashboard" class="w-full h-40 object-contain bg-white" src="public/dashboard.gif"/>
+                        </div>
+                    </div>
+
+                    <!-- Card: Área do Condutor -->
+                    <div class="bg-surface-container-lowest p-4 rounded-2xl flex flex-col space-y-3 shadow-sm border border-outline-variant/10 group hover:shadow-xl transition-all duration-500 min-h-[200px]">
+                        <div class="bg-tertiary-fixed/40 w-10 h-10 rounded-xl flex items-center justify-center text-tertiary">
+                            <span class="material-symbols-outlined text-2xl" data-icon="badge">badge</span>
+                        </div>
+                        <h3 class="font-headline font-bold text-base text-on-surface">Área do Condutor</h3>
+                        <p class="text-on-surface-variant text-xs leading-relaxed">Gestão individualizada de serviço e histórico detalhado para cada motorista.</p>
+                        <div class="mt-auto">
+                            <button class="flex items-center gap-2 text-tertiary font-bold group-hover:gap-4 transition-all text-xs">
+                                Ver pormenores
+                                <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+                            </button>
+                        </div>
+                        <div class="mt-2 rounded-lg overflow-hidden">
+                            <img alt="Condutor" class="w-full h-40 object-contain bg-white" src="public/driver.gif"/>
+                        </div>
+                    </div>
+                </div>
+
+ <!-- CTA Section -->
+<section class="bg-surface-container-low py-24 px-6 overflow-hidden">
+<div class="w-full mb-10">
+    <div class="w-full bg-tertiary/10 py-8 px-4 md:px-12 rounded-2xl flex items-center justify-center">
+        <h1 class="font-headline font-bold text-3xl md:text-5xl text-secondary leading-tight w-full text-center">Pronto para geries o teu negócio na palma da tua mão?</h1>
+    </div>
+</div>
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+<div class="flex-1 space-y-8">
+<p class="text-xl text-on-surface-variant leading-relaxed max-w-xl">
+                        <ul class="list-disc pl-6 space-y-3">
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-2xl">verified_user</span> <p class="m-0">Tenha o controlo total do seu negócio — sem limites.</p></li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-2xl">lock</span> <p class="m-0">Sistema 100% seu! Cada cliente, reserva e contacto ficam diretamente consigo.</p></li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-2xl">check_circle</span> <p class="m-0">Mais organização e eficiência no dia a dia.</p></li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-2xl">hub</span> <p class="m-0">Centralize tudo num só lugar: reservas, clientes, rotas e comunicação — simples, rápido e sempre acessível.</p></li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-2xl">star</span> <p class="m-0">Experiência profissional aos seus clientes, aumente a confiança no seu serviço e transforme cada pedido numa oportunidade de faturação.</p></li>
+                            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary text-2xl">trending_up</span> <p class="m-0">Prepare-se para crescer — com o nosso sistema, não está apenas a gerir melhor, está a preparar o seu negócio para crescer, todos os dias.</p></li>
+                        </ul>
+                    </p>
+<div class="flex gap-4">
+<button class="signature-gradient text-on-primary px-8 py-4 rounded-xl font-bold shadow-xl">Solicitar Demonstração</button>
+<button class="bg-white border border-outline-variant/30 text-on-surface px-8 py-4 rounded-xl font-bold">Ver Planos</button>
+</div>
+</div>
+<div class="flex-1 relative">
+<div class="absolute -top-12 -right-12 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="relative bg-white p-4 rounded-[2.5rem] shadow-2xl rotate-2">
+<img alt="Close up of a vibrant teal electric TukTuk parked on a charming European street with high-tech dashboard" class="rounded-[2rem] w-full aspect-video object-cover" data-alt="Close up of a vibrant teal electric TukTuk parked on a charming European street with high-tech dashboard" src="\public\tuktuk-amarelo.png
+"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 border-t border-slate-200 pt-20 pb-12 px-6">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+<div class="space-y-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="electric_rickshaw">electric_rickshaw</span>
+<span class="font-headline font-black text-2xl text-primary tracking-tighter">TukPulse</span>
+</div>
+<p class="text-slate-500 leading-relaxed">
+                    A plataforma líder em gestão de mobilidade leve urbana. Potencializando frotas de TukTuks em todo o mundo.
+                </p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-4">
+<h4 class="font-bold text-on-surface">Produto</h4>
+<ul class="space-y-2 text-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">Funcionalidades</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Preços</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">BackOffice</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-on-surface">Empresa</h4>
+<ul class="space-y-2 text-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">Sobre Nós</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Suporte</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Blog</a></li>
+</ul>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-on-surface">Newsletter</h4>
+<p class="text-sm text-slate-500">Receba atualizações e insights sobre gestão de frotas.</p>
+<div class="flex gap-2">
+<input class="bg-white border-slate-200 rounded-lg flex-1 text-sm focus:ring-primary focus:border-primary" placeholder="Seu email" type="email"/>
+<button class="bg-primary text-white p-2 rounded-lg">
+<span class="material-symbols-outlined" data-icon="send">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
+<p>© 2024 TukPulse Kinetic. Orchestrating Movement.</p>
+<div class="flex gap-8">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Fleet Support</a>
+</div>
+</div>
+</footer>
+<!-- Mobile Bottom Navigation (Visible only on mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full glass-nav border-t border-slate-100 flex justify-around py-3 px-2 z-50">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" data-icon="home" data-weight="fill">home</span>
+<span class="text-[10px] font-bold">Início</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+<span class="text-[10px]">Reservas</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard_customize">dashboard_customize</span>
+<span class="text-[10px]">BackOffice</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="text-[10px]">Relatórios</span>
+</a>
+</nav>
+</body></html>

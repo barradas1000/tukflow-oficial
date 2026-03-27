@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Você No Comando do Seu Sucesso Tuk-Tuk</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Plus+Jakarta+Sans:wght@400;600&display=swap');
+    body {
+      font-family: 'Manrope', 'Plus Jakarta Sans', Arial, sans-serif;
+      background: #f8fafc;
+      color: #1f2937;
+      margin: 0;
+      padding: 0;
+    }
+    header.hero {
+      position: relative;
+      min-height: 420px;
+      background: #0ea5e9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .hero video {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;
+      filter: brightness(0.7);
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, rgba(14,165,233,0.7) 0%, rgba(16,185,129,0.5) 100%);
+      z-index: 2;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+      color: #fff;
+      padding: 2.5rem 1rem 1.5rem 1rem;
+    }
+    .hero-content h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 1.2rem;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.18);
+    }
+    .main-title {
+      color: #2563eb;
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+    .main-slogan {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #fb923c;
+      margin-bottom: 0.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .main-slogan .arrow {
+      display: inline-block;
+      color: #2563eb;
+      font-size: 1.5rem;
+      margin-left: 0.2rem;
+    }
+    .main-desc {
+      color: #2563eb;
+      font-size: 1.1rem;
+      margin-bottom: 2.2rem;
+      font-weight: 600;
+    }
+    .features-bg {
+      background: url('https://www.transparenttextures.com/patterns/azulejos.png'), linear-gradient(120deg, #e0f2fe 0%, #ccfbf1 100%);
+      padding: 3rem 0 3.5rem 0;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .feature-card {
+      background: #fff;
+      border-radius: 1.5rem;
+      box-shadow: 0 4px 24px rgba(37,99,235,0.07);
+      padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      min-height: 320px;
+      position: relative;
+      border: 1.5px solid #e0e7ef;
+      transition: box-shadow 0.2s;
+    }
+    .feature-card:hover {
+      box-shadow: 0 8px 32px rgba(37,99,235,0.13);
+    }
+    .feature-icon {
+      font-size: 2.2rem;
+      margin-bottom: 1.1rem;
+      color: #0ea5e9;
+    }
+    .feature-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #2563eb;
+      margin-bottom: 0.5rem;
+    }
+    .feature-desc {
+      font-size: 1.01rem;
+      color: #334155;
+      margin-bottom: 1.2rem;
+      font-weight: 500;
+    }
+    .feature-btn {
+      background: #fb923c;
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      padding: 0.6rem 1.3rem;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.18s;
+      margin-top: auto;
+    }
+    .feature-btn:hover {
+      background: #f59e42;
+    }
+    @media (max-width: 700px) {
+      .hero-content h1 { font-size: 1.5rem; }
+      .main-title { font-size: 1.2rem; }
+      .features-bg { padding: 1.5rem 0; }
+      .feature-card { padding: 1.2rem 0.7rem; min-height: 220px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <video src="video-tuktuk-pagina-marketing.mp4" autoplay loop muted playsinline></video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Você No Comando do Seu Sucesso Tuk-Tuk</h1>
+    </div>
+  </header>
+  <main>
+    <section style="background:#fff; text-align:center; padding:2.5rem 1rem 1.5rem 1rem;">
+      <div class="main-title">O Seu Negócio, o Seu Caminho. Apenas Mais Fácil e Lucrativo.</div>
+      <div class="main-slogan">
+        Turbine a sua faturação e veja o seu orgulho crescer!
+        <span class="arrow">↑↑</span>
+      </div>
+      <div class="main-desc">
+        Chega de dias improdutivos. Conheça o parceiro que facilita sua vida, mantendo você no controle.
+      </div>
+    </section>
+    <section class="features-bg">
+      <div class="features-grid">
+        <div class="feature-card">
+          <span class="feature-icon">🌍</span>
+          <div class="feature-title">Mostre o Orgulho do Seu Negócio ao Mundo.</div>
+          <div class="feature-desc">Dê visibilidade aos seus melhores tours e receba reservas sem esforço, dia e noite, de clientes em qualquer lugar.</div>
+          <button class="feature-btn">Ver pormenores</button>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">📡</span>
+          <div class="feature-title">Não se Perca de Seus Clientes, Nem de Seus Sonhos.</div>
+          <div class="feature-desc">Veja onde cada TukTuk está e mostre aos clientes que você é o parceiro mais confiável. Chega de procurar às cegas.</div>
+          <button class="feature-btn">Ver pormenores</button>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">📅</span>
+          <div class="feature-title">O Controle do Agendamento na Sua Mão.</div>
+          <div class="feature-desc">Menos telefone, menos erros. Seus dias mais produtivos e seu bolso mais cheio, sem perder sua liberdade de escolha.</div>
+          <button class="feature-btn">Ver pormenores</button>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🧑‍✈️</span>
+          <div class="feature-title">A Liberdade dos Condutores, a Sua Tranquilidade.</div>
+          <div class="feature-desc">Ative e desative a localização com um toque. Mais segurança para eles, e total visibilidade para quem controla o negócio: Você.</div>
+          <button class="feature-btn">Ver pormenores</button>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">📊</span>
+          <div class="feature-title">O Comando Central do Seu Império.</div>
+          <div class="feature-desc">Gestão simples de tudo o que importa: reservas, equipe, frota e resultados. Menos papel, mais resultados.</div>
+          <button class="feature-btn">Ver pormenores</button>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🤝</span>
+          <div class="feature-title">Respeito e Independência para Sua Equipe.</div>
+          <div class="feature-desc">Uma área pessoal para cada condutor gerir suas tarefas e ver seu próprio progresso. Motivação que reflete no lucro.</div>
+          <button class="feature-btn">Ver pormenores</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    // JS para futuras interações, ex: abrir detalhes dos cards
+    document.querySelectorAll('.feature-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        alert('Em breve: detalhes do recurso!');
+      });
+    });
+  </script>
+</body>
+</html>
