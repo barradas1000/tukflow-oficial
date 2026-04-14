@@ -1,48 +1,67 @@
-|-- cara velho.mp4
+|-- .vercelignore
 |-- FireShot Capture 003 - tuktuk-milfontes - [tuktuk-milfontes.vercel.app].png
 |-- gestão de condutores.png
 |-- global.css
-|-- images.png
+|-- languages
+    |-- en.js
+    |-- es.js
+    |-- pt.js
 |-- oficial
-    |-- logo-tukflow.svg
+    |-- cara velho.mp4
+    |-- index-2.html
+    |-- index-3.html
+    |-- index-4.html
+    |-- index.html
+    |-- mapa-lisboa.png
     |-- pagina-marketing-apresenta-sistema.css
-    |-- pagina-marketing-apresenta-sistema.html
     |-- pagina-marketing-apresenta-sistema.js
+    |-- pagina-painel-admin.html
+    |-- paginas
+        |-- pagina-convite.html
+        |-- pagina-disponibilidade.html
+        |-- pagina-painel-admin.html
+        |-- pagina-reservas.html
+        |-- pagina-traking.html
+    |-- painel-admin.png
     |-- public
         |-- calendar.gif
-        |-- condutor.jpg
         |-- dashboard.gif
         |-- driver.gif
         |-- mapa-celular.gif
         |-- maps-tempo real.gif
         |-- pagina-web.gif
+        |-- tukflow-icon-3d-2.png
+        |-- tukflow-icon-3d-3.png
+        |-- tukflow-icon-3d-transp.png
+        |-- tukflow-icon-laranja.png
+        |-- tukflow-icon-sem-fundo.jpeg
         |-- tuktuk-amarelo.png
-    |-- tuktuk-condutor.jpg
+        |-- tuktuk-movie-site.mp4
+        |-- user-icon.png
+    |-- reserva.html
+    |-- tuk-mapa-onde-estou.jpeg
     |-- video-tuktuk-pagina-marketing.mp4
 |-- package-lock.json
-|-- pagina-convite.html
-|-- pagina-disponibilidade.html
 |-- pagina-inicial-publico.png
 |-- Pagina-marketing-gpt-2 copy.html
 |-- Pagina-marketing-gpt-2.css
 |-- Pagina-marketing-gpt-2.html
 |-- Pagina-marketing-gpt-2.js
-|-- pagina-marketing-oficial copy.html
+|-- pagina-marketing-oficial-verde.html
 |-- pagina-marketing-peplexity-2.html
 |-- pagina-marketing-perplexity.html
-|-- pagina-reservas.html
-|-- public
-    |-- calendario-condutores.gif
-    |-- gps.gif
-    |-- script.js
-    |-- styles.css
-    |-- tuktuk-amarelo.png
-|-- sem-dinheiro-2.mp4
-|-- sem-dinheiro-3.mp4
+|-- painel-admin.png
+|-- README.md
 |-- sem-dinheiro.mp4
+|-- tuk-no-mapa.png
 |-- tukruk azul , jovem.mp4
 |-- tuktuk-condutor -pensativo-01.-ok mp4.mp4
 |-- tuktuk-condutor -pensativo-01.mp4
 |-- tuktuk-video-nao-subrou-nada.mp4
 |-- tutu-fazer contas.mp4
+|-- vercel.json
 |-- video, ok para usar.mp4
+|-- video-demo
+    |-- icon-tukflow-animado.mp4
+    |-- sem-dinheiro-2.mp4
+    |-- sem-dinheiro-3.mp4

@@ -28,7 +28,16 @@
     </style>
 </head>
 <body class="bg-slate-100 text-slate-900 pb-[calc(1rem+var(--safe-bottom))]">
+<div class="w-full text-center py-2">
+    <span class="text-3xl font-extrabold text-red-600">Pagina Demo</span>
+</div>
 <div class="mx-auto w-full max-w-md min-h-screen bg-slate-50 sm:my-4 sm:rounded-3xl sm:shadow-xl overflow-hidden">
+    <div class="p-4 flex justify-start">
+        <a href="../index.html" class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-full shadow-md transition-colors duration-150 flex items-center gap-2">
+            <svg class="h-5 w-5 mr-1 inline-block align-middle" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+            Voltar página inicial
+        </a>
+    </div>
 <!-- BEGIN: MainHeader -->
 <header class="bg-white border-b border-slate-100 p-4 flex flex-col items-center gap-3 sticky top-0 z-50 shadow-sm" data-purpose="header">
 <div class="w-full flex justify-between items-center">
@@ -57,7 +66,8 @@
 </svg>
 </div>
 <p class="text-xs text-indigo-900 leading-relaxed">
-                Bem-vindo à <span class="font-bold">Gestão de Disponibilidade</span>. Configure períodos de fecho e gerencie horários.
+                Bem-vindo à <span class="font-bold">Gestão de Disponibilidade</span>. Esta é a zona onde pode gerir as ocupações e disponibilidade dos tuktuks, por períodos de tempo durante o dia.
+A gestão por dias, semanas ou meses de forma simples diretamente pelo calendário..
             </p>
 </section>
 <!-- END: Info Section -->
@@ -259,11 +269,6 @@
             if (target) {
                 target.classList.add('highlight-active');
                 target.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-                // Remove highlight after 2.5 seconds
-                setTimeout(() => {
-                    target.classList.remove('highlight-active');
-                }, 2500);
             }
         }
     </script>

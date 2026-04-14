@@ -29,7 +29,16 @@
   </style>
 </head>
 <body class="bg-slate-100 font-sans text-slate-900 pb-[calc(1rem+var(--safe-bottom))]">
+<div class="w-full text-center py-2">
+  <span class="text-3xl font-extrabold text-red-600">Pagina Demo</span>
+</div>
 <div class="mx-auto w-full max-w-md min-h-screen bg-slate-50 sm:my-4 sm:rounded-3xl sm:shadow-xl overflow-hidden">
+  <div class="p-4 flex justify-start">
+    <a href="../index.html" class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-full shadow-md transition-colors duration-150 flex items-center gap-2">
+      <svg class="h-5 w-5 mr-1 inline-block align-middle" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+      Voltar página inicial
+    </a>
+  </div>
 <!-- BEGIN: MainHeader -->
 <header class="bg-white border-b sticky top-0 z-50 px-4 py-3.5 flex items-center justify-between">
 <div class="flex items-center gap-3">
@@ -190,7 +199,7 @@
 </svg>
 </div>
 <div>
-<h4 class="font-bold text-sm text-slate-800">Formulário de Convite</h4>
+<h4 class="font-bold text-sm text-slate-800">Formulário de Convite para Novos Condutores</h4>
 <p class="text-xs text-slate-500 leading-relaxed">Campos de entrada para Nome, Email e Whatsapp para iniciar o processo.</p>
 </div>
 </div>
@@ -253,17 +262,10 @@
         document.querySelectorAll('.highlight-section').forEach(el => {
           el.classList.remove('highlight-section');
         });
-        
         // Scroll to element
         element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        
         // Add highlight
         element.classList.add('highlight-section');
-        
-        // Remove highlight after 2 seconds
-        setTimeout(() => {
-          element.classList.remove('highlight-section');
-        }, 2000);
       }
     }
   </script>

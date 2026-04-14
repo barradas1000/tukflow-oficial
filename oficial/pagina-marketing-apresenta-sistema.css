@@ -1,58 +1,107 @@
+/* ==================== FEATURE CARDS ==================== */
 .feature-card-variant1 {
   background: linear-gradient(135deg, #FFF9C4 0%, #FFE082 100%) !important; /* amarelo suave */
 }
+
 .feature-card-variant2 {
   background: linear-gradient(135deg, #FFE0B2 0%, #FFCC80 100%) !important; /* laranja suave */
 }
+
 /* CSS extraído de pagina-marketing-apresenta-sistema.html */
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
+
 .glass-nav {
   background: rgba(255, 236, 179, 0.85); /* amarelo claro translúcido */
   backdrop-filter: blur(12px);
 }
+
 .signature-gradient {
   background: linear-gradient(135deg, #FFB300 0%, #FF7043 100%); /* amarelo para laranja */
 }
+
 .hero-overlay {
-  background: linear-gradient(to bottom, rgba(33, 150, 243, 0.18), rgba(13, 71, 161, 0.22)); /* azul claro para azul escuro translúcido, mais leve */
+  background: linear-gradient(to bottom, rgba(33, 150, 243, 0.18), rgba(13, 71, 161, 0.22));
 }
+
+/* Grid assimétrico */
 .asymmetric-grid-item:nth-child(even) {
   margin-top: 2rem;
 }
+
+/* Altura mínima do hero / container principal */
+.hero-section,
+.main-container,
+body,
+html {
   min-height: max(884px, 100dvh);
   background: #FFF8E1;
 }
 
-/* Novas cores para elementos principais */
-.bg-surface, .bg-surface-container-lowest, .bg-surface-container, .bg-surface-container-low, .bg-surface-container-high, .bg-surface-container-highest {
+/* ==================== NOVAS CORES DO SISTEMA ==================== */
+.bg-surface,
+.bg-surface-container-lowest,
+.bg-surface-container,
+.bg-surface-container-low,
+.bg-surface-container-high,
+.bg-surface-container-highest {
   background-color: #FFFDE7 !important; /* fundo bege ainda mais claro */
 }
+
 .text-primary {
   color: #FF7043 !important; /* laranja vivo */
 }
+
 .text-on-primary {
   color: #fff !important;
 }
+
 .text-secondary {
   color: #FFA000 !important; /* amarelo escuro */
 }
-.text-tertiary, .text-on-tertiary {
+
+.text-tertiary,
+.text-on-tertiary {
   color: #FFB300 !important; /* amarelo */
 }
-.bg-primary, .bg-primary-container {
+
+.bg-primary,
+.bg-primary-container {
   background-color: #FF7043 !important;
 }
-.bg-secondary, .bg-secondary-container {
+
+.bg-secondary,
+.bg-secondary-container {
   background-color: #FFA000 !important;
 }
-.bg-tertiary, .bg-tertiary-container {
+
+.bg-tertiary,
+.bg-tertiary-container {
   background-color: #FFB300 !important;
 }
-.border-outline-variant, .border-outline-variant\/10 {
+
+.border-outline-variant,
+.border-outline-variant\/10 {
   border-color: #FFB30033 !important;
 }
-.shadow-lg, .shadow-xl, .shadow-2xl {
+
+.shadow-lg,
+.shadow-xl,
+.shadow-2xl {
   box-shadow: 0 4px 24px 0 rgba(255, 183, 77, 0.15);
+}
+
+/* Cards de benefícios: fundo branco e sombra acentuada em todas as telas */
+.benefit-cards-grid > div {
+  background-color: #fff !important;
+  box-shadow: 0 6px 32px 0 rgba(255, 183, 77, 0.22), 0 1.5px 6px 0 rgba(0,0,0,0.07);
+  /* Sombra mais forte e suave */
+}
+
+@media (min-width: 1024px) {
+  /* Cards de benefícios em desktop: fundo branco */
+  .benefit-cards-grid > div {
+    background-color: #fff !important;
+  }
 }
