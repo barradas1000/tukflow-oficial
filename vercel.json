@@ -8,7 +8,7 @@
     { "src": "*.html", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "^/$", "dest": "/oficial/index-3.html" },
+    { "src": "^/$", "dest": "/oficial/index.html" },
     { "src": "^/(.*)$", "dest": "/$1" }
   ],
   "cleanUrls": true,
