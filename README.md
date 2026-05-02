@@ -101,4 +101,4 @@ Adicione o workflow que já colocámos em `.github/workflows/vercel-deploy.yml` 
 
 3. Após push para a branch `main`, o workflow executa e publica o site em produção (usa `vercel` com `prod: true`).
 
-Se preferir que o workflow faça deploy apenas em tags ou em outra branch, diga qual o seu fluxo preferido e eu adapto o ficheiro.
+Se preferir que o workflow faça deploy apenas em tags ou em outra branch, diga qual o seu fluxo preferido e eu adapto o ficheiro...
