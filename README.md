@@ -83,7 +83,8 @@ vercel --prod
 ```
 
 Observações sobre a configuração incluída:
-- O ficheiro `vercel.json` já está preparado para servir ficheiros estáticos e mapeia `/` para `/oficial/index-3.html`.
+- O ficheiro `vercel.json` está configurado para servir ficheiros estáticos sem build, mapeando `/` para `/oficial/index.html`.
+- A secção `builds` com `@vercel/static` foi removida (depreciado) — o Vercel agora deteta automaticamente os ficheiros estáticos.
 - Use o script `npm run start` para pré-visualizar localmente (usa `serve` via `npx`).
 
 Se preferir, eu posso: configurar um ficheiro `.env` com variáveis públicas, adicionar um domínio personalizado no vercel.json, ou automatizar o processo com um workflow GitHub Actions. Diga o que prefere.
