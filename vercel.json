@@ -1,12 +1,7 @@
 {
   "version": 2,
-  "builds": [
-    { "src": "oficial/**/*.html", "use": "@vercel/static" },
-    { "src": "oficial/**", "use": "@vercel/static" },
-    { "src": "public/**", "use": "@vercel/static" },
-    { "src": "languages/**", "use": "@vercel/static" },
-    { "src": "*.html", "use": "@vercel/static" }
-  ],
+  "buildCommand": null,
+  "outputDirectory": ".",
   "routes": [
     { "src": "^/$", "dest": "/oficial/index.html" },
     { "src": "^/(.*)$", "dest": "/$1" }
