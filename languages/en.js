@@ -91,7 +91,8 @@ window.translations = {
   gestao_admin: "Admin Management",
   gestao_frota: "Fleet Management",
   hero_title: "Manage Your Business Here",
-  hero_gestao_negocio: "Few customers? Tired of paying commissions and fines?",
+  hero_gestao_negocio:
+    '<span class="hero-question">Few customers?</span><span class="hero-pay">Tired of paying</span><span class="hero-alert">Commissions and fines?</span>',
   hero_subtitle:
     'Stop fighting for clients on the street. With <span style="color:#91BFD2;font-weight:700;">TukFlow</span>, customers come to you — online bookings, zero commissions, no middlemen.',
   dores_title: "We know your day. In detail.",

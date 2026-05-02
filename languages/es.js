@@ -92,7 +92,7 @@ window.translations = {
   gestao_frota: "Gestión de Flota",
   hero_title: "Gestiona tu negocio aquí",
   hero_gestao_negocio:
-    "¿Pocos clientes? ¿Cansado de pagar comisiones y multas?",
+    '<span class="hero-question">¿Pocos clientes?</span><span class="hero-pay">Cansado de pagar</span><span class="hero-alert">Comisiones y multas?</span>',
   hero_subtitle:
     'Deja de luchar en la calle. Con <span style="color:#91BFD2;font-weight:700;">TukFlow</span>, los clientes llegan a ti — reservas online, sin comisiones, sin intermediarios.',
   dores_title: "Conocemos tu día. Al detalle.",

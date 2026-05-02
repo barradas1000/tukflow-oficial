@@ -90,7 +90,8 @@ window.translations = {
   gestao_admin: "Gestão Admin",
   gestao_frota: "Gestão de Frota",
   hero_title: "Faça Aqui Toda a Gestão do seu Negócio",
-  hero_gestao_negocio: "Poucos clientes, Farto de Pagar Comissões e Multas?",
+  hero_gestao_negocio:
+    '<span class="hero-question">Poucos clientes?</span><span class="hero-pay">Farto de pagar</span><span class="hero-alert">Comissões e Multas?</span>',
   hero_subtitle:
     'Chega de lutar na rua. Com o <span style="color:#91BFD2;font-weight:700;">TukFlow</span>, os clientes chegam até ti — reservas online, sem comissões, sem intermediários.',
   dores_title:
