@@ -1,16 +1,17 @@
+|-- .github
+    |-- workflows
+        |-- vercel-deploy.yml
+|-- .gitignore
 |-- .vercelignore
-|-- FireShot Capture 003 - tuktuk-milfontes - [tuktuk-milfontes.vercel.app].png
-|-- gestão de condutores.png
 |-- global.css
 |-- languages
     |-- en.js
     |-- es.js
+    |-- fr.js
     |-- pt.js
+    |-- translator.js
 |-- oficial
     |-- cara velho.mp4
-    |-- index-2.html
-    |-- index-3.html
-    |-- index-4.html
     |-- index.html
     |-- mapa-lisboa.png
     |-- pagina-marketing-apresenta-sistema.css
@@ -40,16 +41,10 @@
         |-- user-icon.png
     |-- reserva.html
     |-- tuk-mapa-onde-estou.jpeg
-    |-- video-tuktuk-pagina-marketing.mp4
+    |-- Video-Tuktuk-Pagina-Marketing.mp4
 |-- package-lock.json
-|-- pagina-inicial-publico.png
-|-- Pagina-marketing-gpt-2 copy.html
-|-- Pagina-marketing-gpt-2.css
-|-- Pagina-marketing-gpt-2.html
-|-- Pagina-marketing-gpt-2.js
-|-- pagina-marketing-oficial-verde.html
-|-- pagina-marketing-peplexity-2.html
-|-- pagina-marketing-perplexity.html
+|-- package.json
+|-- PAGINA-PROMO.md
 |-- painel-admin.png
 |-- README.md
 |-- sem-dinheiro.mp4

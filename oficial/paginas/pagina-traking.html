@@ -262,25 +262,29 @@
 <div class="relative group hidden md:block">
 <button id="langSelectorBtn" class="flex items-center gap-1 px-2 py-1 rounded-full border border-gray-300 bg-white hover:bg-gray-100 text-xs font-bold" type="button">
 <span class="material-symbols-outlined text-base align-middle">language</span>
-<span id="currentLang">PT</span>
+<span class="flag" id="currentFlag">🇵🇹</span>
+<span id="currentLangText">PT</span>
 <span class="material-symbols-outlined text-xs align-middle">expand_more</span>
 </button>
 <div id="langDropdown" class="absolute top-full right-0 mt-1 w-28 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-1 z-50">
-<button class="block w-full text-left px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors text-xs" data-lang="pt" type="button">Português</button>
-<button class="block w-full text-left px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors text-xs" data-lang="en" type="button">English</button>
-<button class="block w-full text-left px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors text-xs" data-lang="es" type="button">Español</button>
+<button class="lang-option block w-full text-left px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors text-xs" data-lang="pt" type="button">🇵🇹 Português</button>
+<button class="lang-option block w-full text-left px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors text-xs" data-lang="en" type="button">🇬🇧 English</button>
+<button class="lang-option block w-full text-left px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors text-xs" data-lang="es" type="button">🇪🇸 Español</button>
+<button class="lang-option block w-full text-left px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors text-xs" data-lang="fr" type="button">🇫🇷 Français</button>
 </div>
 </div>
 <div class="relative group md:hidden">
 <button id="langSelectorBtnMobile" class="flex items-center gap-1 px-2 py-1 rounded-full border border-gray-300 bg-white hover:bg-gray-100 text-xs font-bold" type="button">
 <span class="material-symbols-outlined text-base align-middle">language</span>
+<span class="flag" id="currentFlagMobile">🇵🇹</span>
 <span id="currentLangMobile">PT</span>
 <span class="material-symbols-outlined text-xs align-middle">expand_more</span>
 </button>
 <div id="langDropdownMobile" class="absolute top-full right-0 mt-1 w-28 bg-white rounded-xl shadow-xl opacity-0 invisible transition-all duration-200 p-1 z-50">
-<button class="block w-full text-left px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors text-xs" data-lang="pt" type="button">Português</button>
-<button class="block w-full text-left px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors text-xs" data-lang="en" type="button">English</button>
-<button class="block w-full text-left px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors text-xs" data-lang="es" type="button">Español</button>
+<button class="lang-option block w-full text-left px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors text-xs" data-lang="pt" type="button">🇵🇹 Português</button>
+<button class="lang-option block w-full text-left px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors text-xs" data-lang="en" type="button">🇬🇧 English</button>
+<button class="lang-option block w-full text-left px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors text-xs" data-lang="es" type="button">🇪🇸 Español</button>
+<button class="lang-option block w-full text-left px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors text-xs" data-lang="fr" type="button">🇫🇷 Français</button>
 </div>
 </div>
 </div>
@@ -534,11 +538,24 @@
   function setLanguage(lang) {
     localStorage.setItem('lang', lang);
 
-    const currentLang = document.getElementById('currentLang');
+    const flagMap = { pt: '🇵🇹', en: '🇬🇧', es: '🇪🇸', fr: '🇫🇷' };
+    const currentFlag = document.getElementById('currentFlag');
+    const currentLangText = document.getElementById('currentLangText');
+    const currentFlagMobile = document.getElementById('currentFlagMobile');
     const currentLangMobile = document.getElementById('currentLangMobile');
 
-    if (currentLang) currentLang.textContent = lang.toUpperCase();
+    if (currentFlag) currentFlag.textContent = flagMap[lang] || '🇵🇹';
+    if (currentLangText) currentLangText.textContent = lang.toUpperCase();
+    if (currentFlagMobile) currentFlagMobile.textContent = flagMap[lang] || '🇵🇹';
     if (currentLangMobile) currentLangMobile.textContent = lang.toUpperCase();
+
+    // Update active state in dropdowns
+    document.querySelectorAll('.lang-option').forEach(btn => {
+      btn.classList.remove('active');
+      if (btn.getAttribute('data-lang') === lang) {
+        btn.classList.add('active');
+      }
+    });
 
     loadLanguageScript(lang, applyTranslations);
   }

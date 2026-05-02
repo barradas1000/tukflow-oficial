@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="pt-br"><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Gestão de Convites - Mobile</title>
+<title data-i18n="conv_page_title">Gestão de Convites - Mobile</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script>
     tailwind.config = {
@@ -17,6 +17,8 @@
       }
     }
   </script>
+<!-- Google Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <style data-purpose="custom-animations">
     .highlight-section {
       border: 3px solid #ef4444 !important;
@@ -27,16 +29,82 @@
       --safe-bottom: env(safe-area-inset-bottom, 0px);
     }
   </style>
+<style>
+    /* Language Selector Styles */
+    .lang-btn {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        padding: 6px 12px;
+        border-radius: 9999px;
+        font-size: 14px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.2s;
+        border: none;
+        background: transparent;
+        color: #1e293b;
+    }
+    .lang-btn:hover {
+        background: #e2e8f0;
+    }
+    .lang-dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        margin-top: 4px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        min-width: 120px;
+        z-index: 100;
+        overflow: hidden;
+    }
+    .lang-dropdown.show {
+        display: block;
+    }
+    .lang-option {
+        display: block;
+        width: 100%;
+        padding: 10px 16px;
+        text-align: left;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        border: none;
+        background: none;
+        color: #334155;
+        transition: background 0.15s;
+    }
+    .lang-option:hover {
+        background: #f1f5f9;
+    }
+  </style>
 </head>
 <body class="bg-slate-100 font-sans text-slate-900 pb-[calc(1rem+var(--safe-bottom))]">
+<!-- Language Selector -->
+<div class="relative" style="position: fixed; top: 8px; right: 8px; z-index: 9999;">
+    <button class="lang-btn" id="currentLang" onclick="document.getElementById('langDropdown').classList.toggle('show')" type="button">
+        <span class="flag" id="currentFlag">🇵🇹</span>
+        <span id="currentLangText">PT</span>
+        <span class="material-symbols-outlined" style="font-size: 16px;">arrow_drop_down</span>
+    </button>
+    <div class="lang-dropdown" id="langDropdown">
+        <button class="lang-option" data-lang="pt" type="button">🇵🇹 Português</button>
+        <button class="lang-option" data-lang="en" type="button">🇬🇧 English</button>
+        <button class="lang-option" data-lang="es" type="button">🇪🇸 Español</button>
+        <button class="lang-option" data-lang="fr" type="button">🇫🇷 Français</button>
+    </div>
+</div>
 <div class="w-full text-center py-2">
-  <span class="text-3xl font-extrabold text-red-600">Pagina Demo</span>
+  <span class="text-3xl font-extrabold text-red-600" data-i18n="conv_pagina_demo">Pagina Demo</span>
 </div>
 <div class="mx-auto w-full max-w-md min-h-screen bg-slate-50 sm:my-4 sm:rounded-3xl sm:shadow-xl overflow-hidden">
   <div class="p-4 flex justify-start">
     <a href="../index.html" class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-full shadow-md transition-colors duration-150 flex items-center gap-2">
       <svg class="h-5 w-5 mr-1 inline-block align-middle" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
-      Voltar página inicial
+      <span data-i18n="conv_voltar_inicio">Voltar página inicial</span>
     </a>
   </div>
 <!-- BEGIN: MainHeader -->
@@ -47,7 +115,7 @@
 <path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
 </svg>
 </div>
-<h1 class="font-bold text-[15px] leading-tight text-slate-800">Gestão de Condutores</h1>
+<h1 class="font-bold text-[15px] leading-tight text-slate-800" data-i18n="conv_gestao_condutores">Gestão de Condutores</h1>
 </div>
 <button aria-label="Abrir menu" class="text-slate-500 p-2 -mr-2" type="button">
 <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -58,22 +126,22 @@
 <!-- END: MainHeader -->
 <main class="p-4 space-y-5">
 <section class="bg-guide-bg border border-blue-100 rounded-2xl p-4" data-purpose="page-description" id="page-description">
-<h2 class="text-sm font-bold text-blue-900 mb-1">Gestão de Convites
+<h2 class="text-sm font-bold text-blue-900 mb-1" data-i18n="conv_gestao_convites">Gestão de Convites
 </h2>
-<p class="text-sm text-blue-900/80 leading-relaxed">Esta área de gestão de condutores serve para enviar convites pré-preenchidos por WhatsApp para novos condutores, permitindo que se registem no sistema.</p>
+<p class="text-sm text-blue-900/80 leading-relaxed" data-i18n="conv_descricao">Esta área de gestão de condutores serve para enviar convites pré-preenchidos por WhatsApp para novos condutores, permitindo que se registem no sistema.</p>
 </section>
 <!-- BEGIN: DashboardKPI -->
 <section class="grid grid-cols-3 gap-2" data-purpose="dashboard-kpis" id="kpi-section">
 <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm text-center">
-<span class="block text-xs text-slate-500 uppercase font-semibold">Enviados</span>
+<span class="block text-xs text-slate-500 uppercase font-semibold" data-i18n="conv_enviados">Enviados</span>
 <span class="text-xl font-bold text-solar-blue">4</span>
 </div>
 <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm text-center">
-<span class="block text-xs text-slate-500 uppercase font-semibold">Aguardando</span>
+<span class="block text-xs text-slate-500 uppercase font-semibold" data-i18n="conv_aguardando">Aguardando</span>
 <span class="text-xl font-bold text-orange-500">2</span>
 </div>
 <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm text-center">
-<span class="block text-xs text-slate-500 uppercase font-semibold">Ativos</span>
+<span class="block text-xs text-slate-500 uppercase font-semibold" data-i18n="conv_ativos">Ativos</span>
 <span class="text-xl font-bold text-solar-green">2</span>
 </div>
 </section>
@@ -82,22 +150,22 @@
 <section class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm" data-purpose="form-invitation" id="invite-form">
 <h2 class="text-base font-bold mb-4 flex items-center gap-2">
 <span class="w-1.5 h-4 bg-solar-blue rounded-full"></span>
-        Convidar condutor
+        <span data-i18n="conv_convidar_condutor">Convidar condutor</span>
       </h2>
 <form class="space-y-4">
 <div>
-<label class="block text-sm font-medium text-slate-600 mb-1" for="nome-completo">Nome Completo</label>
-<input autocomplete="name" class="w-full rounded-lg border-slate-300 focus:ring-solar-blue focus:border-solar-blue text-base" id="nome-completo" name="nomeCompleto" placeholder="Ex: João Silva" required type="text">
+<label class="block text-sm font-medium text-slate-600 mb-1" for="nome-completo" data-i18n="conv_nome_completo">Nome Completo</label>
+<input autocomplete="name" class="w-full rounded-lg border-slate-300 focus:ring-solar-blue focus:border-solar-blue text-base" id="nome-completo" name="nomeCompleto" placeholder="Ex: João Silva" required type="text" data-i18n-placeholder="conv_nome_placeholder">
 </div>
 <div>
-<label class="block text-sm font-medium text-slate-600 mb-1" for="email-condutor">Email</label>
-<input autocomplete="email" class="w-full rounded-lg border-slate-300 focus:ring-solar-blue focus:border-solar-blue text-base" id="email-condutor" name="email" placeholder="email@exemplo.com" required type="email">
+<label class="block text-sm font-medium text-slate-600 mb-1" for="email-condutor" data-i18n="conv_email">Email</label>
+<input autocomplete="email" class="w-full rounded-lg border-slate-300 focus:ring-solar-blue focus:border-solar-blue text-base" id="email-condutor" name="email" placeholder="email@exemplo.com" required type="email" data-i18n-placeholder="conv_email_placeholder">
 </div>
 <div>
-<label class="block text-sm font-medium text-slate-600 mb-1" for="whatsapp-condutor">WhatsApp</label>
-<input autocomplete="tel" class="w-full rounded-lg border-slate-300 focus:ring-solar-blue focus:border-solar-blue text-base" id="whatsapp-condutor" name="whatsapp" pattern="^\+?[0-9\s]{9,15}$" placeholder="+351 9XX XXX XXX" required type="tel">
+<label class="block text-sm font-medium text-slate-600 mb-1" for="whatsapp-condutor" data-i18n="conv_whatsapp">WhatsApp</label>
+<input autocomplete="tel" class="w-full rounded-lg border-slate-300 focus:ring-solar-blue focus:border-solar-blue text-base" id="whatsapp-condutor" name="whatsapp" pattern="^\+?[0-9\s]{9,15}$" placeholder="+351 9XX XXX XXX" required type="tel" data-i18n-placeholder="conv_whatsapp_placeholder">
 </div>
-<button class="w-full bg-solar-blue hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition-colors shadow-md shadow-blue-100 min-h-[44px]" type="submit">
+<button class="w-full bg-solar-blue hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition-colors shadow-md shadow-blue-100 min-h-[44px]" type="submit" data-i18n="conv_criar_convite">
           Criar convite
         </button>
 </form>
@@ -107,7 +175,7 @@
 <section class="space-y-4" data-purpose="list-recent-invites" id="recent-invites">
 <h2 class="text-base font-bold flex items-center gap-2">
 <span class="w-1.5 h-4 bg-orange-400 rounded-full"></span>
-        Convites Recentes
+        <span data-i18n="conv_convites_recentes">Convites Recentes</span>
       </h2>
 <!-- Invite Card 1 -->
 <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
@@ -116,13 +184,13 @@
 <p class="font-semibold text-sm text-slate-800 break-all">carlosbarradas111@gmail.com</p>
 <p class="text-xs text-slate-500">351965748022</p>
 </div>
-<span class="bg-green-100 text-green-700 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Aceite</span>
+<span class="bg-green-100 text-green-700 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase" data-i18n="conv_aceite">Aceite</span>
 </div>
 <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mt-4 pt-3 border-t border-slate-50">
-<span class="text-[10px] text-slate-400">Criado em: 06/03/2026</span>
+<span class="text-[10px] text-slate-400"><span data-i18n="conv_criado_em">Criado em:</span> 06/03/2026</span>
 <div class="flex gap-2 w-full sm:w-auto">
-<button class="text-solar-blue text-xs font-bold px-3 py-2 bg-blue-50 rounded-lg min-h-[40px] flex-1 sm:flex-none" type="button">EDITAR</button>
-<button class="text-red-500 text-xs font-bold px-3 py-2 bg-red-50 rounded-lg min-h-[40px] flex-1 sm:flex-none" type="button">ELIMINAR</button>
+<button class="text-solar-blue text-xs font-bold px-3 py-2 bg-blue-50 rounded-lg min-h-[40px] flex-1 sm:flex-none" type="button" data-i18n="conv_editar">EDITAR</button>
+<button class="text-red-500 text-xs font-bold px-3 py-2 bg-red-50 rounded-lg min-h-[40px] flex-1 sm:flex-none" type="button" data-i18n="conv_eliminar">ELIMINAR</button>
 </div>
 </div>
 </div>
@@ -132,7 +200,7 @@
 <section class="space-y-4" data-purpose="list-active-drivers" id="active-drivers">
 <h2 class="text-base font-bold flex items-center gap-2">
 <span class="w-1.5 h-4 bg-solar-green rounded-full"></span>
-        Condutores Ativos
+        <span data-i18n="conv_condutores_ativos">Condutores Ativos</span>
       </h2>
 <!-- Driver Card 1 -->
 <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm flex items-center justify-between">
@@ -146,7 +214,7 @@
 <h3 class="font-bold text-sm">Carlos Barradas</h3>
 <div class="flex items-center gap-2">
 <span class="w-2 h-2 bg-solar-green rounded-full"></span>
-<span class="text-[11px] text-slate-500">disponível • milfontes</span>
+<span class="text-[11px] text-slate-500"><span data-i18n="conv_disponivel">disponível</span> • milfontes</span>
 </div>
 </div>
 </div>
@@ -168,7 +236,7 @@
 <h3 class="font-bold text-sm">Sónia Carias</h3>
 <div class="flex items-center gap-2">
 <span class="w-2 h-2 bg-solar-green rounded-full"></span>
-<span class="text-[11px] text-slate-500">disponível • milfontes</span>
+<span class="text-[11px] text-slate-500"><span data-i18n="conv_disponivel">disponível</span> • milfontes</span>
 </div>
 </div>
 </div>
@@ -187,7 +255,7 @@
 <svg class="h-5 w-5 text-solar-blue" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 <path clip-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" fill-rule="evenodd"></path>
 </svg>
-<h2 class="text-blue-900 font-bold">Lista de Elementos da Interface</h2>
+<h2 class="text-blue-900 font-bold" data-i18n="conv_lista_elementos">Lista de Elementos da Interface</h2>
 </div>
 <div class="grid grid-cols-1 gap-4">
 <!-- Guide Item 1 -->
@@ -199,11 +267,11 @@
 </svg>
 </div>
 <div>
-<h4 class="font-bold text-sm text-slate-800">Formulário de Convite para Novos Condutores</h4>
-<p class="text-xs text-slate-500 leading-relaxed">Campos de entrada para Nome, Email e Whatsapp para iniciar o processo.</p>
+<h4 class="font-bold text-sm text-slate-800" data-i18n="conv_form_convite">Formulário de Convite para Novos Condutores</h4>
+<p class="text-xs text-slate-500 leading-relaxed" data-i18n="conv_form_convite_desc">Campos de entrada para Nome, Email e Whatsapp para iniciar o processo.</p>
 </div>
 </div>
-<button class="w-full py-2 border border-blue-200 rounded-lg text-solar-blue text-[10px] font-bold tracking-wider hover:bg-blue-50 min-h-[40px]" onclick="highlightElement('invite-form')" type="button">VER ELEMENTO</button>
+<button class="w-full py-2 border border-blue-200 rounded-lg text-solar-blue text-[10px] font-bold tracking-wider hover:bg-blue-50 min-h-[40px]" onclick="highlightElement('invite-form')" type="button" data-i18n="conv_ver_elemento">VER ELEMENTO</button>
 </div>
 <!-- Guide Item 2 -->
 <div class="bg-white p-4 rounded-xl border border-blue-50 shadow-sm">
@@ -214,11 +282,11 @@
 </svg>
 </div>
 <div>
-<h4 class="font-bold text-sm text-slate-800">Status de Convites</h4>
-<p class="text-xs text-slate-500 leading-relaxed">Tabela detalhada com estados de preenchimento e datas de expiração.</p>
+<h4 class="font-bold text-sm text-slate-800" data-i18n="conv_status_convites">Status de Convites</h4>
+<p class="text-xs text-slate-500 leading-relaxed" data-i18n="conv_status_convites_desc">Tabela detalhada com estados de preenchimento e datas de expiração.</p>
 </div>
 </div>
-<button class="w-full py-2 border border-blue-200 rounded-lg text-solar-blue text-[10px] font-bold tracking-wider hover:bg-blue-50 min-h-[40px]" onclick="highlightElement('recent-invites')" type="button">VER ELEMENTO</button>
+<button class="w-full py-2 border border-blue-200 rounded-lg text-solar-blue text-[10px] font-bold tracking-wider hover:bg-blue-50 min-h-[40px]" onclick="highlightElement('recent-invites')" type="button" data-i18n="conv_ver_elemento">VER ELEMENTO</button>
 </div>
 <!-- Guide Item 3 -->
 <div class="bg-white p-4 rounded-xl border border-blue-50 shadow-sm">
@@ -229,11 +297,11 @@
 </svg>
 </div>
 <div>
-<h4 class="font-bold text-sm text-slate-800">Sub-Navegação de Gestão</h4>
-<p class="text-xs text-slate-500 leading-relaxed">Alternância rápida entre Convites, Disponibilidade e Bloqueios.</p>
+<h4 class="font-bold text-sm text-slate-800" data-i18n="conv_sub_navegacao">Sub-Navegação de Gestão</h4>
+<p class="text-xs text-slate-500 leading-relaxed" data-i18n="conv_sub_navegacao_desc">Alternância rápida entre Convites, Disponibilidade e Bloqueios.</p>
 </div>
 </div>
-<button class="w-full py-2 border border-blue-200 rounded-lg text-solar-blue text-[10px] font-bold tracking-wider hover:bg-blue-50 min-h-[40px]" onclick="highlightElement('kpi-section')" type="button">VER ELEMENTO</button>
+<button class="w-full py-2 border border-blue-200 rounded-lg text-solar-blue text-[10px] font-bold tracking-wider hover:bg-blue-50 min-h-[40px]" onclick="highlightElement('kpi-section')" type="button" data-i18n="conv_ver_elemento">VER ELEMENTO</button>
 </div>
 <!-- Guide Item 4 -->
 <div class="bg-white p-4 rounded-xl border border-blue-50 shadow-sm">
@@ -244,11 +312,11 @@
 </svg>
 </div>
 <div>
-<h4 class="font-bold text-sm text-slate-800">Listagem de Condutores</h4>
-<p class="text-xs text-slate-500 leading-relaxed">Dados consolidados de condutores ativos e região de operação.</p>
+<h4 class="font-bold text-sm text-slate-800" data-i18n="conv_listagem_condutores">Listagem de Condutores</h4>
+<p class="text-xs text-slate-500 leading-relaxed" data-i18n="conv_listagem_condutores_desc">Dados consolidados de condutores ativos e região de operação.</p>
 </div>
 </div>
-<button class="w-full py-2 border border-blue-200 rounded-lg text-solar-blue text-[10px] font-bold tracking-wider hover:bg-blue-50 min-h-[40px]" onclick="highlightElement('active-drivers')" type="button">VER ELEMENTO</button>
+<button class="w-full py-2 border border-blue-200 rounded-lg text-solar-blue text-[10px] font-bold tracking-wider hover:bg-blue-50 min-h-[40px]" onclick="highlightElement('active-drivers')" type="button" data-i18n="conv_ver_elemento">VER ELEMENTO</button>
 </div>
 </div>
 </section>
@@ -269,4 +337,5 @@
       }
     }
   </script>
+<script src="../languages/translator.js"></script>
 </body></html>

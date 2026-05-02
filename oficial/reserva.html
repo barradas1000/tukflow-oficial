@@ -3,7 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reservation Request – Tuk Tuk Milfontes</title>
+  <title data-i18n="reserva_page_title">Reservation Request – Tuk Tuk Milfontes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <style>
+    .lang-selector {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 1000;
+    }
+    .lang-selector summary {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: #fff;
+      border: 1px solid #dbeafe;
+      border-radius: 10px;
+      padding: 8px 14px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: #1e3a5f;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      list-style: none;
+    }
+    .lang-selector summary::-webkit-details-marker { display: none; }
+    .lang-selector[open] summary {
+      border-color: #f59e0b;
+      box-shadow: 0 0 0 3px rgba(245,158,11,0.15);
+    }
+    .lang-dropdown {
+      position: absolute;
+      top: calc(100% + 4px);
+      right: 0;
+      background: #fff;
+      border: 1px solid #dbeafe;
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      overflow: hidden;
+      min-width: 140px;
+    }
+    .lang-dropdown button {
+      display: block;
+      width: 100%;
+      padding: 10px 16px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #1e3a5f;
+      text-align: left;
+      transition: background 0.15s;
+    }
+    .lang-dropdown button:hover { background: #fffbeb; }
+    .lang-dropdown button:active { background: #fef3c7; }
+  </style>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -288,15 +343,30 @@
 </head>
 <body>
 
+  <!-- Language Selector -->
+  <details class="lang-selector">
+    <summary>
+      <span class="material-symbols-outlined" style="font-size:18px;">translate</span>
+      <span id="currentLang">PT</span>
+    </summary>
+    <div class="lang-dropdown">
+      <button data-lang="pt">🇵🇹 Português</button>
+      <button data-lang="en">🇬🇧 English</button>
+      <button data-lang="es">🇪🇸 Español</button>
+      <button data-lang="fr">🇫🇷 Français</button>
+    </div>
+  </details>
+
   <!-- Back to Home Button - Top Left -->
   <div style="padding: 24px 12px 0;">
     <a href="index.html" style="display: inline-flex; align-items: center; gap: 8px; background: #facc15; color: #000; font-weight: bold; padding: 10px 20px; border-radius: 12px; text-decoration: none; box-shadow: 0 4px 12px rgba(250, 204, 21, 0.3); transition: background 0.15s, transform 0.1s; font-size: 0.95rem;">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
         <path d="M15 19l-7-7 7-7"/>
       </svg>
-      Voltar página inicial
+      <span data-i18n="reserva_back_home">Voltar página inicial</span>
     </a>
   </div>
+
   <style>
     a[href="index.html"]:hover {
       background: #eab308 !important;
@@ -313,8 +383,8 @@
   <div class="card-header highlight-target" id="section-reserva-header">
     <div class="card-header-icon">🛺</div>
     <div class="card-header-text">
-      <h1>Reservation Request</h1>
-      <p>Fill in the details and confirm via WhatsApp</p>
+      <h1 data-i18n="reserva_request_title">Reservation Request</h1>
+      <p data-i18n="reserva_request_subtitle">Fill in the details and confirm via WhatsApp</p>
     </div>
   </div>
 
@@ -325,24 +395,24 @@
     <div class="section highlight-target" id="section-step-1">
       <div class="section-header">
         <div class="step-badge amber">1</div>
-        <span class="section-title">Select Date and Time</span>
+        <span class="section-title" data-i18n="reserva_step1_title">Select Date and Time</span>
       </div>
 
       <div class="grid-2">
 
         <!-- Date -->
         <div>
-          <label for="date"><span class="icon">📅</span>Desired Date *</label>
+          <label for="date" data-i18n="reserva_date_label"><span class="icon">📅</span>Desired Date *</label>
           <input type="date" id="date" value="2026-08-22" onchange="onDateChange()" />
         </div>
 
         <!-- Time slots -->
         <div>
-          <label><span class="icon">🕐</span>Desired Time *</label>
+          <label data-i18n="reserva_time_label"><span class="icon">🕐</span>Desired Time *</label>
           <div class="slots-grid" id="slots-grid">
             <!-- filled by JS -->
           </div>
-          <div class="avail-badge" id="avail-badge" style="display:none;">Time Available!</div>
+          <div class="avail-badge" id="avail-badge" style="display:none;" data-i18n="reserva_time_available">Time Available!</div>
         </div>
 
       </div>
@@ -355,13 +425,13 @@
 
       <div class="section-header">
         <div class="step-badge green">2</div>
-        <span class="section-title">Your Details</span>
+        <span class="section-title" data-i18n="reserva_step2_title">Your Details</span>
       </div>
 
       <!-- locked placeholder shown until date+time selected -->
       <div class="locked-overlay" id="locked-notice">
         <span class="lock-icon">🔒</span>
-        Select date and time first
+        <span data-i18n="reserva_locked_notice">Select date and time first</span>
       </div>
 
       <!-- actual form (hidden until date+time selected) -->
@@ -370,21 +440,21 @@
         <!-- Name + Email -->
         <div class="grid-2">
           <div>
-            <label for="name">Full Name *</label>
-            <input type="text" id="name" placeholder="Your full name" required />
+          <label for="name" data-i18n="reserva_name_label">Full Name *</label>
+            <input type="text" id="name" data-i18n-placeholder="reserva_name_placeholder" placeholder="Your full name" required />
           </div>
           <div>
-            <label for="email">Email *</label>
-            <input type="email" id="email" placeholder="your@email.com" required />
+          <label for="email" data-i18n="reserva_email_label">Email *</label>
+            <input type="email" id="email" data-i18n-placeholder="reserva_email_placeholder" placeholder="your@email.com" required />
           </div>
         </div>
 
         <!-- Phone -->
         <div>
-          <label for="phone">Phone *</label>
-          <input type="tel" id="phone" placeholder="Ex: +351912345678" required />
-          <span class="phone-hint">WhatsApp with country code</span>
-          <div class="phone-warning">
+          <label for="phone" data-i18n="reserva_phone_label">Phone *</label>
+          <input type="tel" id="phone" data-i18n-placeholder="reserva_phone_placeholder" placeholder="Ex: +351912345678" required />
+          <span class="phone-hint" data-i18n="reserva_phone_hint">WhatsApp with country code</span>
+          <div class="phone-warning" data-i18n="reserva_phone_warning">
             ⚠️ Please include the international country code (e.g., <strong>+351</strong> for Portugal)
             in the WhatsApp number to ensure correct delivery of the confirmation.
           </div>
@@ -393,26 +463,26 @@
         <!-- Pax + Tour Type -->
         <div class="grid-2">
           <div>
-            <label for="pax">
+          <label for="pax" data-i18n="reserva_pax_label">
               <span class="icon">👥</span>Number of People
             </label>
             <div class="select-wrap">
               <select id="pax" onchange="updatePrice()">
-                <option value="1">1 person</option>
-                <option value="2" selected>2 people</option>
-                <option value="3">3 people</option>
-                <option value="4">4 people</option>
+                <option value="1" data-i18n="reserva_pax_1">1 person</option>
+                <option value="2" selected data-i18n="reserva_pax_2">2 people</option>
+                <option value="3" data-i18n="reserva_pax_3">3 people</option>
+                <option value="4" data-i18n="reserva_pax_4">4 people</option>
               </select>
             </div>
           </div>
           <div>
-            <label for="tour">Tour Type *</label>
+            <label for="tour" data-i18n="reserva_tour_label">Tour Type *</label>
             <div class="select-wrap">
               <select id="tour" onchange="updatePrice()" required>
-                <option value="">Select a tour…</option>
-                <option value="classic" selected>Classic Tour: Village &amp; Views</option>
-                <option value="panoramic">Panoramic Tour: Coastline</option>
-                <option value="sunset">Sunset Tour: Golden Hour</option>
+                <option value="" data-i18n="reserva_tour_select">Select a tour…</option>
+                <option value="classic" selected data-i18n="reserva_tour_classic">Classic Tour: Village & Views</option>
+                <option value="panoramic" data-i18n="reserva_tour_panoramic">Panoramic Tour: Coastline</option>
+                <option value="sunset" data-i18n="reserva_tour_sunset">Sunset Tour: Golden Hour</option>
               </select>
             </div>
           </div>
@@ -421,21 +491,21 @@
         <!-- Price estimate -->
         <div class="price-box" id="price-box" style="display:none;">
           <div>
-            <div class="price-label">💰 Preço estimado</div>
-            <div class="price-sub" id="price-sub">Inclui até 2 pessoas</div>
+            <div class="price-label" data-i18n="reserva_price_label">💰 Preço estimado</div>
+            <div class="price-sub" id="price-sub" data-i18n="reserva_price_sub">Inclui até 2 pessoas</div>
           </div>
           <div class="price-value" id="price-value">€10.00</div>
         </div>
 
         <!-- Message -->
         <div>
-          <label for="message">Additional Message</label>
-          <p style="font-size:0.78rem;color:#475569;margin:0 0 8px;">Este campo serve para o cliente adicionar uma mensagem extra.</p>
-          <textarea class="highlight-target" id="message" placeholder="Any additional information or special requests…"></textarea>
+          <label for="message" data-i18n="reserva_message_label">Additional Message</label>
+          <p style="font-size:0.78rem;color:#475569;margin:0 0 8px;" data-i18n="reserva_message_desc">Este campo serve para o cliente adicionar uma mensagem extra.</p>
+          <textarea class="highlight-target" id="message" data-i18n-placeholder="reserva_message_placeholder" placeholder="Any additional information or special requests…"></textarea>
         </div>
 
         <!-- Submit -->
-        <button type="submit" class="btn-whatsapp highlight-target" id="section-submit-reservation">
+        <button type="submit" class="btn-whatsapp highlight-target" id="section-submit-reservation" data-i18n="reserva_submit_btn">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.199-.298.298-.497.1-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
             <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.553 4.118 1.522 5.852L0 24l6.336-1.51A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.968 0-3.81-.52-5.406-1.428l-.388-.23-4.007.956.991-3.886-.253-.4A9.953 9.953 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
@@ -451,7 +521,7 @@
       <div style="background:#eef2ff;border:1px solid #c7d2fe;border-radius:16px;padding:14px 14px 12px;">
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
           <div style="width:28px;height:28px;border-radius:999px;background:#e0e7ff;color:#4338ca;display:flex;align-items:center;justify-content:center;font-weight:800;">i</div>
-          <h3 style="font-size:0.95rem;font-weight:800;color:#312e81;">Elementos da Interface</h3>
+          <h3 style="font-size:0.95rem;font-weight:800;color:#312e81;" data-i18n="reserva_guide_title">Elementos da Interface</h3>
         </div>
 
         <div style="display:grid;gap:8px;">
@@ -459,55 +529,55 @@
             <div style="display:flex;gap:8px;align-items:flex-start;">
               <span aria-hidden="true" style="width:30px;height:30px;border-radius:10px;background:#dbeafe;color:#1d4ed8;display:flex;align-items:center;justify-content:center;font-size:16px;">🛺</span>
               <div>
-                <div style="font-size:0.75rem;font-weight:800;color:#1e1b4b;">Cabeçalho</div>
-                <p style="font-size:0.72rem;color:#4338ca;opacity:0.85;">Título e resumo da reserva.</p>
+                <div style="font-size:0.75rem;font-weight:800;color:#1e1b4b;" data-i18n="reserva_guide_header_title">Cabeçalho</div>
+                <p style="font-size:0.72rem;color:#4338ca;opacity:0.85;" data-i18n="reserva_guide_header_desc">Título e resumo da reserva.</p>
               </div>
             </div>
-            <button type="button" onclick="highlightElement('section-reserva-header')" style="font-size:0.65rem;font-weight:800;color:#1d4ed8;border:1px solid #bfdbfe;background:#fff;padding:6px 10px;border-radius:8px;">VER</button>
+            <button type="button" onclick="highlightElement('section-reserva-header')" style="font-size:0.65rem;font-weight:800;color:#1d4ed8;border:1px solid #bfdbfe;background:#fff;padding:6px 10px;border-radius:8px;" data-i18n="reserva_guide_ver">VER</button>
           </div>
 
           <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:10px;background:#fff;border:1px solid #e0e7ff;border-radius:12px;padding:10px;">
             <div style="display:flex;gap:8px;align-items:flex-start;">
               <span aria-hidden="true" style="width:30px;height:30px;border-radius:10px;background:#fef3c7;color:#b45309;display:flex;align-items:center;justify-content:center;font-size:16px;">📅</span>
               <div>
-                <div style="font-size:0.75rem;font-weight:800;color:#1e1b4b;">Data e Hora</div>
-                <p style="font-size:0.72rem;color:#4338ca;opacity:0.85;">Selecione dia e horário disponível.</p>
+                <div style="font-size:0.75rem;font-weight:800;color:#1e1b4b;" data-i18n="reserva_guide_datetime_title">Data e Hora</div>
+                <p style="font-size:0.72rem;color:#4338ca;opacity:0.85;" data-i18n="reserva_guide_datetime_desc">Selecione dia e horário disponível.</p>
               </div>
             </div>
-            <button type="button" onclick="highlightElement('section-step-1')" style="font-size:0.65rem;font-weight:800;color:#b45309;border:1px solid #fcd34d;background:#fff;padding:6px 10px;border-radius:8px;">VER</button>
+            <button type="button" onclick="highlightElement('section-step-1')" style="font-size:0.65rem;font-weight:800;color:#b45309;border:1px solid #fcd34d;background:#fff;padding:6px 10px;border-radius:8px;" data-i18n="reserva_guide_ver">VER</button>
           </div>
 
           <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:10px;background:#fff;border:1px solid #e0e7ff;border-radius:12px;padding:10px;">
             <div style="display:flex;gap:8px;align-items:flex-start;">
               <span aria-hidden="true" style="width:30px;height:30px;border-radius:10px;background:#dcfce7;color:#15803d;display:flex;align-items:center;justify-content:center;font-size:16px;">👤</span>
               <div>
-                <div style="font-size:0.75rem;font-weight:800;color:#1e1b4b;">Seus Dados</div>
-                <p style="font-size:0.72rem;color:#4338ca;opacity:0.85;">Preencha contacto e detalhes do tour.</p>
+                <div style="font-size:0.75rem;font-weight:800;color:#1e1b4b;" data-i18n="reserva_guide_dados_title">Seus Dados</div>
+                <p style="font-size:0.72rem;color:#4338ca;opacity:0.85;" data-i18n="reserva_guide_dados_desc">Preencha contacto e detalhes do tour.</p>
               </div>
             </div>
-            <button type="button" onclick="highlightElement('section-step-2')" style="font-size:0.65rem;font-weight:800;color:#15803d;border:1px solid #86efac;background:#fff;padding:6px 10px;border-radius:8px;">VER</button>
+            <button type="button" onclick="highlightElement('section-step-2')" style="font-size:0.65rem;font-weight:800;color:#15803d;border:1px solid #86efac;background:#fff;padding:6px 10px;border-radius:8px;" data-i18n="reserva_guide_ver">VER</button>
           </div>
 
           <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:10px;background:#fff;border:1px solid #e0e7ff;border-radius:12px;padding:10px;">
             <div style="display:flex;gap:8px;align-items:flex-start;">
               <span aria-hidden="true" style="width:30px;height:30px;border-radius:10px;background:#dcfce7;color:#166534;display:flex;align-items:center;justify-content:center;font-size:16px;">💬</span>
               <div>
-                <div style="font-size:0.75rem;font-weight:800;color:#1e1b4b;">Confirmar WhatsApp</div>
-                <p style="font-size:0.72rem;color:#4338ca;opacity:0.85;">Envie o pedido de reserva com um clique.</p>
+                <div style="font-size:0.75rem;font-weight:800;color:#1e1b4b;" data-i18n="reserva_guide_whatsapp_title">Confirmar WhatsApp</div>
+                <p style="font-size:0.72rem;color:#4338ca;opacity:0.85;" data-i18n="reserva_guide_whatsapp_desc">Envie o pedido de reserva com um clique.</p>
               </div>
             </div>
-            <button type="button" onclick="highlightElement('section-submit-reservation')" style="font-size:0.65rem;font-weight:800;color:#166534;border:1px solid #86efac;background:#fff;padding:6px 10px;border-radius:8px;">VER</button>
+            <button type="button" onclick="highlightElement('section-submit-reservation')" style="font-size:0.65rem;font-weight:800;color:#166534;border:1px solid #86efac;background:#fff;padding:6px 10px;border-radius:8px;" data-i18n="reserva_guide_ver">VER</button>
           </div>
 
           <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:10px;background:#fff;border:1px solid #e0e7ff;border-radius:12px;padding:10px;">
             <div style="display:flex;gap:8px;align-items:flex-start;">
               <span aria-hidden="true" style="width:30px;height:30px;border-radius:10px;background:#ede9fe;color:#6d28d9;display:flex;align-items:center;justify-content:center;font-size:16px;">📝</span>
               <div>
-                <div style="font-size:0.75rem;font-weight:800;color:#1e1b4b;">Additional Message</div>
-                <p style="font-size:0.72rem;color:#4338ca;opacity:0.85;">Campo para o cliente escrever uma mensagem extra.</p>
+                <div style="font-size:0.75rem;font-weight:800;color:#1e1b4b;" data-i18n="reserva_guide_message_title">Additional Message</div>
+                <p style="font-size:0.72rem;color:#4338ca;opacity:0.85;" data-i18n="reserva_guide_message_desc">Campo para o cliente escrever uma mensagem extra.</p>
               </div>
             </div>
-            <button type="button" onclick="highlightElement('message')" style="font-size:0.65rem;font-weight:800;color:#6d28d9;border:1px solid #c4b5fd;background:#fff;padding:6px 10px;border-radius:8px;">VER</button>
+            <button type="button" onclick="highlightElement('message')" style="font-size:0.65rem;font-weight:800;color:#6d28d9;border:1px solid #c4b5fd;background:#fff;padding:6px 10px;border-radius:8px;" data-i18n="reserva_guide_ver">VER</button>
           </div>
         </div>
       </div>
@@ -542,7 +612,7 @@
     const grid = document.getElementById("slots-grid");
     const dateVal = document.getElementById("date").value;
     if (!dateVal) {
-      grid.innerHTML = '<div class="slot-empty">Select a date to see available times</div>';
+      grid.innerHTML = '<div class="slot-empty" data-i18n="reserva_slot_empty">Select a date to see available times</div>';
       return;
     }
 
@@ -667,5 +737,6 @@
   renderSlots();
   checkUnlock();
 </script>
+<script src="../languages/translator.js"></script>
 </body>
 </html>

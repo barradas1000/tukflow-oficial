@@ -1,0 +1,13 @@
+{
+  "name": "tukflow-marketing",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npx serve . -l 3000",
+    "preview": "npx vercel dev --listen 3000",
+    "deploy": "npx vercel --prod"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}

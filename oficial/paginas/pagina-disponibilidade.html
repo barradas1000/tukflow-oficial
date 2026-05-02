@@ -3,11 +3,13 @@
 <html lang="pt"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Disponibilidade de Reservase Gestão de Época - TukTuk</title>
+<title data-i18n="disp_page_title">Disponibilidade de Reservas e Gestão de Época - TukTuk</title>
 <!-- Tailwind CSS v3 CDN with plugins -->
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <!-- Google Fonts: Inter -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<!-- Google Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <style data-purpose="custom-typography">
         body {
             font-family: 'Inter', sans-serif;
@@ -26,16 +28,82 @@
             --safe-bottom: env(safe-area-inset-bottom, 0px);
         }
     </style>
+<style>
+        /* Language Selector Styles */
+        .lang-btn {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 6px 12px;
+            border-radius: 9999px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+            background: transparent;
+            color: #1e293b;
+        }
+        .lang-btn:hover {
+            background: #e2e8f0;
+        }
+        .lang-dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 4px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            min-width: 120px;
+            z-index: 100;
+            overflow: hidden;
+        }
+        .lang-dropdown.show {
+            display: block;
+        }
+        .lang-option {
+            display: block;
+            width: 100%;
+            padding: 10px 16px;
+            text-align: left;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            background: none;
+            color: #334155;
+            transition: background 0.15s;
+        }
+        .lang-option:hover {
+            background: #f1f5f9;
+        }
+    </style>
 </head>
 <body class="bg-slate-100 text-slate-900 pb-[calc(1rem+var(--safe-bottom))]">
+<!-- Language Selector -->
+<div class="relative" style="position: fixed; top: 8px; right: 8px; z-index: 9999;">
+    <button class="lang-btn" id="currentLang" onclick="document.getElementById('langDropdown').classList.toggle('show')" type="button">
+        <span class="flag" id="currentFlag">🇵🇹</span>
+        <span id="currentLangText">PT</span>
+        <span class="material-symbols-outlined" style="font-size: 16px;">arrow_drop_down</span>
+    </button>
+    <div class="lang-dropdown" id="langDropdown">
+        <button class="lang-option" data-lang="pt" type="button">🇵🇹 Português</button>
+        <button class="lang-option" data-lang="en" type="button">🇬🇧 English</button>
+        <button class="lang-option" data-lang="es" type="button">🇪🇸 Español</button>
+        <button class="lang-option" data-lang="fr" type="button">🇫🇷 Français</button>
+    </div>
+</div>
 <div class="w-full text-center py-2">
-    <span class="text-3xl font-extrabold text-red-600">Pagina Demo</span>
+    <span class="text-3xl font-extrabold text-red-600" data-i18n="disp_pagina_demo">Pagina Demo</span>
 </div>
 <div class="mx-auto w-full max-w-md min-h-screen bg-slate-50 sm:my-4 sm:rounded-3xl sm:shadow-xl overflow-hidden">
     <div class="p-4 flex justify-start">
         <a href="../index.html" class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-full shadow-md transition-colors duration-150 flex items-center gap-2">
             <svg class="h-5 w-5 mr-1 inline-block align-middle" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
-            Voltar página inicial
+            <span data-i18n="disp_voltar_inicio">Voltar página inicial</span>
         </a>
     </div>
 <!-- BEGIN: MainHeader -->
@@ -52,7 +120,7 @@
 </svg>
 </button>
 </div>
-<h1 class="text-sm md:text-lg font-extrabold text-indigo-950 text-center uppercase tracking-tight leading-tight">
+<h1 class="text-sm md:text-lg font-extrabold text-indigo-950 text-center uppercase tracking-tight leading-tight" data-i18n="disp_titulo">
             Disponibilidade e Gestão
         </h1>
 </header>
@@ -65,7 +133,7 @@
 <path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
 </svg>
 </div>
-<p class="text-xs text-indigo-900 leading-relaxed">
+<p class="text-xs text-indigo-900 leading-relaxed" data-i18n="disp_info_texto" data-i18n-html="true">
                 Bem-vindo à <span class="font-bold">Gestão de Disponibilidade</span>. Esta é a zona onde pode gerir as ocupações e disponibilidade dos tuktuks, por períodos de tempo durante o dia.
 A gestão por dias, semanas ou meses de forma simples diretamente pelo calendário..
             </p>
@@ -79,9 +147,9 @@ A gestão por dias, semanas ou meses de forma simples diretamente pelo calendár
 <path d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
 </svg>
 </div>
-<h2 class="text-base font-bold text-slate-900">Gestão de Fora de Época</h2>
+<h2 class="text-base font-bold text-slate-900" data-i18n="disp_fora_epoca">Gestão de Fora de Época</h2>
 </div>
-<p class="text-xs text-slate-500 mb-4 leading-relaxed">Selecione os meses para desativar reservas.</p>
+<p class="text-xs text-slate-500 mb-4 leading-relaxed" data-i18n="disp_selecione_meses">Selecione os meses para desativar reservas.</p>
 <div class="grid grid-cols-3 gap-2 mb-4">
 <button class="py-2 px-1 text-[10px] font-bold rounded-lg border border-slate-100 text-slate-400" type="button">Jan 2026</button>
 <button class="py-2 px-1 text-[10px] font-bold rounded-lg border border-slate-100 text-slate-400" type="button">Fev 2026</button>
@@ -93,7 +161,7 @@ A gestão por dias, semanas ou meses de forma simples diretamente pelo calendár
 <button class="py-2 px-1 text-[10px] font-bold rounded-lg border border-slate-100 text-slate-600" type="button">Ago 2026</button>
 <button class="py-2 px-1 text-[10px] font-bold rounded-lg border border-slate-100 text-slate-600" type="button">Set 2026</button>
 </div>
-<button class="w-full bg-emerald-500 text-white font-bold py-3 rounded-xl shadow-lg shadow-emerald-100 active:scale-95 transition-all min-h-[44px]" type="button">
+<button class="w-full bg-emerald-500 text-white font-bold py-3 rounded-xl shadow-lg shadow-emerald-100 active:scale-95 transition-all min-h-[44px]" type="button" data-i18n="disp_salvar_config">
                 Salvar Configuração
             </button>
 </section>
@@ -101,7 +169,7 @@ A gestão por dias, semanas ou meses de forma simples diretamente pelo calendár
 <!-- BEGIN: AvailabilityCalendar -->
 <section class="bg-white rounded-2xl p-4 shadow-sm border border-slate-100 highlight-target" id="section-calendar">
 <div class="flex justify-between items-center gap-2 mb-4 flex-col sm:flex-row">
-<h2 class="text-base font-bold text-slate-900">Calendário</h2>
+<h2 class="text-base font-bold text-slate-900" data-i18n="disp_calendario">Calendário</h2>
 <div class="flex items-center gap-2">
 <button class="p-1.5 bg-slate-50 rounded-lg" type="button"><svg class="h-4 w-4 text-slate-600" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg></button>
 <span class="font-bold text-indigo-700 text-sm whitespace-nowrap">março 2026</span>
@@ -128,16 +196,16 @@ A gestão por dias, semanas ou meses de forma simples diretamente pelo calendár
 <!-- Legend Grid -->
 <div class="grid grid-cols-2 gap-4 mt-8 pt-6 border-t border-slate-50">
 <div class="flex items-center gap-2 text-[10px] font-bold text-slate-500 uppercase tracking-tighter">
-<span class="w-3.5 h-3.5 bg-white border border-slate-200 rounded-sm"></span> Disponível
+<span class="w-3.5 h-3.5 bg-white border border-slate-200 rounded-sm"></span> <span data-i18n="disp_disponivel">Disponível</span>
                 </div>
 <div class="flex items-center gap-2 text-[10px] font-bold text-slate-500 uppercase tracking-tighter">
-<span class="w-3.5 h-3.5 bg-yellow-400 rounded-sm"></span> Com Reservas
+<span class="w-3.5 h-3.5 bg-yellow-400 rounded-sm"></span> <span data-i18n="disp_com_reservas">Com Reservas</span>
                 </div>
 <div class="flex items-center gap-2 text-[10px] font-bold text-slate-500 uppercase tracking-tighter">
-<span class="w-3.5 h-3.5 bg-slate-300 rounded-sm"></span> Bloqueado
+<span class="w-3.5 h-3.5 bg-slate-300 rounded-sm"></span> <span data-i18n="disp_bloqueado">Bloqueado</span>
                 </div>
 <div class="flex items-center gap-2 text-[10px] font-bold text-slate-500 uppercase tracking-tighter">
-<span class="w-3.5 h-3.5 bg-orange-200 rounded-sm"></span> Sem Condutor
+<span class="w-3.5 h-3.5 bg-orange-200 rounded-sm"></span> <span data-i18n="disp_sem_condutor">Sem Condutor</span>
                 </div>
 </div>
 </section>
@@ -145,7 +213,7 @@ A gestão por dias, semanas ou meses de forma simples diretamente pelo calendár
 <!-- BEGIN: TimeSlotDetails -->
 <section class="bg-white rounded-2xl p-4 shadow-sm border border-slate-100 highlight-target" id="section-timeslots">
 <div class="flex items-center justify-between gap-2 mb-4 flex-col sm:flex-row">
-<h2 class="text-base font-bold text-slate-900">Horários para 17/03</h2>
+<h2 class="text-base font-bold text-slate-900"><span data-i18n="disp_horarios_para">Horários para</span> 17/03</h2>
 <span class="text-[10px] bg-cyan-50 text-cyan-600 px-2 py-1 rounded-full font-extrabold uppercase tracking-wider border border-cyan-100">15'</span>
 </div>
 <div class="grid grid-cols-3 gap-2">
@@ -180,7 +248,7 @@ A gestão por dias, semanas ou meses de forma simples diretamente pelo calendár
 <div class="w-1 h-1 bg-emerald-500 rounded-full mx-auto mt-1.5"></div>
 </div>
 </div>
-<p class="text-center text-[10px] text-slate-400 mt-4 italic px-3">
+<p class="text-center text-[10px] text-slate-400 mt-4 italic px-3" data-i18n="disp_toque_detalhes">
                 Toque para detalhes ou bloquear horário.
             </p>
 </section>
@@ -193,7 +261,7 @@ A gestão por dias, semanas ou meses de forma simples diretamente pelo calendár
 <path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
 </svg>
 </div>
-<h3 class="text-base font-bold text-indigo-900">Elementos da Interface</h3>
+<h3 class="text-base font-bold text-indigo-900" data-i18n="disp_elementos_interface">Elementos da Interface</h3>
 </div>
 <!-- Guide Item 1 -->
 <div class="space-y-2">
@@ -204,11 +272,11 @@ A gestão por dias, semanas ou meses de forma simples diretamente pelo calendár
 </svg>
 </div>
 <div>
-<h4 class="font-bold text-indigo-950 text-xs mb-1">Gestão de Fora de Época</h4>
-<p class="text-[11px] text-indigo-700/70 leading-relaxed mb-2">
+<h4 class="font-bold text-indigo-950 text-xs mb-1" data-i18n="disp_gestao_fora_epoca">Gestão de Fora de Época</h4>
+<p class="text-[11px] text-indigo-700/70 leading-relaxed mb-2" data-i18n="disp_gestao_fora_epoca_desc">
                             Configure períodos de manutenção ou baixa estação.
                         </p>
-<button class="text-[10px] font-bold text-blue-600 border border-blue-200 bg-white px-3 py-1.5 rounded-lg uppercase tracking-wider hover:bg-blue-50 active:bg-blue-100 transition-colors" onclick="highlightElement('section-off-season')" type="button">
+<button class="text-[10px] font-bold text-blue-600 border border-blue-200 bg-white px-3 py-1.5 rounded-lg uppercase tracking-wider hover:bg-blue-50 active:bg-blue-100 transition-colors" onclick="highlightElement('section-off-season')" type="button" data-i18n="disp_ver">
                             VER
                         </button>
 </div>
@@ -223,11 +291,11 @@ A gestão por dias, semanas ou meses de forma simples diretamente pelo calendár
 </svg>
 </div>
 <div>
-<h4 class="font-bold text-indigo-950 text-xs mb-1">Calendário Mensal</h4>
-<p class="text-[11px] text-indigo-700/70 leading-relaxed mb-2">
+<h4 class="font-bold text-indigo-950 text-xs mb-1" data-i18n="disp_calendario_mensal">Calendário Mensal</h4>
+<p class="text-[11px] text-indigo-700/70 leading-relaxed mb-2" data-i18n="disp_calendario_mensal_desc">
                             Visão da ocupação com status coloridos.
                         </p>
-<button class="text-[10px] font-bold text-blue-600 border border-blue-200 bg-white px-3 py-1.5 rounded-lg uppercase tracking-wider hover:bg-blue-50 active:bg-blue-100 transition-colors" onclick="highlightElement('section-calendar')" type="button">
+<button class="text-[10px] font-bold text-blue-600 border border-blue-200 bg-white px-3 py-1.5 rounded-lg uppercase tracking-wider hover:bg-blue-50 active:bg-blue-100 transition-colors" onclick="highlightElement('section-calendar')" type="button" data-i18n="disp_ver">
                             VER
                         </button>
 </div>
@@ -242,11 +310,11 @@ A gestão por dias, semanas ou meses de forma simples diretamente pelo calendár
 </svg>
 </div>
 <div>
-<h4 class="font-bold text-indigo-950 text-xs mb-1">Slots de 15 Minutos</h4>
-<p class="text-[11px] text-indigo-700/70 leading-relaxed mb-2">
+<h4 class="font-bold text-indigo-950 text-xs mb-1" data-i18n="disp_slots_15min">Slots de 15 Minutos</h4>
+<p class="text-[11px] text-indigo-700/70 leading-relaxed mb-2" data-i18n="disp_slots_15min_desc">
                             Controle preciso da agenda diária.
                         </p>
-<button class="text-[10px] font-bold text-blue-600 border border-blue-200 bg-white px-3 py-1.5 rounded-lg uppercase tracking-wider hover:bg-blue-50 active:bg-blue-100 transition-colors" onclick="highlightElement('section-timeslots')" type="button">
+<button class="text-[10px] font-bold text-blue-600 border border-blue-200 bg-white px-3 py-1.5 rounded-lg uppercase tracking-wider hover:bg-blue-50 active:bg-blue-100 transition-colors" onclick="highlightElement('section-timeslots')" type="button" data-i18n="disp_ver">
                             VER
                         </button>
 </div>
@@ -272,5 +340,6 @@ A gestão por dias, semanas ou meses de forma simples diretamente pelo calendár
             }
         }
     </script>
+<script src="../languages/translator.js"></script>
 <!-- END: FooterScripts -->
 </body></html>

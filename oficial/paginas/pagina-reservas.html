@@ -15,7 +15,7 @@
   </style>
 <!-- Material Symbols for icons -->
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<style data-purpose="custom-layout">
+  <style data-purpose="custom-layout">
     .card-shadow {
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     }
@@ -44,6 +44,9 @@
       -ms-overflow-style: none;
       scrollbar-width: none;
     }
+    /* Language selector flags */
+    .flag { font-size: 1.1em; line-height: 1; }
+    .lang-option.active { background-color: #e0e7ff; font-weight: 600; }
   </style>
 </head>
 <body class="bg-gray-50 text-slate-800">
@@ -53,25 +56,29 @@
     <div class="relative group hidden md:block">
       <button id="langSelectorBtn" class="flex items-center gap-1 px-2 py-1 rounded-full border border-gray-300 bg-white hover:bg-gray-100 text-xs font-bold">
         <span class="material-symbols-outlined text-base align-middle">language</span>
-        <span id="currentLang">PT</span>
+        <span class="flag" id="currentFlag">🇵🇹</span>
+        <span id="currentLangText">PT</span>
         <span class="material-symbols-outlined text-xs align-middle">expand_more</span>
       </button>
       <div id="langDropdown" class="absolute top-full right-0 mt-1 w-28 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-1 z-50">
-        <button class="block w-full text-left px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors text-xs" data-lang="pt">Português</button>
-        <button class="block w-full text-left px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors text-xs" data-lang="en">English</button>
-        <button class="block w-full text-left px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors text-xs" data-lang="es">Español</button>
+        <button class="lang-option block w-full text-left px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors text-xs" data-lang="pt">🇵🇹 Português</button>
+        <button class="lang-option block w-full text-left px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors text-xs" data-lang="en">🇬🇧 English</button>
+        <button class="lang-option block w-full text-left px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors text-xs" data-lang="es">🇪🇸 Español</button>
+        <button class="lang-option block w-full text-left px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors text-xs" data-lang="fr">🇫🇷 Français</button>
       </div>
     </div>
     <div class="relative group md:hidden">
       <button id="langSelectorBtnMobile" class="flex items-center gap-1 px-2 py-1 rounded-full border border-gray-300 bg-white hover:bg-gray-100 text-xs font-bold">
         <span class="material-symbols-outlined text-base align-middle">language</span>
+        <span class="flag" id="currentFlagMobile">🇵🇹</span>
         <span id="currentLangMobile">PT</span>
         <span class="material-symbols-outlined text-xs align-middle">expand_more</span>
       </button>
       <div id="langDropdownMobile" class="absolute top-full right-0 mt-1 w-28 bg-white rounded-xl shadow-xl opacity-0 invisible transition-all duration-200 p-1 z-50">
-        <button class="block w-full text-left px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors text-xs" data-lang="pt">Português</button>
-        <button class="block w-full text-left px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors text-xs" data-lang="en">English</button>
-        <button class="block w-full text-left px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors text-xs" data-lang="es">Español</button>
+        <button class="lang-option block w-full text-left px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors text-xs" data-lang="pt">🇵🇹 Português</button>
+        <button class="lang-option block w-full text-left px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors text-xs" data-lang="en">🇬🇧 English</button>
+        <button class="lang-option block w-full text-left px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors text-xs" data-lang="es">🇪🇸 Español</button>
+        <button class="lang-option block w-full text-left px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors text-xs" data-lang="fr">🇫🇷 Français</button>
       </div>
     </div>
   </div>
@@ -129,12 +136,28 @@
       if (translations['page_title']) document.title = translations['page_title'];
     }
 
+    var flagMap = {pt: '🇵🇹', en: '🇬🇧', es: '🇪🇸', fr: '🇫🇷'};
+
     function setLanguage(lang) {
       localStorage.setItem('lang', lang);
-      var el1 = document.getElementById('currentLang');
-      if (el1) el1.textContent = lang.toUpperCase();
-      var el2 = document.getElementById('currentLangMobile');
-      if (el2) el2.textContent = lang.toUpperCase();
+      var flag = flagMap[lang] || '🇵🇹';
+      var text = lang.toUpperCase();
+      var elFlag = document.getElementById('currentFlag');
+      if (elFlag) elFlag.textContent = flag;
+      var elText = document.getElementById('currentLangText');
+      if (elText) elText.textContent = text;
+      var elFlagM = document.getElementById('currentFlagMobile');
+      if (elFlagM) elFlagM.textContent = flag;
+      var elTextM = document.getElementById('currentLangMobile');
+      if (elTextM) elTextM.textContent = text;
+      // Update active state on all lang-option buttons
+      document.querySelectorAll('.lang-option').forEach(function(btn) {
+        if (btn.getAttribute('data-lang') === lang) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
       loadLanguageScript(lang, applyTranslations);
     }
 
@@ -160,7 +183,11 @@
         });
       });
       var lang = localStorage.getItem('lang') || 'pt';
-      if (document.getElementById('currentLang')) document.getElementById('currentLang').textContent = lang.toUpperCase();
+      var flag = flagMap[lang] || '🇵🇹';
+      var elFlag = document.getElementById('currentFlag');
+      if (elFlag) elFlag.textContent = flag;
+      var elText = document.getElementById('currentLangText');
+      if (elText) elText.textContent = lang.toUpperCase();
     });
     // Mobile
     document.addEventListener('DOMContentLoaded', function() {
@@ -184,7 +211,11 @@
         });
       });
       var lang = localStorage.getItem('lang') || 'pt';
-      if (document.getElementById('currentLangMobile')) document.getElementById('currentLangMobile').textContent = lang.toUpperCase();
+      var flag = flagMap[lang] || '🇵🇹';
+      var elFlagM = document.getElementById('currentFlagMobile');
+      if (elFlagM) elFlagM.textContent = flag;
+      var elTextM = document.getElementById('currentLangMobile');
+      if (elTextM) elTextM.textContent = lang.toUpperCase();
     });
     // Inicialização automática
     document.addEventListener('DOMContentLoaded', function() {
@@ -198,7 +229,7 @@
     <svg class="h-5 w-5 mr-1 inline-block align-middle" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
     <span data-i18n="voltar_pagina_inicial">Voltar página inicial</span>
   </a>
-    <button class="bg-indigo-600 text-white p-2 rounded-md shadow-lg active:scale-95 transition-transform flex items-center flex-nowrap" id="btn-add-reservation" style="">
+    <button class="bg-indigo-600 text-white p-2 rounded-md shadow-lg active:scale-95 transition-transform flex items-center flex-nowrap" id="btn-add-reservation">
     <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
     </svg>

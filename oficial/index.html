@@ -1,4 +1,4 @@
-Nesta pagina<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt">
 <head>
     <meta charset="utf-8"/>
@@ -218,10 +218,11 @@ Nesta pagina<!DOCTYPE html>
                     <button class="block w-full text-left px-3 py-2 hover:bg-slate-50 rounded-lg text-xs font-medium text-slate-700" data-lang="pt">Português</button>
                     <button class="block w-full text-left px-3 py-2 hover:bg-slate-50 rounded-lg text-xs font-medium text-slate-700" data-lang="en">English</button>
                     <button class="block w-full text-left px-3 py-2 hover:bg-slate-50 rounded-lg text-xs font-medium text-slate-700" data-lang="es">Español</button>
+                    <button class="block w-full text-left px-3 py-2 hover:bg-slate-50 rounded-lg text-xs font-medium text-slate-700" data-lang="fr">Français</button>
                 </div>
             </div>
 
-            <a href="#" class="btn-amber" style="margin-left:12px;padding:10px 22px;border-radius:12px;font-size:.88rem;text-decoration:none;display:inline-flex;align-items:center;">Contact Us</a>
+            <a href="#" class="btn-amber" style="margin-left:12px;padding:10px 22px;border-radius:12px;font-size:.88rem;text-decoration:none;display:inline-flex;align-items:center;" data-i18n="contact_us">Contact Us</a>
         </nav>
 
         <!-- Mobile top-right -->
@@ -235,6 +236,7 @@ Nesta pagina<!DOCTYPE html>
                     <button class="block w-full text-left px-3 py-2 hover:bg-slate-50 rounded-lg text-xs" data-lang="pt">Português</button>
                     <button class="block w-full text-left px-3 py-2 hover:bg-slate-50 rounded-lg text-xs" data-lang="en">English</button>
                     <button class="block w-full text-left px-3 py-2 hover:bg-slate-50 rounded-lg text-xs" data-lang="es">Español</button>
+                    <button class="block w-full text-left px-3 py-2 hover:bg-slate-50 rounded-lg text-xs" data-lang="fr">Français</button>
                 </div>
             </div>
             <button id="openMobileMenu" style="padding:8px;border-radius:10px;background:none;border:none;cursor:pointer;color:#334155;">
@@ -275,7 +277,7 @@ Nesta pagina<!DOCTYPE html>
                 <span class="material-symbols-outlined" style="font-size:18px;color:#94a3b8;margin-left:auto;">chevron_right</span>
             </button>
             <div style="margin-top:auto;padding-top:20px;">
-                <a href="#" class="btn-amber" style="display:block;text-align:center;padding:14px;border-radius:14px;font-size:1rem;text-decoration:none;">Contact Us</a>
+                <a href="#" class="btn-amber" style="display:block;text-align:center;padding:14px;border-radius:14px;font-size:1rem;text-decoration:none;" data-i18n="contact_us">Contact Us</a>
             </div>
         </nav>
         <div id="mobileSubMenuPanel1" style="display:none;flex:1;overflow-y:auto;padding:16px;flex-direction:column;gap:4px;">
@@ -328,7 +330,7 @@ Nesta pagina<!DOCTYPE html>
 
             <div style="width:64px;height:4px;background:linear-gradient(90deg,#FFB300,#FF7043);border-radius:99px;margin:0 auto 22px;"></div>
 
-            <p style="font-family:'Inter',system-ui,sans-serif;color:rgba(255,255,255,0.92);font-size:clamp(1rem,2.2vw,1.22rem);max-width:560px;margin:0 auto 0;line-height:1.70;font-weight:500;" data-i18n="hero_subtitle">
+            <p style="font-family:'Inter',system-ui,sans-serif;color:rgba(255,255,255,0.92);font-size:clamp(1rem,2.2vw,1.22rem);max-width:560px;margin:0 auto 0;line-height:1.70;font-weight:500;" data-i18n="hero_subtitle" data-i18n-html>
                 Chega de lutar na rua. Com o <span style="color:#91BFD2;font-weight:700;">TukFlow</span>, os clientes chegam até ti — reservas online, sem comissões, sem intermediários.
             </p>
         </div>
@@ -907,8 +909,8 @@ Nesta pagina<!DOCTYPE html>
             </h2>
 
             <!-- Sub -->
-            <p style="color:rgba(255,255,255,.72);font-size:clamp(1rem,2vw,1.15rem);line-height:1.7;margin-bottom:40px;font-weight:500;" data-i18n="cta_final_subtitle">
-                Chega de depender do acaso. Com a TukFlow tens reservas, visibilidade e controlo total — tudo numa só plataforma, sem comissões e sem intermediários.
+            <p style="color:rgba(255,255,255,.72);font-size:clamp(1rem,2vw,1.15rem);line-height:1.7;margin-bottom:40px;font-weight:500;" data-i18n="cta_final_subtitle" data-i18n-html>
+                Pára de depender do acaso. Em vez de esperar que as pessoas encontrem a tua página no Facebook ou Instagram, com o sistema <span style="color:#91BFD2;font-weight:700;">TukFlow</span> terás mais visibilidade Online e controlo total do teu negócio — tudo numa só plataforma, sem comissões nem intermediários e com reservas online todos os dias.
             </p>
 
             <!-- CTAs -->
@@ -1035,44 +1037,6 @@ Nesta pagina<!DOCTYPE html>
 </nav>
 
 <script>
-    /* ── i18n ── */
-    function loadLanguageScript(lang, callback) {
-        var old = document.getElementById('langScript');
-        if (old) old.remove();
-        var s = document.createElement('script');
-        s.id = 'langScript';
-        s.src = '../languages/' + lang + '.js';
-        s.onload = callback;
-        document.head.appendChild(s);
-    }
-    function setLanguage(lang) {
-        localStorage.setItem('lang', lang);
-        var el = document.getElementById('currentLang');
-        if (el) el.textContent = lang.toUpperCase();
-        var elM = document.getElementById('currentLangMobile');
-        if (elM) elM.textContent = lang.toUpperCase();
-        loadLanguageScript(lang, function() { applyTranslations(); });
-    }
-    function applyTranslations() {
-        var t = window.translations || {};
-        document.querySelectorAll('[data-i18n]').forEach(function(el) {
-            var key = el.getAttribute('data-i18n');
-            if (!t[key]) return;
-            if (t[key].indexOf('<') !== -1) {
-                el.innerHTML = t[key];
-            } else {
-                el.textContent = t[key];
-            }
-        });
-    }
-    document.addEventListener('DOMContentLoaded', function() {
-        var lang = localStorage.getItem('lang') || 'pt';
-        setLanguage(lang);
-        document.querySelectorAll('[data-lang]').forEach(function(btn) {
-            btn.addEventListener('click', function() { setLanguage(btn.getAttribute('data-lang')); });
-        });
-    });
-
     /* ── FAQ accordion ── */
     function toggleFaq(btn) {
         var answer = btn.nextElementSibling;
@@ -1147,5 +1111,6 @@ Nesta pagina<!DOCTYPE html>
         back2.addEventListener('click', function() { hide(sub2); show(main); });
     });
 </script>
+<script src="../languages/translator.js"></script>
 </body>
 </html>
