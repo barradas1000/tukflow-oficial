@@ -1,11 +1,5 @@
 {
-  "version": 2,
-  "buildCommand": null,
-  "outputDirectory": ".",
-  "routes": [
-    { "src": "^/$", "dest": "/oficial/index.html" },
-    { "src": "^/(.*)$", "dest": "/$1" }
-  ],
+  "outputDirectory": "oficial",
   "cleanUrls": true,
   "trailingSlash": false
 }
