@@ -17,9 +17,11 @@
     |-- cara velho.mp4
     |-- index.html
     |-- mapa-lisboa.png
+    |-- mapa-lisboa.webp
     |-- pagina-marketing-apresenta-sistema.css
     |-- pagina-marketing-apresenta-sistema.js
     |-- pagina-painel-admin.html
+    |-- pagina-tuktuk-milfontes.jpg
     |-- paginas
         |-- pagina-convite.html
         |-- pagina-disponibilidade.html
@@ -44,6 +46,7 @@
         |-- user-icon.png
     |-- reserva.html
     |-- tuk-mapa-onde-estou.jpeg
+    |-- tuktuk-milfontes-replica.html
     |-- Video-Tuktuk-Pagina-Marketing.mp4
 |-- package-lock.json
 |-- package.json

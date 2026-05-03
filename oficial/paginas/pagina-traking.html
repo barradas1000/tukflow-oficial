@@ -25,12 +25,6 @@
       display: block;
     }
 
-    @media (max-width: 420px) {
-      .logo-hero {
-        transform: scale(2.8) !important;
-      }
-    }
-
     .traffic-layer {
       position: absolute;
       inset: 0;
@@ -291,8 +285,6 @@
 <!-- BEGIN: MainHeader -->
 <header class="pt-3 sm:pt-4 pb-4 sm:pb-6 text-center px-4" data-purpose="header">
 <div class="flex flex-col items-center gap-2">
-<!-- Header Icon: Hand holding phone with map -->
-<img alt="TukTuk Logo" class="logo-hero w-28 sm:w-32 md:w-36 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ujI0hqmszuMMfcLOiOUOXG1xnb6OKkxAaMoS9TeJjNDWyjiTvlRB_QoKhnJwxXPzi4pScT44zmQgVbNHjm1liZPHYYh15iBTpruyunOPsS7x4jFf8eFbdnYiYd-E5tFJpucyHuIbzi7z5W5f8SmPXAlDBwLAm2wSesmJdFLOG2rno6t7wKXpkDofVtrKAwuPTZs4anNorxrU3tpv4MCcfAKwp4PvPsfZbRPmty5JXhBYGnHYciJ3cHmqly_uTHIOnTNNPOIvNbyog" style="clip-path: inset(1.5% 28% 84% 28%); transform: scale(3.8); height: 3.4rem; margin-bottom: 0.25rem;"/>
 <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight" data-i18n="tracking_header_title">TukTuk em Tempo Real</h1>
 <p class="text-slate-500 text-sm sm:text-base max-w-md mx-auto" data-i18n="tracking_header_subtitle">Acompanhe a localização do nosso TukTuk</p>
 </div>
@@ -323,7 +315,7 @@
 <!-- Map Container -->
 <div class="relative w-full aspect-[4/3] sm:aspect-[16/10] lg:aspect-[16/9] max-h-[260px] sm:max-h-[300px] lg:max-h-[340px] mx-auto rounded-xl overflow-hidden border border-slate-200 highlight-target" data-purpose="map-view" id="section-map-view">
 <!-- Official map background -->
-<img alt="Interactive Map" class="w-full h-full object-cover object-[center_35%]" src="../mapa-lisboa.png"/>
+<img alt="Interactive Map" class="w-full h-full object-cover object-[center_35%]" src="../mapa-lisboa.webp"/>
 <img alt="Sua localizacao" class="user-marker" id="user-marker" src="../public/user-icon.png"/>
 <!-- Tukflow moving markers -->
 <div class="traffic-layer" aria-hidden="true">

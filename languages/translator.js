@@ -10,12 +10,13 @@
   var SUPPORTED_LANGS = ['pt', 'en', 'es', 'fr'];
   var DEFAULT_LANG = 'pt';
   var STORAGE_KEY = 'tukflow_lang';
+  var LEGACY_STORAGE_KEY = 'lang';
 
   /**
    * Get the current language from localStorage or default
    */
   function getCurrentLang() {
-    var stored = localStorage.getItem(STORAGE_KEY);
+    var stored = localStorage.getItem(STORAGE_KEY) || localStorage.getItem(LEGACY_STORAGE_KEY);
     if (stored && SUPPORTED_LANGS.indexOf(stored) !== -1) {
       return stored;
     }
@@ -104,6 +105,7 @@
     if (SUPPORTED_LANGS.indexOf(lang) === -1) return;
 
     localStorage.setItem(STORAGE_KEY, lang);
+    localStorage.setItem(LEGACY_STORAGE_KEY, lang);
 
     // Update language selector UI if it exists
     var currentLangEl = document.getElementById('currentLang');
@@ -125,6 +127,11 @@
     var currentLangMobileEl = document.getElementById('currentLangMobile');
     if (currentLangMobileEl) {
       currentLangMobileEl.textContent = lang.toUpperCase();
+    }
+    var currentFlagMobileEl = document.getElementById('currentFlagMobile');
+    if (currentFlagMobileEl) {
+      var mobileFlags = { pt: '🇵🇹', en: '🇬🇧', es: '🇪🇸', fr: '🇫🇷' };
+      currentFlagMobileEl.textContent = mobileFlags[lang] || '🇵🇹';
     }
     // Update active state in dropdown
     document.querySelectorAll('.lang-option').forEach(function (opt) {
@@ -149,8 +156,38 @@
     document.querySelectorAll('[data-lang]').forEach(function (btn) {
       btn.addEventListener('click', function (e) {
         e.preventDefault();
+        e.stopPropagation();
         var lang = btn.getAttribute('data-lang');
         switchLanguage(lang);
+        document.querySelectorAll('.nav-dropdown, .lang-dropdown').forEach(function (dropdown) {
+          dropdown.classList.remove('is-open', 'show');
+          if (!dropdown.classList.contains('nav-dropdown')) {
+            dropdown.classList.add('opacity-0', 'invisible');
+          }
+        });
+      });
+    });
+
+    [
+      ['langSelectorBtn', 'langDropdown'],
+      ['langSelectorBtnMobile', 'langDropdownMobile']
+    ].forEach(function (pair) {
+      var trigger = document.getElementById(pair[0]);
+      var dropdown = document.getElementById(pair[1]);
+      if (!trigger || !dropdown) return;
+      if (dropdown.classList.contains('nav-dropdown')) return;
+
+      trigger.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        dropdown.classList.toggle('is-open');
+        dropdown.classList.toggle('show');
+        dropdown.classList.toggle('opacity-0');
+        dropdown.classList.toggle('invisible');
+      });
+
+      dropdown.addEventListener('click', function (e) {
+        e.stopPropagation();
       });
     });
 
