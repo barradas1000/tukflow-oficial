@@ -1,0 +1,1104 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="oficial/public/favicon_tukflow.png"
+    />
+    <title data-i18n="site_title">tuktuk-milfontes - Replica</title>
+    <meta
+      name="description"
+      data-i18n="site_description"
+      content="Descubra Vila Nova de Milfontes de Tuk Tuk! Passeios turísticos, experiências únicas e reservas online. Viva a magia do Alentejo Litoral com conforto e diversão."
+    />
+    <meta
+      name="keywords"
+      content="Tuk Tuk, Milfontes, Vila Nova de Milfontes, passeios turísticos, turismo, Alentejo, reservas, experiências, Portugal"
+    />
+    <meta name="author" content="Tuk Tuk Milfontes" />
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: ["class"],
+        theme: {
+          extend: {
+            screens: {
+              xs: "475px",
+            },
+            height: {
+              18: "4.5rem",
+              22: "5.5rem",
+            },
+            colors: {
+              border: "hsl(214.3 31.8% 91.4%)",
+              input: "hsl(214.3 31.8% 91.4%)",
+              ring: "hsl(222.2 84% 4.9%)",
+              background: "hsl(0 0% 100%)",
+              foreground: "hsl(222.2 84% 4.9%)",
+              primary: {
+                DEFAULT: "hsl(222.2 47.4% 11.2%)",
+                foreground: "hsl(210 40% 98%)",
+              },
+              secondary: {
+                DEFAULT: "hsl(210 40% 96.1%)",
+                foreground: "hsl(222.2 47.4% 11.2%)",
+              },
+              destructive: {
+                DEFAULT: "hsl(0 84.2% 60.2%)",
+                foreground: "hsl(210 40% 98%)",
+              },
+              muted: {
+                DEFAULT: "hsl(210 40% 96.1%)",
+                foreground: "hsl(215.4 16.3% 46.9%)",
+              },
+              accent: {
+                DEFAULT: "hsl(210 40% 96.1%)",
+                foreground: "hsl(222.2 47.4% 11.2%)",
+              },
+              popover: {
+                DEFAULT: "hsl(0 0% 100%)",
+                foreground: "hsl(222.2 84% 4.9%)",
+              },
+            },
+          },
+          keyframes: {
+            "accordion-up": {
+              from: { height: "var(--accordion-content-height)" },
+              to: { height: "0" },
+            },
+          },
+          animation: {
+            "accordion-up": "accordion-up 0.2s ease-out",
+          },
+        },
+        plugins: [],
+      };
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+      * {
+        font-family:
+          -ui-sans-serif,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          "Helvetica Neue",
+          Arial,
+          "Noto Sans",
+          sans-serif;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Animações personalizadas */
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fade-in {
+        animation: fade-in 0.6s ease-out;
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(-25%);
+          animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+        }
+        50% {
+          transform: translateY(0);
+          animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        }
+      }
+
+      .animate-bounce {
+        animation: bounce 2s infinite;
+      }
+
+      @keyframes pulse {
+        50% {
+          opacity: 0.5;
+        }
+      }
+
+      .animate-pulse {
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+
+      /* Estilos do Accordion */
+      .accordion-item {
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      .accordion-trigger {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 1rem 0;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: #1e3a5f;
+        transition: color 0.2s;
+      }
+
+      .accordion-trigger:hover {
+        color: #d97706;
+      }
+
+      .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+      }
+
+      .accordion-content.active {
+        max-height: 500px;
+      }
+
+      .accordion-icon {
+        transition: transform 0.2s;
+      }
+
+      .accordion-icon.rotated {
+        transform: rotate(180deg);
+      }
+
+      /* Modal/Diálogo */
+      .modal-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 50;
+      }
+
+      .modal-overlay.active {
+        display: flex;
+      }
+
+      .modal-content {
+        background: white;
+        border-radius: 0.75rem;
+        max-width: 56rem;
+        width: 90%;
+        max-height: 90vh;
+        overflow-y: auto;
+        padding: 2rem;
+        position: relative;
+      }
+
+      .modal-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+      }
+
+      /* Testimonials */
+      .testimonial-card {
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+      }
+
+      .testimonial-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      }
+
+      /* Scroll suave */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Language Selector Styles */
+      .lang-selector {
+        position: relative;
+        display: inline-block;
+      }
+
+      .lang-selector-btn {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(4px);
+        border: 1px solid #d1d5db;
+        border-radius: 0.5rem;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: #374151;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .lang-selector-btn:hover {
+        background: white;
+      }
+
+      .lang-dropdown {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        margin-top: 0.25rem;
+        background: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 0.5rem;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        display: none;
+        z-index: 100;
+        min-width: 140px;
+        overflow: hidden;
+      }
+
+      .lang-dropdown.active {
+        display: block;
+      }
+
+      .lang-option {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        width: 100%;
+        padding: 0.625rem 0.75rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 0.875rem;
+        color: #374151;
+        transition: background 0.15s;
+        text-align: left;
+      }
+
+      .lang-option:hover {
+        background: #f3f4f6;
+      }
+
+      .lang-option.active-lang {
+        background: #fef3c7;
+        font-weight: 600;
+      }
+
+      .current-flag {
+        font-size: 1.25rem;
+        line-height: 1;
+      }
+
+      .lang-option-flag {
+        font-size: 1.125rem;
+        line-height: 1;
+      }
+    </style>
+  </head>
+
+  <body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <!-- Language Selector -->
+    <div class="fixed top-4 right-4 z-50">
+      <div class="lang-selector">
+        <button id="langSelectorBtn" class="lang-selector-btn">
+          <span id="currentFlag" class="current-flag">🇵🇹</span>
+          <span id="currentLangText">PT</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-4 h-4 text-gray-500"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </button>
+        <div id="langDropdown" class="lang-dropdown">
+          <button class="lang-option active-lang" data-lang="pt">
+            <span class="lang-option-flag">🇵🇹</span> Português
+          </button>
+          <button class="lang-option" data-lang="en">
+            <span class="lang-option-flag">🇬🇧</span> English
+          </button>
+          <button class="lang-option" data-lang="es">
+            <span class="lang-option-flag">🇪🇸</span> Español
+          </button>
+          <button class="lang-option" data-lang="fr">
+            <span class="lang-option-flag">🇫🇷</span> Français
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section
+      id="hero"
+      class="relative min-h-screen flex flex-col justify-center items-center overflow-hidden"
+      style="
+        background: linear-gradient(
+          135deg,
+          #1e3a8a 0%,
+          #1e40af 50%,
+          #312e81 100%
+        );
+      "
+    >
+      <!-- Background Image -->
+      <div
+        class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style="
+          background-image: url(&quot;/oficial/por-do-sol-praia-malhao.webp&quot;);
+        "
+      ></div>
+
+      <!-- Content -->
+      <div class="relative z-10 text-center px-4 max-w-5xl mx-auto pt-16 pb-8">
+        <div class="animate-fade-in space-y-3 sm:space-y-4 md:space-y-5">
+          <!-- Logo -->
+          <div class="flex justify-center">
+            <div class="relative">
+              <div
+                class="absolute inset-0 bg-amber-400/30 rounded-full blur-xl animate-pulse"
+              ></div>
+              <div
+                class="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full bg-white/95 backdrop-blur-sm shadow-2xl border-4 border-amber-400/50 p-2 hover:scale-105 transition-transform duration-300"
+              >
+                <img
+                  alt="TukTuk Milfontes Logo"
+                  class="w-full h-full object-contain rounded-full"
+                  src="/oficial/app_launcher_icon.jpg"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Title -->
+          <h1 class="font-bold tracking-tight">
+            <span
+              class="block font-bold text-[2rem] xs:text-[2.25rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] text-white drop-shadow-lg"
+              data-i18n="hero_title_1"
+            >
+              Descubra Milfontes com Estilo
+            </span>
+            <span
+              class="block font-bold text-[1.75rem] xs:text-[2rem] sm:text-[2.25rem] md:text-[2.75rem] lg:text-[3rem] text-amber-400 drop-shadow-lg"
+            >
+              <span data-i18n="hero_title_2"
+                >Aventuras de Tuk-Tuk pela Costa Vicentina</span
+              >
+              <span class="align-middle inline-block text-[2rem] lg:text-[3rem]"
+                >🛺✨</span
+              >
+            </span>
+          </h1>
+
+          <!-- Description -->
+          <p
+            class="font-medium text-white/90 text-[0.875rem] sm:text-[1rem] md:text-[1.125rem] max-w-3xl mx-auto leading-relaxed drop-shadow-md px-2"
+            data-i18n="hero_description"
+          >
+            Explore paisagens deslumbrantes, praias paradisíacas e vilas
+            históricas numa experiência única e inesquecível de Tuk-Tuk pela
+            Costa Vicentina!
+          </p>
+
+          <!-- CTA Buttons + Rating -->
+          <div
+            class="flex flex-col sm:flex-row gap-3 justify-center items-center mt-2"
+          >
+            <button
+              onclick="openReservationModal()"
+              class="group relative bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-blue-900 font-bold text-[0.875rem] sm:text-[1rem] px-6 py-3 sm:px-8 sm:py-3.5 rounded-full shadow-2xl hover:shadow-amber-500/40 transition-all duration-300 hover:scale-105 transform w-full sm:w-auto"
+            >
+              <span
+                class="flex items-center justify-center gap-2"
+                data-i18n="hero_btn_reserve"
+              >
+                Reservar Agora
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </span>
+            </button>
+            <button
+              class="bg-white/20 text-white font-bold text-[0.875rem] sm:text-[1rem] px-6 py-3 sm:px-8 sm:py-3.5 rounded-full border border-white/30 shadow hover:bg-white/30 transition-all duration-300 w-full sm:w-auto"
+              onclick="scrollToDisponibilidade()"
+              data-i18n="hero_btn_availability"
+            >
+              Veja Disponibilidade
+            </button>
+            <!-- Rating Badge -->
+            <div
+              class="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm px-3 py-2 rounded-full border border-white/20"
+            >
+              <div class="flex">
+                <svg
+                  class="w-4 h-4 text-amber-400 fill-current"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-amber-400 fill-current"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-amber-400 fill-current"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-amber-400 fill-current"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-amber-400 fill-current"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+              </div>
+              <span
+                class="text-white font-semibold text-xs sm:text-sm"
+                data-i18n="hero_rating"
+                >4.9/5 ⭐ (200+ avaliações)</span
+              >
+            </div>
+          </div>
+
+          <!-- Scroll Indicator -->
+          <div class="pt-4 flex justify-center">
+            <div class="animate-bounce">
+              <div
+                class="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center p-1"
+              >
+                <div
+                  class="w-1.5 h-2.5 bg-white/80 rounded-full animate-pulse"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="about" class="py-20 px-4 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold text-blue-900 mb-6">
+            <span data-i18n="benefits_title_1">Porquê Escolher os</span>
+            <span class="text-amber-500" data-i18n="benefits_title_2"
+              >Nossos Tuk-Tuks?</span
+            >
+          </h2>
+          <p
+            class="text-xl text-gray-600 max-w-3xl mx-auto"
+            data-i18n="benefits_subtitle"
+          >
+            Conforto, diversão e experiências únicas garantidas para toda a
+            família
+          </p>
+        </div>
+
+        <!-- Image Gallery -->
+        <div class="grid md:grid-cols-2 gap-8 mb-16">
+          <div class="relative">
+            <img
+              src="https://tuktuk-milfontes.vercel.app/lovable-uploads/bc9c590b-26bf-4d4d-a27c-3e917afef291.png"
+              alt="Nosso Tuk-Tuk ao pôr do sol em Milfontes"
+              class="w-full h-64 object-cover rounded-xl shadow-lg"
+              loading="lazy"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl"
+            ></div>
+            <div class="absolute bottom-4 left-4 text-white">
+              <h3 class="text-xl font-bold" data-i18n="benefits_img1_title">
+                Experiência Única
+              </h3>
+              <p class="text-sm" data-i18n="benefits_img1_desc">
+                Paisagens deslumbrantes ao pôr do sol
+              </p>
+            </div>
+          </div>
+          <div class="relative">
+            <img
+              src="https://tuktuk-milfontes.vercel.app/lovable-uploads/ddc85a0b-4a74-44e3-a0a6-bed937a5a686.png"
+              alt="Tuk-Tuk com cobertura contra chuva"
+              class="w-full h-64 object-cover rounded-xl shadow-lg"
+              loading="lazy"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl"
+            ></div>
+            <div class="absolute bottom-4 left-4 text-white">
+              <h3 class="text-xl font-bold" data-i18n="benefits_img2_title">
+                Proteção Climática
+              </h3>
+              <p class="text-sm" data-i18n="benefits_img2_desc">
+                Capota retrátil e proteção contra chuva
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-0 shadow-lg bg-gradient-to-br from-blue-50 to-white rounded-xl p-8 text-center"
+          >
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-10 h-10 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"
+                />
+              </svg>
+            </div>
+            <h3
+              class="text-2xl font-bold text-blue-900 mb-4"
+              data-i18n="benefits_card1_title"
+            >
+              Rotas Exclusivas
+            </h3>
+            <p
+              class="text-gray-600 text-lg leading-relaxed"
+              data-i18n="benefits_card1_desc"
+            >
+              Acesso a locais únicos e vistas panorâmicas que só consegue
+              alcançar com os nossos tuk-tuks especializados
+            </p>
+          </div>
+
+          <div
+            class="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-0 shadow-lg bg-gradient-to-br from-amber-50 to-white rounded-xl p-8 text-center"
+          >
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-amber-500 to-amber-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-10 h-10 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                />
+              </svg>
+            </div>
+            <h3
+              class="text-2xl font-bold text-blue-900 mb-4"
+              data-i18n="benefits_card2_title"
+            >
+              Conforto Familiar
+            </h3>
+            <p
+              class="text-gray-600 text-lg leading-relaxed"
+              data-i18n="benefits_card2_desc"
+            >
+              Veículos seguros e confortáveis, ideais para famílias com crianças
+              e pessoas de todas as idades
+            </p>
+          </div>
+
+          <div
+            class="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-0 shadow-lg bg-gradient-to-br from-green-50 to-white rounded-xl p-8 text-center"
+          >
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-10 h-10 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                />
+              </svg>
+            </div>
+            <h3
+              class="text-2xl font-bold text-blue-900 mb-4"
+              data-i18n="benefits_card3_title"
+            >
+              Reserva Rápida
+            </h3>
+            <p
+              class="text-gray-600 text-lg leading-relaxed"
+              data-i18n="benefits_card3_desc"
+            >
+              Sistema de reservas WhatsApp simples e rápido. Confirme o seu
+              passeio em apenas alguns minutos
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section
+      id="tours"
+      class="py-20 px-4 bg-gradient-to-br from-amber-50 to-white"
+    >
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold text-blue-900 mb-6">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="inline-block w-12 h-12 mr-4 text-amber-500"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z"
+              />
+            </svg>
+            <span data-i18n="pricing_title_1">Preços</span>
+            <span class="text-amber-500" data-i18n="pricing_title_2"
+              >Transparentes</span
+            >
+          </h2>
+          <p
+            class="text-xl text-gray-600 max-w-3xl mx-auto"
+            data-i18n="pricing_subtitle"
+          >
+            Preços justos e claros, sem surpresas. Diversão garantida para toda
+            a família!
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <!-- Tour Card 1 -->
+          <div
+            class="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-0 shadow-lg bg-gradient-to-br from-white to-blue-50 rounded-xl p-8 text-center"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"
+            >
+              <span class="text-white font-bold text-2xl">€10</span>
+            </div>
+            <h3
+              class="text-xl font-bold text-blue-900 mb-2"
+              data-i18n="tour1_name"
+            >
+              Passeio panorâmico pela vila
+            </h3>
+            <div
+              class="inline-flex items-center px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm mb-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 mr-1"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              45 min
+            </div>
+            <p class="text-gray-600 mb-6" data-i18n="tour1_desc">
+              Descubra os pontos mais emblemáticos de Vila Nova de Milfontes
+            </p>
+            <div class="text-sm text-gray-500">
+              <p>
+                <span data-i18n="tour_up_to">Até 2 pessoas</span>:
+                <span class="font-semibold text-amber-600">€10</span>
+              </p>
+              <p>
+                <span data-i18n="tour_extra">Pessoas adicionais</span>:
+                <span class="font-semibold text-amber-600">+€3.50</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Tour Card 2 -->
+          <div
+            class="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-0 shadow-lg bg-gradient-to-br from-white to-blue-50 rounded-xl p-8 text-center"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"
+            >
+              <span class="text-white font-bold text-2xl">€14</span>
+            </div>
+            <h3
+              class="text-xl font-bold text-blue-900 mb-2"
+              data-i18n="tour2_name"
+            >
+              Vila Nova de Milfontes → Praia das Furnas
+            </h3>
+            <div
+              class="inline-flex items-center px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm mb-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 mr-1"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              45 min
+            </div>
+            <p class="text-gray-600 mb-6" data-i18n="tour2_desc">
+              Percurso panorâmico até à deslumbrante Praia das Furnas
+            </p>
+            <div class="text-sm text-gray-500">
+              <p>
+                <span data-i18n="tour_up_to">Até 2 pessoas</span>:
+                <span class="font-semibold text-amber-600">€14</span>
+              </p>
+              <p>
+                <span data-i18n="tour_extra">Pessoas adicionais</span>:
+                <span class="font-semibold text-amber-600">+€3.50</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Tour Card 3 -->
+          <div
+            class="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-0 shadow-lg bg-gradient-to-br from-white to-blue-50 rounded-xl p-8 text-center"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"
+            >
+              <span class="text-white font-bold text-2xl">€10</span>
+            </div>
+            <h3
+              class="text-xl font-bold text-blue-900 mb-2"
+              data-i18n="tour3_name"
+            >
+              Travessia da ponte
+            </h3>
+            <div
+              class="inline-flex items-center px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm mb-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 mr-1"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              30 min
+            </div>
+            <p class="text-gray-600 mb-6" data-i18n="tour3_desc">
+              Atravesse a ponte histórica com vistas panorâmicas
+            </p>
+            <div class="text-sm text-gray-500">
+              <p>
+                <span data-i18n="tour_up_to">Até 2 pessoas</span>:
+                <span class="font-semibold text-amber-600">€10</span>
+              </p>
+              <p>
+                <span data-i18n="tour_extra">Pessoas adicionais</span>:
+                <span class="font-semibold text-amber-600">+€3.50</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Tour Card 4 -->
+          <div
+            class="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-0 shadow-lg bg-gradient-to-br from-white to-blue-50 rounded-xl p-8 text-center"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"
+            >
+              <span class="text-white font-bold text-2xl">€25</span>
+            </div>
+            <h3
+              class="text-xl font-bold text-blue-900 mb-2"
+              data-i18n="tour4_name"
+            >
+              Pôr do Sol Romântico
+            </h3>
+            <div
+              class="inline-flex items-center px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm mb-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 mr-1"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              2h
+            </div>
+            <p class="text-gray-600 mb-6" data-i18n="tour4_desc">
+              Desfrute do mais belo pôr do sol da costa
+            </p>
+            <div class="text-sm text-gray-500">
+              <p>
+                <span data-i18n="tour_up_to">Até 2 pessoas</span>:
+                <span class="font-semibold text-amber-600">€25</span>
+              </p>
+              <p>
+                <span data-i18n="tour_extra">Pessoas adicionais</span>:
+                <span class="font-semibold text-amber-600">+€3.50</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Tour Card 5 -->
+          <div
+            class="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-0 shadow-lg bg-gradient-to-br from-white to-blue-50 rounded-xl p-8 text-center"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"
+            >
+              <span class="text-white font-bold text-2xl">€8</span>
+            </div>
+            <h3
+              class="text-xl font-bold text-blue-900 mb-2"
+              data-i18n="tour5_name"
+            >
+              Passeio noturno
+            </h3>
+            <div
+              class="inline-flex items-center px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm mb-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 mr-1"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              1h
+            </div>
+            <p class="text-gray-600 mb-6" data-i18n="tour5_desc">
+              Explore a vila sob o luar numa perspetiva única
+            </p>
+            <div class="text-sm text-gray-500">
+              <p>
+                <span data-i18n="tour_up_to">Até 2 pessoas</span>:
+                <span class="font-semibold text-amber-600">€8</span>
+              </p>
+              <p>
+                <span data-i18n="tour_extra">Pessoas adicionais</span>:
+                <span class="font-semibold text-amber-600">+€3.50</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Tour Card 6 -->
+          <div
+            class="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-0 shadow-lg bg-gradient-to-br from-white to-blue-50 rounded-xl p-8 text-center"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"
+            >
+              <span class="text-white font-bold text-2xl">€10</span>
+            </div>
+            <h3
+              class="text-xl font-bold text-blue-900 mb-2"
+              data-i18n="tour6_name"
+            >
+              Rota dos Pescadores
+            </h3>
+            <div
+              class="inline-flex items-center px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm mb-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4 mr-1"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              45 min
+            </div>
+            <p class="text-gray-600 mb-6" data-i18n="tour6_desc">
+              Conheça as tradições piscatórias locais
+            </p>
+            <div class="text-sm text-gray-500">
+              <p>
+                <span data-i18n="tour_up_to">Até 2 pessoas</span>:
+                <span class="font-semibold text-amber-600">€10</span>
+              </p>
+              <p>
+                <span data-i18n="tour_extra">Pessoas adicionais</span>:
+                <span class="font-semibold text-amber-600">+€3.50</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="languages/pt.js"></script>
+    <script src="languages/translator.js"></script>
+
+    <script>
+      // Accordion
+      document.querySelectorAll(".accordion-trigger").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var content = this.nextElementSibling;
+          var icon = this.querySelector(".accordion-icon");
+          content.classList.toggle("active");
+          if (icon) icon.classList.toggle("rotated");
+        });
+      });
+
+      // Language dropdown toggle
+      var langBtn = document.getElementById("langSelectorBtn");
+      var langDropdown = document.getElementById("langDropdown");
+      if (langBtn && langDropdown) {
+        langBtn.addEventListener("click", function (e) {
+          e.stopPropagation();
+          langDropdown.classList.toggle("active");
+        });
+        document.addEventListener("click", function () {
+          langDropdown.classList.remove("active");
+        });
+      }
+
+      // Language option click — delegate to translator
+      document.querySelectorAll(".lang-option").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var lang = this.getAttribute("data-lang");
+          if (window.TukFlowTranslator) {
+            window.TukFlowTranslator.switchLanguage(lang);
+          }
+          // Update active-lang class
+          document.querySelectorAll(".lang-option").forEach(function (b) {
+            b.classList.remove("active-lang");
+          });
+          this.classList.add("active-lang");
+          // Update button display
+          var flags = { pt: "🇵🇹", en: "🇬🇧", es: "🇪🇸", fr: "🇫🇷" };
+          var labels = { pt: "PT", en: "EN", es: "ES", fr: "FR" };
+          document.getElementById("currentFlag").textContent =
+            flags[lang] || "🇵🇹";
+          document.getElementById("currentLangText").textContent =
+            labels[lang] || "PT";
+          langDropdown.classList.remove("active");
+        });
+      });
+    </script>
+  </body>
+</html>

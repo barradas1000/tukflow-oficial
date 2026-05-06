@@ -6,6 +6,8 @@
     |-- project.json
     |-- README.txt
 |-- .vercelignore
+|-- gif
+    |-- trajeto-tuktuk-lisboa-roteiro.md
 |-- global.css
 |-- languages
     |-- en.js
@@ -14,25 +16,33 @@
     |-- pt.js
     |-- translator.js
 |-- oficial
-    |-- cara velho.mp4
+    |-- app_launcher_icon.jpg
+    |-- banner-goto-map.webp
+    |-- exelente-noticia.jpg
+    |-- imagem-interativo.png
+    |-- imagem-pagina-traking.webp
+    |-- imagem-video-milfontes.jpg
     |-- index.html
-    |-- mapa-lisboa.png
     |-- mapa-lisboa.webp
     |-- pagina-marketing-apresenta-sistema.css
     |-- pagina-marketing-apresenta-sistema.js
-    |-- pagina-painel-admin.html
     |-- pagina-tuktuk-milfontes.jpg
     |-- paginas
         |-- pagina-convite.html
         |-- pagina-disponibilidade.html
+        |-- pagina-mapa-condutores.html
         |-- pagina-painel-admin.html
         |-- pagina-reservas.html
         |-- pagina-traking.html
+        |-- tuktuk-milfontes-replica.html
     |-- painel-admin.png
+    |-- por-do-sol-praia-malhao.webp
     |-- public
         |-- calendar.gif
         |-- dashboard.gif
         |-- driver.gif
+        |-- favicon_tukflow.png
+        |-- favicon_tukflow.webp
         |-- mapa-celular.gif
         |-- maps-tempo real.gif
         |-- pagina-web.gif
@@ -41,28 +51,20 @@
         |-- tukflow-icon-3d-transp.png
         |-- tukflow-icon-laranja.png
         |-- tukflow-icon-sem-fundo.jpeg
+        |-- tukflow_apenas_texto_e_seta.png
         |-- tuktuk-amarelo.png
         |-- tuktuk-movie-site.mp4
         |-- user-icon.png
     |-- reserva.html
+    |-- trajeto_lisboa_na_pagina.gif
     |-- tuk-mapa-onde-estou.jpeg
-    |-- tuktuk-milfontes-replica.html
     |-- Video-Tuktuk-Pagina-Marketing.mp4
 |-- package-lock.json
 |-- package.json
 |-- PAGINA-PROMO.md
+|-- pagina-teste-replique.html
 |-- painel-admin.png
 |-- README.md
-|-- sem-dinheiro.mp4
-|-- tuk-no-mapa.png
-|-- tukruk azul , jovem.mp4
-|-- tuktuk-condutor -pensativo-01.-ok mp4.mp4
-|-- tuktuk-condutor -pensativo-01.mp4
-|-- tuktuk-video-nao-subrou-nada.mp4
-|-- tutu-fazer contas.mp4
 |-- vercel.json
-|-- video, ok para usar.mp4
 |-- video-demo
     |-- icon-tukflow-animado.mp4
-    |-- sem-dinheiro-2.mp4
-    |-- sem-dinheiro-3.mp4

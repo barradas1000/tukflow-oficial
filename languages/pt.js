@@ -1,417 +1,335 @@
-window.translations = {
-  // ── Credibility bar
-  stat_operators_num: "47+",
-  stat_operators_label: "Operadores Ativos",
-  stat_bookings_num: "3.200+",
-  stat_bookings_label: "Reservas Processadas",
-  stat_cities_num: "12",
-  stat_cities_label: "Cidades",
-  stat_rating_num: "4.9★",
-  stat_rating_label: "Avaliação Média",
-  // ── Testimonials
-  testimonials_label: "Casos Reais",
-  testimonials_title: "O que dizem quem já usa",
-  testimonial_1_text:
-    '"Antes dependia totalmente do movimento na rua e das comissões às plataformas. Desde que tenho o meu sistema com a TukFlow, os clientes encontram-me online, fazem reservas antecipadas e eu consigo planear o meu dia. Em menos de uma semana já tinha o site a funcionar com reservas e o tuktuk visível no mapa. Recomendo a qualquer operador que queira trabalhar com mais dignidade e autonomia."',
-  testimonial_1_name: "Diogo Carias",
-  testimonial_1_role: "Operador TukTuk · Vila Nova de Milfontes",
-  testimonial_2_text:
-    '"Finalmente tenho um sistema profissional. Os clientes chegam por si e eu foco-me na qualidade do serviço."',
-  testimonial_2_name: "Carlos M.",
-  testimonial_2_role: "Operador TukTuk · Sintra",
-  testimonial_3_text:
-    '"Reduzi as multas, as comissões desapareceram e o meu horário ficou muito mais organizado. Excelente."',
-  testimonial_3_name: "Ana R.",
-  testimonial_3_role: "Operadora TukTuk · Porto",
-  // ── FAQ
-  faq_label: "FAQ",
-  faq_title: "Perguntas frequentes",
-  faq_subtitle:
-    "Temos respostas. Se não encontrar o que procura, fale connosco diretamente.",
-  faq_1_q: "Preciso de saber programar para usar a TukFlow?",
-  faq_1_a:
-    "Não. A TukFlow é pensada para operadores, não para programadores. Nós tratamos de toda a configuração inicial e tens suporte em português incluído. Não precisas de instalar nada nem de qualquer conhecimento técnico.",
-  faq_2_q: "Em quanto tempo fico operacional?",
-  faq_2_a:
-    "Em menos de 24 horas. Após a demonstração e confirmação, a tua plataforma fica configurada com o teu nome, passeios, preços e geolocalização ativa. Podes começar a receber reservas no próprio dia.",
-  faq_3_q: "Há contrato de permanência?",
-  faq_3_a:
-    "Não existe fidelização obrigatória. Podes cancelar a qualquer momento sem penalizações. Acreditamos que ficas porque o sistema funciona — não porque tens de ficar.",
-  faq_4_q: "A plataforma funciona no telemóvel?",
-  faq_4_a:
-    "Sim. O sistema é 100% responsivo e otimizado para mobile. Geres as reservas, a disponibilidade e acompanhas as viagens diretamente pelo telemóvel — sem necessidade de computador.",
-  faq_5_q: "Como os meus clientes fazem reservas?",
-  faq_5_a:
-    "Terás um site público personalizado onde os teus clientes vêem o tuktuk no mapa em tempo real, consultam os teus tours e preços, e fazem a reserva online ou via WhatsApp. Recebes a notificação imediatamente.",
-  faq_6_q: "Tenho de pagar comissões por cada reserva?",
-  faq_6_a:
-    "Não. Zero comissões por reserva. Pagas uma mensalidade fixa e todas as reservas são 100% tuas. Em plataformas como Airbnb ou GetYourGuide pagas entre 20-30% por serviço — aqui esse dinheiro fica no teu bolso.",
-  card_site_empresa: "Site da Empresa",
-  card_site_empresa_desc:
-    "Mostre os seus passeios, preços e durações num site profissional e otimizado para conversão.",
-  card_mapa_tempo_real: "Mapa em Tempo Real",
-  card_mapa_tempo_real_desc:
-    "Acompanhe os seus TukTuks ao vivo e ofereça transparência total aos seus clientes.",
-  card_sistema_reservas: "Sistema de Reservas",
-  card_sistema_reservas_desc:
-    "Gira reservas de forma simples, online e intuitiva com calendário integrado.",
-  card_app_geolocalizacao: "App de Geolocalização",
-  card_app_geolocalizacao_desc:
-    "App mobile para TukTuks indicarem a sua localização em tempo real.",
-  card_painel_administrativo: "Painel Administrativo",
-  card_painel_administrativo_desc:
-    "Controlo total de frotas, histórico e faturação num dashboard unificado.",
-  card_area_condutor: "Área do Condutor",
-  card_area_condutor_desc:
-    "Gestão individualizada de serviço e histórico detalhado para cada motorista.",
-  ver_pormenores: "Ver pormenores",
-  o_que_encontrar: "Ferramentas Pensadas para o Teu Dia a Dia",
-  descricao_o_que_encontrar:
-    "Um sistema online pensado para o teu dia a dia, com ferramentas de gestão completas, sem complicações e sempre no teu controlo.",
-  vais_ter: "Vais ter",
-  descricao_vais_ter:
-    "O teu próprio site personalizado, onde podes mostrar os teus passeios, preços e contactos de forma simples e clara.",
-  sistema_reservas_personalizado: "Sistema de reservas personalizado",
-  descricao_sistema_reservas:
-    "Um sistema de reservas, onde o cliente pode ver o teu tuktuk no mapa, chamar-te diretamente ou marcar uma viagem para mais tarde, tudo online.",
-  website_personalizado: "WebSite Personalizado",
-  pagina_publica: "Exemplo de Website  Personalizado",
-  ver_tuktuk_tempo_real: "Ver TukTuk Tempo em Real",
-  tuk_em_tempo_real: "Tuk em Tempo Real",
-  disponibilidade_tempo_real: "Disponibilidade em Tempo Real",
-  formulario_reservas: "Formulário de reserva",
-  pesquisar: "Pesquisar",
-  app_geolocalizacao: "App Geolocalização",
-  backoffice_administrativo: "BackOffice Administrativo",
-  reservas_ativas: "Reservas Ativas",
-  disponibilidade: "Disponibilidade",
-  gestao_condutores: "Gestão de Condutores",
-  tuk_no_map: "Tuk no Map",
-  gestao_admin: "Gestão Admin",
-  gestao_frota: "Gestão de Frota",
-  hero_title: "Faça Aqui Toda a Gestão do seu Negócio",
-  hero_gestao_negocio:
-    '<span class="hero-question">Poucos clientes?</span><span class="hero-pay">Farto de pagar</span><span class="hero-alert">Comissões e Multas?</span>',
-  hero_subtitle:
-    'Chega de lutar na rua. Com o <span style="color:#91BFD2;font-weight:700;">TukFlow</span>, os clientes chegam até ti — reservas online, sem comissões, sem intermediários.',
-  dores_title:
-    "Começas o dia sem reservas e segues para o ponto onde costumas trabalhar.",
-  dores_subtitle:
-    "Às vezes há movimento, outras vezes não. Mesmo quando aparece alguém, já enfrentaste custos e riscos só por estares ali. O teu tuktuk está pronto, tu estás pronto — o que falta são condições mais justas para trabalhar.",
-  dor_1_title: 'Fim da "Caça" ao Cliente',
-  dor_1_desc:
-    "Deixa de depender apenas de quem passa na rua ou de estar parado em locais proibidos à espera de sorte.",
-  dor_2_title: "Menos Multas, Mais Faturação",
-  dor_2_desc:
-    "Com um sistema de reservas próprio, os teus clientes marcam hora e local. Menos tempo mal estacionado, menos risco de fiscalização.",
-  dor_3_title: "Sai da Guerra de Preços",
-  dor_3_desc:
-    'Quando tens a tua própria plataforma, não és "apenas mais um" na fila. És uma marca profissional com agendamento direto.',
-  dor_4_title: "Manutenção Sem Surpresas",
-  dor_4_desc:
-    "Controla o desgaste do teu veículo com alertas de manutenção baseados no volume de viagens.",
-  dor_5_title: "Transparência de Preços",
-  dor_5_desc:
-    "Os teus clientes sabem exatamente quanto vão pagar antes de entrar no TukTuk. Sem surpresas na chegada — mais confiança, mais reservas confirmadas.",
-  dor_6_title: "Conhecedor dos Locais de Vista",
-  dor_6_desc:
-    "Mostra que és um especialista local. Destaca os melhores pontos de vista da cidade no teu perfil e diferencia-te da concorrência sem esforço.",
-  comecar_agora: "Começar Agora",
-  ver_demonstracao: "Ver Demonstração",
-  plataforma_all_in_one: "Plataforma All-in-One",
-  descubra_sistema_completo:
-    "Um sistema completo para o teu negócio TukTuk — simples, online e sempre acessível.",
-  aumente_faturacao:
-    "Aumente a sua faturação e veja o seu negócio decolar com mais clientes dentro do seu tuktuk, todos os dias.",
-  ja_imaginou: "Já imaginou ter o seu próprio sistema?",
-  sistema_100_seu:
-    "Um sistema 100% seu, sem precisar de pagamentos a  plataformas externas, fim das comissões altas e sem guerras de reviews?",
-  cta_title: "O teu negócio, nas tuas mãos, sem depender de ninguém.",
-  cta_solicitar_demo: "Solicitar Demonstração",
-  cta_ver_planos: "Ver Planos",
-  benefit_controle_total: "Controlo Total de Horários",
-  benefit_controle_total_desc:
-    "Acaba com o desgaste físico de estar 10 horas na rua. Planeia o teu dia com reservas antecipadas e rentabiliza as horas mortas.",
-  benefit_privacidade_total: "Independência de Plataformas",
-  benefit_privacidade_total_desc:
-    "Diz adeus às guerras de reviews injustas. Aqui, o cliente é teu e a relação é direta, sem intermediários.",
-  benefit_organizacao_eficiencia: "Localização Inteligente",
-  benefit_organizacao_eficiencia_desc:
-    "O cliente vê-te no mapa. Não precisas de estar amontoado em espaços históricos; o teu TukTuk torna-se visível digitalmente em toda a cidade.",
-  benefit_centralizacao: "Centralização",
-  benefit_centralizacao_desc:
-    "Centralize tudo num só lugar: reservas, clientes, rotas e comunicação — simples, rápido e sempre acessível.",
-  benefit_profissionalismo: "Profissionalismo",
-  benefit_profissionalismo_desc:
-    "Experiência profissional aos seus clientes, aumente a confiança no seu serviço e transforme cada pedido numa oportunidade de faturação.",
-  benefit_crescimento: "Crescimento",
-  benefit_crescimento_desc:
-    "Prepare-se para crescer — com o nosso sistema, não está apenas a gerir melhor, está a preparar o seu negócio para crescer, todos os dias.",
-  footer_brand: "TukFlow",
-  footer_desc:
-    "A plataforma líder em gestão de mobilidade leve urbana. Potencializando frotas de TukTuks em todo o mundo.",
-  footer_produto: "Produto",
-  footer_funcionalidades: "Funcionalidades",
-  footer_precos: "Preços",
-  funcionalidades_label: "Funcionalidades",
-  funcionalidades_headline: "Tudo incluído. Uma plataforma. Zero complicações.",
-  contact_us: "Contacte-nos",
-  cta_badge: "Demonstração Gratuita — Sem Compromisso",
-  cta_final_title:
-    "Se os teus clientes estão online, por que é que o teu negócio ainda não está?",
-  cta_final_subtitle:
-    'Pára de depender do acaso. Em vez de esperar que as pessoas encontrem a tua página no Facebook ou Instagram, com o sistema <span style="color:#91BFD2;font-weight:700;">TukFlow</span> terás mais visibilidade Online e controlo total do teu negócio — tudo numa só plataforma, sem comissões nem intermediários e com reservas online todos os dias.',
-  cta_final_btn_demo: "Quero a Minha Demonstração",
-  cta_final_btn_video: "Ver Como Funciona",
-  cta_proof_1: "Sem cartão de crédito",
-  cta_proof_2: "Configuração em menos de 24h",
-  cta_proof_3: "Suporte em português incluído",
-  footer_backoffice: "BackOffice",
-  footer_empresa: "Empresa",
-  footer_sobre_nos: "Sobre Nós",
-  footer_suporte: "Suporte",
-  footer_blog: "Blog",
-  footer_newsletter: "Newsletter",
-  footer_newsletter_desc:
-    "Receba atualizações e insights sobre gestão de frotas.",
-  footer_privacy: "Privacy Policy",
-  footer_terms: "Terms of Service",
-  footer_fleet_support: "Fleet Support",
-  footer_copyright: "© 2024 TukFlow. Todos os direitos reservados.",
-  mobile_inicio: "Início",
-  mobile_reservas: "Reservas",
-  mobile_backoffice: "BackOffice",
-  mobile_relatorios: "Relatórios",
+/**
+ * Portuguese translations for TukTuk Milfontes page
+ */
+window.translations = window.translations || {};
 
-  // pagina-reservas
-  pagina_demo: "Página Demo",
-  zona_reservas: "Zona de Reservas de Serviços TukTuk",
-  voltar_pagina_inicial: "Voltar página inicial",
-  adicionar_reserva: "Adicionar Reserva",
-  descricao_bem_vindo:
-    "Nesta página você tem uma visão rápida do dia de atividade e pode ver as reservas de forma simples. Quando os clientes fazem uma reserva através do formulário web, o administrador recebe a notificação no WhatsApp e pode de imediato, atribuir o serviço a um dos condutores.",
-  confirmadas: "2 Confirmadas",
-  pendentes: "2 Pendentes",
-  canceladas: "0 Canceladas",
-  pesquise: "Pesquise",
-  status: "Status",
-  todos: "Todos",
-  pendente: "Pendente",
-  confirmada: "Confirmada",
-  concluida: "Concluída",
-  cancelada: "Cancelada",
-  tipo_tour: "Tipo de Tour",
-  todas: "Todas",
-  passeio_vila: "Passeio Vila",
-  miradouros: "Miradouros",
-  praia: "Praia",
-  selecionar_tudo: "Selecionar Tudo",
-  reserva_encontrada: "1 Reserva Encontrada",
-  bem_vindo_gestao_reservas: "Bem-vindo à Gestão de Reservas",
-  ver_detalhes: "Ver detalhes",
+// ============ HEADER / NAV ============
+window.translations["nav.home"] = "Início";
+window.translations["nav.about"] = "Sobre Nós";
+window.translations["nav.tours"] = "Passeios";
+window.translations["nav.faq"] = "FAQ";
+window.translations["nav.reservations"] = "Reservas";
+window.translations["nav.tracking"] = "Tracking";
 
-  painel_administrativo_tukflow: "Painel Administrativo - TukFlow",
-  total_confirmadas: "Total Confirmadas",
-  desde_o_inicio: "Desde o início",
-  pendentes_total: "Pendentes (Total)",
-  todas_as_datas: "Todas as datas",
-  reservas_hoje: "Reservas (Hoje)",
-  zero_confirmadas: "0 confirmadas",
-  reservas_futuras: "Reservas Futuras",
-  confirmadas_e_agendadas: "Confirmadas e agendadas",
-  faturacao_dia: "Faturação (Dia)",
-  baseado_em_reservas_confirmadas: "Baseado em reservas confirmadas",
-  reservas_nao_confirmadas: "Reservas não Confirmadas",
-  pendentes_para_hoje: "Pendentes para hoje",
-  status_hoje: "Status (Hoje)",
-  whatsapp_reservas: "WhatsApp Reservas:",
-  whatsapp_reservas_ativo: "Ativo",
-  alterar: "Alterar",
-  gestao_de_reservas: "Gestão de Reservas",
-  page_title: "Gestão de Reservas - Mobile",
-  eliminar_selecionados: "Eliminar selecionados",
-  selecionado: "selecionado",
-  selecionados: "selecionados",
-  search_placeholder: "Pesquise por: nome, email ou tour",
-  feito_em: "Feita em:",
-  adicionar_reserva_btn: "+ Adicionar Reserva",
-  tour_passeio_vila_miradouros: "Tour: Passeio pela Vila e Miradouros",
-  pessoas_2: "2 pessoas",
-  tour_duration_base: "45 minutos | Base: €10.00",
-  mensagem_do_cliente_label: "Mensagem do cliente:",
-  mensagem_do_cliente_exemplo:
-    "Gostaria de saber se é possível incluir uma paragem extra no Miradouro da Senhora do Monte para tirar algumas fotos rápidas.",
-  preco_20: "€ 20.00",
-  editar: "Editar",
-  whatsapp: "WhatsApp",
-  atribuir: "Atribuir",
-  eliminar_reserva: "Eliminar Reserva",
-  info: "info",
-  lista_elementos_interface: "Lista de Elementos da Interface",
-  touch_app: "touch_app",
-  elementos_interativos: "Elementos Interativos",
-  analytics: "analytics",
-  painel_administrativo_desc:
-    "O painel Administrativo permite de forma rápida e em tempo real, ter uma visão rápida e estratégica da operação. Centraliza as reservas para o dia e faturação diária.",
-  painel_dashboard: "PAINEL DASHBOARD",
-  whatsapp_reservas_ativo_desc:
-    "Este elemento serve para selecionar qual dos administradores vai receber as reservas no seu WhatsApp.",
-  whatsapp_ativo_label: "WHATSAPP ATIVO",
-  botao_adicionar_reserva_desc:
-    "Este botão permite o administrador abrir o formulário de criação de uma nova reserva.",
-  filtros_pesquisa: "Filtros e Pesquisa",
-  campo_pesquise: 'Campo "Pesquise"',
-  botao_atribuir_title: 'Botão "Atribuir"',
-  botao_atribuir_desc:
-    "Significa que o Administrador pode atribuir o serviço a um condutor à sua escolha e enviar instruções.",
-  botao_editar_desc:
-    "Permite modificar valores específicos de uma reserva como valor ou passageiros.",
-  abre_conversa_whatsapp: "Abre conversa direta com o cliente pelo WhatsApp.",
-  pontos_de_dados: "Pontos de Dados",
-  dados_cliente: "Dados do Cliente",
-  mensagens_especiais: "Mensagens Especiais",
-  indicadores_de_status: "Indicadores de Status",
-  painel_acoes: "Painel de Ações",
-  dados_cliente_desc:
-    "Exibição detalhada com nome completo, número de contacto e endereço de email.",
-  mensagens_especiais_desc:
-    "Destaque visual para observações ou pedidos extras enviados pelo cliente durante a reserva.",
-  indicadores_de_status_desc:
-    "Badges coloridas que facilitam a identificação rápida do estado atual da reserva.",
-  status_badge: "Status Badge",
-  painel_acoes_desc:
-    "Acesso rápido para contato, atribuição de guias ou exclusão definitiva do registro.",
-  tracking_page_title: "TukTuk em Tempo Real",
-  tracking_header_title: "TukTuk em Tempo Real",
-  tracking_header_subtitle: "Acompanhe a localização do nosso TukTuk",
-  tracking_intro_text:
-    "Nesta pagina, poderá acompanhar em tempo real a sua localização e a posição de todos os nossos TukTuks no mapa. Verifica facilmente se cada veiculo esta disponível ou ocupado e consulta o tempo estimado de chegada ate si. O cliente pode escolher o seu TukTuk mais perto de si e chamar o tuktuk de imediato!",
-  tracking_intro_point_1:
-    "Nesta pagina, poderá acompanhar em tempo real a sua localização e a posição de todos os nossos TukTuks no mapa.",
-  tracking_intro_point_2:
-    "Verifica facilmente se cada veiculo esta disponível ou ocupado e consulta o tempo estimado de chegada ate si.",
-  tracking_intro_point_3:
-    "O cliente pode escolher o seu TukTuk mais perto de si e chamar o tuktuk de imediato!",
-  tracking_current_location: "Localização Atual",
-  tracking_locate_callout: "Clique aqui para saber onde estou neste momento.",
-  tracking_locate_me: "Localize-me",
-  tracking_status_connected: "ligacao.ativa (108ms) 10:55:14",
-  tracking_make_reservation: "Faça a sua reserva aqui!",
-  tracking_back_main_site: "Voltar ao site principal",
-  tracking_how_it_works: "Como Funciona",
-  tracking_how_1: 'Clique em "Localize-me" para ver a sua posição no mapa',
-  tracking_how_2: "O ícone do TukTuk mostra a localização atual em tempo real",
-  tracking_how_3: "O estado indica se o TukTuk está disponível ou ocupado",
-  tracking_how_4:
-    "A distância e o tempo estimado são calculados automaticamente",
-  tracking_how_5: 'Use "Faça a sua reserva aqui!" para reservar o serviço',
-  tracking_how_6: '"Centrar mapa" ajusta a vista para melhor visualização',
-  tracking_how_7: "Se não vir o TukTuk, ele pode estar offline",
-  tracking_contact: "Contacto",
-  tracking_phone_label: "Telefone:",
-  tracking_whatsapp_label: "WhatsApp:",
-  tracking_whatsapp_value: "Disponivel no site principal",
-  tracking_email_label: "Email:",
-  tracking_interface_title: "Elementos da Interface",
-  tracking_interface_map_title: "Mapa em Tempo Real",
-  tracking_interface_map_desc: "Veja os TukTuks no mapa em tempo real.",
-  tracking_interface_locate_title: "Localizar-me",
-  tracking_interface_locate_desc:
-    "Mostra a sua posição atual e ajusta a vista no mapa.",
-  tracking_interface_status_title: "Estado & Reserva",
-  tracking_interface_status_desc:
-    "Verifique disponibilidade e reserve o serviço rapidamente.",
-  tracking_interface_contact_title: "Contacto",
-  tracking_interface_contact_desc:
-    "Telefone, WhatsApp e email para apoio imediato.",
-  tracking_interface_view: "VER",
-  tracking_footer: "",
+// ============ HERO SECTION ============
+window.translations["hero.title"] = "Descubra Milfontes com Estilo";
+window.translations["hero.subtitle"] =
+  "Aventuras de Tuk-Tuk pela Costa Vicentina 🛺✨";
+window.translations["hero.description"] =
+  "Explore paisagens deslumbrantes, praias paradisíacas e vilas históricas numa experiência única e inesquecível de Tuk-Tuk pela Costa Vicentina!";
+window.translations["hero.cta.reserve"] = "Reservar Agora";
+window.translations["hero.cta.availability"] = "Veja Disponibilidade";
+window.translations["hero.rating"] = "4.9/5 ⭐ (200+ avaliações)";
 
-  // ── pagina-painel-admin (Tuk no Mapa)
-  admin_page_title: "TukTuk Smart - Tuk no Mapa",
-  admin_tuk_no_mapa: "Tuk no Mapa",
-  admin_tuks_online_offline: "Tuks Online/Offline",
-  admin_ocultar_mostrar: "Ocultar ou mostrar Tuks no mapa de clientes.",
-  admin_live_tracking: "LIVE TRACKING",
-  admin_visiveis: "Visíveis",
-  admin_nao_visiveis: "Não Visíveis",
-  admin_status_frota: "Status da Frota",
-  admin_dashboard: "Dashboard",
-  admin_relatorios: "Relatórios",
-  admin_definicoes: "Definições",
-  admin_ver_elemento: "VER ELEMENTO",
-  admin_lista_elementos: "Lista de Elementos da Interface",
-  admin_tuk_mapa_title: "Tuk no Mapa",
-  admin_tuk_mapa_desc: "Visualização da posição exata de todos os tuk-tuks da frota em tempo real no mapa interativo.",
-  admin_visibilidade_title: "Visibilidade do Condutor",
-  admin_visibilidade_desc: "Controlos rápidos para ativar ou desativar a visibilidade de condutores específicos na aplicação do cliente.",
-  admin_painel_estatisticas_title: "Painel de Estatísticas",
-  admin_painel_estatisticas_desc: "Contadores atualizados que mostram o rácio de condutores visíveis vs não visíveis atualmente.",
-  admin_live_map: "Live Map",
-  admin_fleet: "Fleet",
-  admin_drivers: "Drivers",
-  admin_alerts: "Alerts",
+// ============ BENEFITS SECTION ============
+window.translations["benefits.title"] = "Porquê Escolher os";
+window.translations["benefits.title.highlight"] = "Nossos Tuk-Tuks?";
+window.translations["benefits.subtitle"] =
+  "Conforto, diversão e experiências únicas garantidas para toda a família";
+window.translations["benefits.card1.title"] = "Rotas Exclusivas";
+window.translations["benefits.card1.desc"] =
+  "Acesso a locais únicos e vistas panorâmicas que só consegue alcançar com os nossos tuk-tuks especializados";
+window.translations["benefits.card2.title"] = "Conforto Familiar";
+window.translations["benefits.card2.desc"] =
+  "Veículos seguros e confortáveis, ideais para famílias com crianças e pessoas de todas as idades";
+window.translations["benefits.card3.title"] = "Reserva Rápida";
+window.translations["benefits.card3.desc"] =
+  "Sistema de reservas WhatsApp simples e rápido. Confirme o seu passeio em apenas alguns minutos";
+window.translations["benefits.gallery1.title"] = "Experiência Única";
+window.translations["benefits.gallery1.desc"] =
+  "Paisagens deslumbrantes ao pôr do sol";
+window.translations["benefits.gallery2.title"] = "Proteção Climática";
+window.translations["benefits.gallery2.desc"] =
+  "Capota retrátil e proteção contra chuva";
 
-  // ── pagina-disponibilidade
-  disp_page_title: "Disponibilidade de Reservas e Gestão de Época - TukTuk",
-  disp_pagina_demo: "Página Demo",
-  disp_voltar_inicio: "Voltar página inicial",
-  disp_titulo: "Disponibilidade e Gestão",
-  disp_info_texto: "Bem-vindo à <span class='font-bold'>Gestão de Disponibilidade</span>. Esta é a zona onde pode gerir as ocupações e disponibilidade dos tuktuks, por períodos de tempo durante o dia. A gestão por dias, semanas ou meses de forma simples diretamente pelo calendário.",
-  disp_fora_epoca: "Gestão de Fora de Época",
-  disp_selecione_meses: "Selecione os meses para desativar reservas.",
-  disp_salvar_config: "Salvar Configuração",
-  disp_calendario: "Calendário",
-  disp_disponivel: "Disponível",
-  disp_com_reservas: "Com Reservas",
-  disp_bloqueado: "Bloqueado",
-  disp_sem_condutor: "Sem Condutor",
-  disp_horarios_para: "Horários para",
-  disp_toque_detalhes: "Toque para detalhes ou bloquear horário.",
-  disp_elementos_interface: "Elementos da Interface",
-  disp_gestao_fora_epoca: "Gestão de Fora de Época",
-  disp_gestao_fora_epoca_desc: "Configure períodos de manutenção ou baixa estação.",
-  disp_calendario_mensal: "Calendário Mensal",
-  disp_calendario_mensal_desc: "Visão da ocupação com status coloridos.",
-  disp_slots_15min: "Slots de 15 Minutos",
-  disp_slots_15min_desc: "Controle preciso da agenda diária.",
-  disp_ver: "VER",
+// ============ PRICING / TOURS SECTION ============
+window.translations["pricing.title"] = "Preços";
+window.translations["pricing.title.highlight"] = "Transparentes";
+window.translations["pricing.subtitle"] =
+  "Preços justos e claros, sem surpresas. Diversão garantida para toda a família!";
+window.translations["pricing.tour1.name"] = "Passeio panorâmico pela vila";
+window.translations["pricing.tour1.desc"] =
+  "Descubra os pontos mais emblemáticos de Vila Nova de Milfontes";
+window.translations["pricing.tour1.duration"] = "45 min";
+window.translations["pricing.tour2.name"] =
+  "Vila Nova de Milfontes → Praia das Furnas";
+window.translations["pricing.tour2.desc"] =
+  "Viagem até à famosa Praia das Furnas com paragens fotográficas";
+window.translations["pricing.tour2.duration"] = "1h 30min";
+window.translations["pricing.tour3.name"] = "Travessia da ponte";
+window.translations["pricing.tour3.desc"] =
+  "Atravesse a ponte histórica com vistas panorâmicas";
+window.translations["pricing.tour3.duration"] = "30 min";
+window.translations["pricing.tour4.name"] = "Pôr do Sol Romântico";
+window.translations["pricing.tour4.desc"] =
+  "Desfrute do mais belo pôr do sol da costa";
+window.translations["pricing.tour4.duration"] = "2h";
+window.translations["pricing.tour5.name"] = "Passeio noturno";
+window.translations["pricing.tour5.desc"] =
+  "Explore a vila sob o luar numa perspetiva única";
+window.translations["pricing.tour5.duration"] = "1h";
+window.translations["pricing.tour6.name"] = "Rota dos Pescadores";
+window.translations["pricing.tour6.desc"] =
+  "Conheça as tradições piscatórias locais";
+window.translations["pricing.tour6.duration"] = "45 min";
+window.translations["pricing.upTo2"] = "Até 2 pessoas:";
+window.translations["pricing.extraPerson"] = "Pessoas adicionais:";
+window.translations["pricing.seeDetails"] = "Ver Preços Detalhados";
 
-  // ── pagina-convite
-  conv_page_title: "Gestão de Convites - Mobile",
-  conv_pagina_demo: "Página Demo",
-  conv_voltar_inicio: "Voltar página inicial",
-  conv_gestao_condutores: "Gestão de Condutores",
-  conv_gestao_convites: "Gestão de Convites",
-  conv_descricao: "Esta área de gestão de condutores serve para enviar convites pré-preenchidos por WhatsApp para novos condutores, permitindo que se registem no sistema.",
-  conv_enviados: "Enviados",
-  conv_aguardando: "Aguardando",
-  conv_ativos: "Ativos",
-  conv_convidar_condutor: "Convidar condutor",
-  conv_nome_completo: "Nome Completo",
-  conv_email: "Email",
-  conv_whatsapp: "WhatsApp",
-  conv_nome_placeholder: "Ex: João Silva",
-  conv_email_placeholder: "email@exemplo.com",
-  conv_whatsapp_placeholder: "+351 9XX XXX XXX",
-  conv_criar_convite: "Criar convite",
-  conv_convites_recentes: "Convites Recentes",
-  conv_aceite: "Aceite",
-  conv_criado_em: "Criado em:",
-  conv_editar: "EDITAR",
-  conv_eliminar: "ELIMINAR",
-  conv_condutores_ativos: "Condutores Ativos",
-  conv_disponivel: "disponível",
-  conv_lista_elementos: "Lista de Elementos da Interface",
-  conv_form_convite: "Formulário de Convite para Novos Condutores",
-  conv_form_convite_desc: "Campos de entrada para Nome, Email e Whatsapp para iniciar o processo.",
-  conv_status_convites: "Status de Convites",
-  conv_status_convites_desc: "Tabela detalhada com estados de preenchimento e datas de expiração.",
-  conv_sub_navegacao: "Sub-Navegação de Gestão",
-  conv_sub_navegacao_desc: "Alternância rápida entre Convites, Disponibilidade e Bloqueios.",
-  conv_listagem_condutores: "Listagem de Condutores",
-  conv_listagem_condutores_desc: "Dados consolidados de condutores ativos e região de operação.",
-  conv_ver_elemento: "VER ELEMENTO",
-};
+// ============ MAP SECTION ============
+window.translations["map.title"] = "Localização e";
+window.translations["map.title.highlight"] = "Pontos de Interesse";
+window.translations["map.subtitle"] =
+  "Encontre-nos no coração de Vila Nova de Milfontes e descubra as principais atrações turísticas";
+window.translations["map.interactive"] = "Mapa Interativo";
+window.translations["map.integration"] =
+  "(Funcionalidade requer integração com Leaflet/Google Maps)";
 
+// ============ TRACKING SECTION ============
+window.translations["tracking.title"] =
+  "🛺 Acompanhe o nosso TukTuk em tempo real!";
+window.translations["tracking.desc"] =
+  "Veja onde está o nosso TukTuk neste momento e acompanhe a sua localização em tempo real";
+window.translations["tracking.cta"] = "📍 Ver TukTuk em Tempo Real";
+window.translations["tracking.close"] = "Fechar";
 
+// ============ EXPLORE MILFONTES ============
+window.translations["explore.title"] = "Explore";
+window.translations["explore.title.highlight"] = "Milfontes";
+window.translations["explore.title.rest"] = "Como Nunca Antes";
+window.translations["explore.subtitle"] =
+  "Descubra os segredos mais bem guardados de Vila Nova de Milfontes e Costa Vicentina numa perspetiva única";
+window.translations["explore.card1.title"] = "Vista Panorâmica Única";
+window.translations["explore.card1.desc"] =
+  "Desfrute das melhores vistas da costa alentejana";
+window.translations["explore.card2.title"] = "Património Histórico";
+window.translations["explore.card2.desc"] =
+  "Conheça a rica história desta vila piscatória";
+window.translations["explore.video.title"] = "Vista Aérea de Milfontes";
+window.translations["explore.video.desc"] =
+  "Vista aérea numa tarde de Inverno sobre Vila Nova de Milfontes, Alentejo - Portugal.";
+window.translations["explore.video.credit"] = "Este vídeo é cortesia do canal";
+window.translations["explore.video.watch"] = "Assista o vídeo original";
+window.translations["explore.video.here"] =
+  "aqui: Vila Nova de Milfontes aerial view @Alentejo - Portugal";
+
+// ============ AVAILABILITY SECTION ============
+window.translations["availability.title"] = "Disponibilidade em";
+window.translations["availability.title.highlight"] = "Tempo Real";
+window.translations["availability.subtitle"] =
+  "Consulte os horários disponíveis e reserve o seu momento perfeito";
+window.translations["availability.date"] = "Data";
+window.translations["availability.time"] = "Hora";
+window.translations["availability.tour"] = "Tour";
+window.translations["availability.passengers"] = "Passageiros";
+window.translations["availability.search"] = "Pesquisar";
+window.translations["availability.available"] = "Disponível agora";
+window.translations["availability.benefit1.title"] = "Horários flexíveis";
+window.translations["availability.benefit1.desc"] =
+  "Reserve em diferentes horários ao longo do dia, adaptando-se à sua agenda.";
+window.translations["availability.benefit2.title"] = "Passeios em grupo";
+window.translations["availability.benefit2.desc"] =
+  "Permite reservas para grupos, garantindo experiências compartilhadas e descontos especiais.";
+window.translations["availability.benefit3.title"] = "Reserva fácil";
+window.translations["availability.benefit3.desc"] =
+  "Processo de reserva simplificado, rápido e intuitivo, sem complicações.";
+
+// ============ TESTIMONIALS ============
+window.translations["testimonials.title"] = "O que dizem os nossos";
+window.translations["testimonials.title.highlight"] = "clientes";
+window.translations["testimonials.rating"] = "5.0 (200+ avaliações)";
+window.translations["testimonials.1.name"] = "Ana Silva";
+window.translations["testimonials.1.location"] = "Lisboa";
+window.translations["testimonials.1.text"] =
+  '"Melhor experiência da viagem! Meus filhos adoraram conhecer as praias secretas. O guia foi fantástico!"';
+window.translations["testimonials.2.name"] = "João Santos";
+window.translations["testimonials.2.location"] = "Porto";
+window.translations["testimonials.2.text"] =
+  '"Passeio incrível! O tuk-tuk é super confortável e as vistas são de tirar o fôlego. Recomendo 100%!"';
+window.translations["testimonials.3.name"] = "Maria Costa";
+window.translations["testimonials.3.location"] = "Coimbra";
+window.translations["testimonials.3.text"] =
+  '"Serviço profissional e muito divertido. As crianças não pararam de sorrir durante todo o passeio!"';
+
+// ============ FAQ ============
+window.translations["faq.title"] = "Perguntas";
+window.translations["faq.title.highlight"] = "Frequentes";
+window.translations["faq.subtitle"] =
+  "Esclarecemos as suas principais dúvidas sobre os nossos passeios de tuk-tuk";
+window.translations["faq.q1"] = "Quantas pessoas cabem num tuk-tuk?";
+window.translations["faq.a1"] =
+  "O tuk-tuk tem capacidade até 4 pessoas, mais o condutor";
+window.translations["faq.q2"] = "Os passeios funcionam com chuva?";
+window.translations["faq.a2"] =
+  "Os nossos tuk-tuks têm cobertura, mas em caso de chuva forte, podemos reagendar sem custos.";
+window.translations["faq.q3"] = "É necessário reservar com antecedência?";
+window.translations["faq.a3"] =
+  "Recomendamos reservar com pelo menos 24 horas de antecedência, especialmente na época alta.";
+window.translations["faq.q4"] = "Há descontos para grupos?";
+window.translations["faq.a4"] =
+  "Sim, oferecemos descontos especiais para grupos. Contacte-nos para mais informações.";
+window.translations["faq.q5"] = "Os tuk-tuks são seguros para crianças?";
+window.translations["faq.a5"] =
+  "Sim, todos os nossos tuk-tuks estão equipados com cintos de segurança e são perfeitamente seguros para crianças.";
+
+// ============ FINAL CTA ============
+window.translations["cta.title"] = "Pronto para a";
+window.translations["cta.title.highlight"] = "Aventura?";
+window.translations["cta.desc"] =
+  "Reserve já o seu passeio de tuk-tuk e descubra Milfontes de forma única e inesquecível!";
+window.translations["cta.reserve"] = "Reservar Agora";
+window.translations["cta.talk"] = "Falar Connosco";
+window.translations["pricing.modal.title"] = "Tabela de Preços Completa";
+window.translations["pricing.modal.demoBadge"] = "Pagina Demo";
+window.translations["pricing.modal.howTitle"] = "Como Funcionam os Preços";
+window.translations["pricing.modal.baseTitle"] = "Preço Base";
+window.translations["pricing.modal.baseDesc"] =
+  "Preço fixo até 2 pessoas por tuk-tuk";
+window.translations["pricing.modal.extraTitle"] = "Pessoas adicionais";
+window.translations["pricing.modal.extraDesc"] =
+  "€3.50 por cada pessoa adicional (máximo 4 pessoas por tuk-tuk)";
+window.translations["pricing.modal.examples"] = "Exemplos de Preços:";
+window.translations["pricing.modal.upTo2"] = "Até 2 pessoas";
+window.translations["pricing.modal.people1"] = "1 pessoa";
+window.translations["pricing.modal.people2"] = "2 pessoas";
+window.translations["pricing.modal.people3"] = "3 pessoas";
+window.translations["pricing.modal.people4"] = "4 pessoas";
+window.translations["pricing.modal.close"] = "Fechar";
+window.translations["modal.whatsapp.connecting"] = "A conectar ao WhatsApp...";
+window.translations["modal.whatsapp.simulation"] =
+  "Esta é uma simulação. Nenhuma ação real será realizada.";
+window.translations["cta.phone"] = "968 784 043";
+window.translations["cta.hours"] = "Todos os dias 9h-20h";
+
+// ============ SOCIAL SHARE ============
+window.translations["share.title"] = "Partilhe esta experiência!";
+window.translations["share.desc"] =
+  "Ajude-nos a crescer e inspire outros a descobrir Milfontes de tuk tuk. Siga-nos ou partilhe nas redes sociais:";
+
+// ============ FOOTER ============
+window.translations["footer.contact"] = "Informações de Contacto";
+window.translations["footer.address"] =
+  "Lugar da Boavista, cx postal 2510, Foros do Freixial - 7645-037 Vila Nova de Milfontes";
+window.translations["footer.phone"] = "963 496 320";
+window.translations["footer.email"] = "diogo.carias@outlook.pt";
+window.translations["footer.quickLinks"] = "Links Rápidos";
+window.translations["footer.quickLinks.home"] = "Início";
+window.translations["footer.quickLinks.about"] = "Sobre Nós";
+window.translations["footer.quickLinks.services"] = "Serviços";
+window.translations["footer.quickLinks.reservations"] = "Reservas";
+window.translations["footer.quickLinks.faq"] = "FAQ / Ajuda";
+window.translations["footer.quickLinks.sitemap"] = "Mapa do Site";
+window.translations["footer.policies"] = "Políticas e Termos";
+window.translations["footer.policies.terms"] = "Termos e Condições";
+window.translations["footer.policies.privacy"] = "Política de Privacidade";
+window.translations["footer.policies.cancellation"] =
+  "Política de Cancelamento";
+window.translations["footer.legal"] = "Informações Legais";
+window.translations["footer.legal.nif"] = "NIF: 237319594";
+window.translations["footer.legal.rnaat"] = "RNAAT: 438/2025";
+window.translations["footer.legal.license"] =
+  "Licenciado pelo Turismo de Portugal";
+window.translations["footer.follow"] = "Siga-nos";
+window.translations["footer.payments"] = "Métodos de Pagamento";
+window.translations["footer.payments.mbway"] = "Mbway";
+window.translations["footer.payments.cash"] = "Dinheiro";
+window.translations["footer.payments.secure"] = "Pagamentos 100% seguros (SSL)";
+window.translations["footer.credits"] = "Créditos e Atribuições";
+window.translations["footer.copyright"] =
+  "© 2024 TukTuk Milfontes. Todos os direitos reservados.";
+window.translations["footer.images"] =
+  "Imagens e ícones de fontes públicas e autores referenciados.";
+window.translations["footer.support"] = "Suporte ao Cliente";
+window.translations["footer.insurance"] = "Seguro incluído";
+window.translations["footer.photos"] = "Fotos incluídas";
+window.translations["footer.guides"] = "Guias locais";
+window.translations["footer.developedBy"] = "Site desenvolvido por:";
+
+// ============ RESERVATION MODAL ============
+window.translations["modal.reservation.title"] = "Pedido de reserva";
+window.translations["modal.reservation.desc"] =
+  "Preencha os dados e confirme via WhatsApp";
+window.translations["modal.reservation.name"] = "Nome Completo";
+window.translations["modal.reservation.email"] = "Email";
+window.translations["modal.reservation.phone"] = "Telefone";
+window.translations["modal.reservation.date"] = "Data Pretendida";
+window.translations["modal.reservation.time"] = "Hora Pretendida";
+window.translations["modal.reservation.tourType"] = "Tipo de Passeio";
+window.translations["modal.reservation.tourType.select"] =
+  "Selecione o tipo de passeio";
+window.translations["modal.reservation.tourType.panoramic"] =
+  "Passeio panorâmico pela vila - €10";
+window.translations["modal.reservation.tourType.furnas"] =
+  "Vila Nova de Milfontes → Praia das Furnas - €14";
+window.translations["modal.reservation.tourType.bridge"] =
+  "Travessia da ponte - €10";
+window.translations["modal.reservation.tourType.sunset"] =
+  "Pôr do Sol Romântico - €25";
+window.translations["modal.reservation.tourType.night"] =
+  "Passeio noturno - €8";
+window.translations["modal.reservation.tourType.fishermen"] =
+  "Rota dos Pescadores - €10";
+window.translations["modal.reservation.people"] = "Número de Pessoas";
+window.translations["modal.reservation.people.1"] = "1 pessoa";
+window.translations["modal.reservation.people.2"] = "2 pessoas";
+window.translations["modal.reservation.people.3"] = "3 pessoas";
+window.translations["modal.reservation.people.4"] = "4 pessoas";
+window.translations["modal.reservation.message"] = "Mensagem Adicional";
+window.translations["modal.reservation.message.placeholder"] =
+  "Qualquer informação adicional ou pedido especial...";
+window.translations["modal.reservation.confirm"] = "Confirmar via WhatsApp";
+window.translations["modal.reservation.required"] = "*";
+
+// ============ PAGINA-TESTE-REPLIQUE ============
+window.translations["site_title"] = "TukTuk Milfontes - Passeios Turísticos";
+window.translations["site_description"] =
+  "Descubra Vila Nova de Milfontes de Tuk Tuk! Passeios turísticos, experiências únicas e reservas online. Viva a magia do Alentejo Litoral com conforto e diversão.";
+window.translations["hero_title_1"] = "Descubra Milfontes com Estilo";
+window.translations["hero_title_2"] =
+  "Aventuras de Tuk-Tuk pela Costa Vicentina";
+window.translations["hero_description"] =
+  "Explore paisagens deslumbrantes, praias paradisíacas e vilas históricas numa experiência única e inesquecível de Tuk-Tuk pela Costa Vicentina!";
+window.translations["hero_btn_reserve"] = "Reservar Agora";
+window.translations["hero_btn_availability"] = "Veja Disponibilidade";
+window.translations["hero_rating"] = "4.9/5 ⭐ (200+ avaliações)";
+window.translations["benefits_title_1"] = "Porquê Escolher os";
+window.translations["benefits_title_2"] = "Nossos Tuk-Tuks?";
+window.translations["benefits_subtitle"] =
+  "Conforto, diversão e experiências únicas garantidas para toda a família";
+window.translations["benefits_img1_title"] = "Experiência Única";
+window.translations["benefits_img1_desc"] =
+  "Paisagens deslumbrantes ao pôr do sol";
+window.translations["benefits_img2_title"] = "Proteção Climática";
+window.translations["benefits_img2_desc"] =
+  "Capota retrátil e proteção contra chuva";
+window.translations["benefits_card1_title"] = "Rotas Exclusivas";
+window.translations["benefits_card1_desc"] =
+  "Acesso a locais únicos e vistas panorâmicas que só consegue alcançar com os nossos tuk-tuks especializados";
+window.translations["benefits_card2_title"] = "Conforto Familiar";
+window.translations["benefits_card2_desc"] =
+  "Veículos seguros e confortáveis, ideais para famílias com crianças e pessoas de todas as idades";
+window.translations["benefits_card3_title"] = "Reserva Rápida";
+window.translations["benefits_card3_desc"] =
+  "Sistema de reservas WhatsApp simples e rápido. Confirme o seu passeio em apenas alguns minutos";
+window.translations["pricing_title_1"] = "Preços";
+window.translations["pricing_title_2"] = "Transparentes";
+window.translations["pricing_subtitle"] =
+  "Preços justos e claros, sem surpresas. Diversão garantida para toda a família!";
+window.translations["tour1_name"] = "Passeio panorâmico pela vila";
+window.translations["tour1_desc"] =
+  "Descubra os pontos mais emblemáticos de Vila Nova de Milfontes";
+window.translations["tour2_name"] = "Vila Nova de Milfontes → Praia das Furnas";
+window.translations["tour2_desc"] =
+  "Percurso panorâmico até à deslumbrante Praia das Furnas";
+window.translations["tour3_name"] = "Travessia da ponte";
+window.translations["tour3_desc"] =
+  "Atravesse a ponte histórica com vistas panorâmicas";
+window.translations["tour4_name"] = "Pôr do Sol Romântico";
+window.translations["tour4_desc"] = "Desfrute do mais belo pôr do sol da costa";
+window.translations["tour5_name"] = "Passeio noturno";
+window.translations["tour5_desc"] =
+  "Explore a vila sob o luar numa perspetiva única";
+window.translations["tour6_name"] = "Rota dos Pescadores";
+window.translations["tour6_desc"] = "Conheça as tradições piscatórias locais";
+window.translations["tour_up_to"] = "Até 2 pessoas";
+window.translations["tour_extra"] = "Pessoas adicionais";
