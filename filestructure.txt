@@ -43,6 +43,7 @@
         |-- driver.gif
         |-- favicon_tukflow.png
         |-- favicon_tukflow.webp
+        |-- logo.png
         |-- mapa-celular.gif
         |-- maps-tempo real.gif
         |-- pagina-web.gif
@@ -62,7 +63,6 @@
 |-- package-lock.json
 |-- package.json
 |-- PAGINA-PROMO.md
-|-- pagina-teste-replique.html
 |-- painel-admin.png
 |-- README.md
 |-- vercel.json

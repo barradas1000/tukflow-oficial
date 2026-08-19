@@ -75,6 +75,7 @@ window.translations["pricing.tour6.duration"] = "45 min";
 window.translations["pricing.upTo2"] = "Até 2 pessoas:";
 window.translations["pricing.extraPerson"] = "Pessoas adicionais:";
 window.translations["pricing.seeDetails"] = "Ver Preços Detalhados";
+window.translations["voltar_pagina_inicial"] = "Voltar página inicial";
 
 // ============ MAP SECTION ============
 window.translations["map.title"] = "Localização e";
