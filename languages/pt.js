@@ -10,6 +10,7 @@ window.translations["nav.tours"] = "Passeios";
 window.translations["nav.faq"] = "FAQ";
 window.translations["nav.reservations"] = "Reservas";
 window.translations["nav.tracking"] = "Tracking";
+window.translations["contact_us"] = "Contacte-nos";
 
 // ============ HERO SECTION ============
 window.translations["hero.title"] = "Descubra Milfontes com Estilo";
@@ -208,6 +209,8 @@ window.translations["share.desc"] =
   "Ajude-nos a crescer e inspire outros a descobrir Milfontes de tuk tuk. Siga-nos ou partilhe nas redes sociais:";
 
 // ============ FOOTER ============
+window.translations["footer_desc"] =
+  "A plataforma simples e acessível que transforma qualquer empresa de tuk-tuk num negócio mais organizado e muito mais lucrativo.";
 window.translations["footer.contact"] = "Informações de Contacto";
 window.translations["footer.address"] =
   "Lugar da Boavista, cx postal 2510, Foros do Freixial - 7645-037 Vila Nova de Milfontes";
@@ -334,3 +337,23 @@ window.translations["tour6_name"] = "Rota dos Pescadores";
 window.translations["tour6_desc"] = "Conheça as tradições piscatórias locais";
 window.translations["tour_up_to"] = "Até 2 pessoas";
 window.translations["tour_extra"] = "Pessoas adicionais";
+
+// ============ MODAL DEMONSTRAÇÃO ============
+window.translations["cta_solicitar_demo"] = "Solicitar Demonstração";
+window.translations["cta_ver_planos"] = "Ver Planos";
+window.translations["cta_final_btn_demo"] = "Quero a Minha Demonstração";
+window.translations["modal_demo.badge"] = "Demonstração TukFlow";
+window.translations["modal_demo.title"] = "Vamos começar?";
+window.translations["modal_demo.subtitle"] = "Fale diretamente com a nossa equipa e marque a sua demonstração personalizada. Respondemos rápido.";
+window.translations["modal_demo.contact_title"] = "Contacto direto";
+window.translations["modal_demo.whatsapp_title"] = "WhatsApp — resposta rápida";
+window.translations["modal_demo.whatsapp_phone"] = "351 965 748 022";
+window.translations["modal_demo.email_title"] = "Email — TukFlow-System";
+window.translations["modal_demo.email_address"] = "mail: carlosbarradas54@gmail.com";
+window.translations["modal_demo.newsletter_title"] = "Newsletter";
+window.translations["modal_demo.newsletter_desc"] = "Receba atualizações, dicas de gestão de frotas e novidades TukFlow no seu email.";
+window.translations["modal_demo.newsletter_placeholder"] = "O seu melhor email";
+window.translations["modal_demo.newsletter_btn"] = "Subscrever";
+window.translations["modal_demo.newsletter_success"] = "✓ Obrigado! A sua subscrição foi registada.";
+window.translations["modal_demo.privacy"] = "Os seus dados estão seguros. Sem spam, sem partilha.";
+window.translations["modal_demo.close"] = "Fechar";

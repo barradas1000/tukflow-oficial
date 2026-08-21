@@ -1,0 +1,307 @@
+# TERMOS E CONDIÇÕES DE UTILIZAÇÃO DO TUKFLOW
+### Condição de utilizador testador do sistema gratuito
+
+Estes Termos de Utilização regulam o acesso e a utilização do sistema **TukFlow** na sua condição de **utilizador testador do sistema gratuito**, em conformidade com as normas legais vigentes no território nacional.
+
+**Última atualização:** 21-08-2026
+
+## 1. Identificação e objeto
+
+Os presentes Termos e Condições regulam o acesso e utilização da plataforma tecnológica **TukFlow**, incluindo o respetivo website, aplicação móvel, painel de gestão, funcionalidades de reservas, gestão de condutores, veículos, clientes, localização, agenda e demais funcionalidades disponibilizadas pela plataforma.
+
+O TukFlow é uma solução tecnológica destinada a empresas, empresários em nome individual e profissionais que desenvolvam atividades relacionadas com Tuk Tuk, passeios turísticos, transporte de passageiros, experiências turísticas ou atividades similares.
+
+Para efeitos dos presentes Termos, a entidade ou pessoa que subscreve e utiliza o TukFlow será designada por **"Cliente", "Operador", "Utilizador Profissional" ou "Testador"**.
+
+A entidade responsável pela exploração do TukFlow será designada por **"TukFlow"**, "nós" ou "Prestador", devendo os seus dados de identificação constar do website e da informação contratual disponibilizada ao Cliente.
+
+## 2. Natureza do serviço
+
+O TukFlow é uma plataforma de software disponibilizada como serviço (SaaS).
+
+A plataforma disponibiliza ferramentas tecnológicas destinadas a apoiar a gestão da atividade do Cliente, nomeadamente:
+
+* gestão de reservas;
+* gestão de clientes;
+* gestão de veículos;
+* gestão de condutores;
+* gestão de disponibilidade;
+* gestão de horários e agenda;
+* acompanhamento de localização, quando essa funcionalidade esteja ativa;
+* comunicação entre o operador e os seus clientes ou condutores;
+* gestão e consulta de informação relacionada com os serviços;
+* outras funcionalidades disponibilizadas pelo TukFlow.
+
+O TukFlow **não é, por si só, um operador de transporte de passageiros, empresa de animação turística, agência de viagens, operador turístico ou prestador dos passeios ou serviços vendidos pelo Cliente**, salvo se expressamente indicado em contrato específico.
+
+A utilização do TukFlow não transfere para o TukFlow qualquer responsabilidade legal que pertença ao Cliente enquanto operador da atividade.
+
+## 3. Condição de utilizador testador do sistema gratuito
+
+O acesso ao TukFlow na condição de **testador** é concedido a título **gratuito e temporário**, com a finalidade exclusiva de experimentar, avaliar e validar as funcionalidades da plataforma antes da sua contratação.
+
+Ao aceitar estes Termos na condição de testador, o Utilizador reconhece e aceita que:
+
+* **Não há qualquer custo associado** ao período de teste, salvo indicação expressa em contrário comunicada pelo TukFlow;
+* O acesso é concedido por um **período limitado**, podendo ser renovado, alterado ou cessado a qualquer momento pelo TukFlow, mediante comunicação prévia sempre que razoavelmente possível;
+* O sistema pode encontrar-se em **fase de desenvolvimento, teste ou aperfeiçoamento**, pelo que funcionalidades podem ser adicionadas, alteradas, suspensas ou descontinuadas sem aviso prévio;
+* Podem ocorrer **erros, falhas, interrupções ou perda de dados** durante o período de teste, não podendo o Testador invocar tais ocorrências como fundamento de qualquer indemnização ou responsabilidade do TukFlow;
+* Os dados introduzidos durante o teste (reservas, condutores, veículos, clientes, localizações e demais informação) podem ser **eliminados, reiniciados ou repostos** pelo TukFlow, recomendando-se ao Testador que utilize, sempre que possível, dados de demonstração e não dados reais sensíveis;
+* O Testador deve utilizar o sistema de boa-fé, **reportar erros e dificuldades** encontrados e não explorar o acesso gratuito para fins comerciais não autorizados;
+* No final do período de teste, o Testador poderá ser convidado a **contratar um plano pago**, sendo que, na falta de contratação, o acesso poderá ser desativado;
+* O TukFlow não garante que as funcionalidades disponíveis durante o teste se mantenham inalteradas ou disponíveis na versão final do serviço.
+
+A condição de testador não confere qualquer direito à manutenção gratuita do serviço após o termo do período de teste, nem qualquer direito à continuidade dos dados ou configurações efetuadas durante o teste, salvo acordo escrito em contrário.
+
+## 4. Responsabilidade pela atividade do Cliente
+
+O Cliente é o único responsável pela legalidade, organização e execução da sua atividade profissional.
+
+Compete exclusivamente ao Cliente assegurar que dispõe de todas as licenças, autorizações, seguros, habilitações profissionais, veículos legalmente aptos, motoristas/condutores habilitados e demais requisitos exigidos pela legislação aplicável à sua atividade.
+
+O TukFlow não garante que o Cliente esteja legalmente habilitado a prestar determinado serviço.
+
+O Cliente deve utilizar a plataforma de acordo com todas as leis e regulamentações aplicáveis à sua atividade.
+
+## 5. Conta de utilizador
+
+Para utilizar determinadas funcionalidades do TukFlow poderá ser necessário criar uma conta.
+
+O Cliente compromete-se a fornecer informação verdadeira, completa e atualizada.
+
+O Cliente é responsável pela confidencialidade das suas credenciais de acesso e por todas as atividades realizadas através da sua conta.
+
+Sempre que suspeite de acesso não autorizado à sua conta, o Cliente deve informar imediatamente o TukFlow.
+
+O Cliente não deve partilhar as suas credenciais com terceiros, salvo quando a plataforma disponibilize mecanismos próprios para criação de utilizadores adicionais.
+
+## 6. Utilizadores e colaboradores
+
+Quando o plano contratado permitir a criação de vários utilizadores, o Cliente é responsável por definir os respetivos níveis de acesso e permissões.
+
+O Cliente deve garantir que os seus colaboradores e utilizadores autorizados utilizam o TukFlow de acordo com os presentes Termos e com a legislação aplicável.
+
+As ações realizadas através das contas associadas ao Cliente poderão ser registadas para efeitos de segurança, auditoria, funcionamento da plataforma e resolução de problemas.
+
+## 7. Reservas e clientes finais
+
+O TukFlow pode disponibilizar ferramentas para receber, organizar e gerir reservas efetuadas pelos clientes do Operador.
+
+A existência de uma reserva na plataforma não significa que o TukFlow seja parte do contrato celebrado entre o Cliente e o passageiro.
+
+O contrato relativo ao passeio, transporte ou experiência turística é celebrado entre o Cliente e o respetivo cliente final, sempre que assim resulte do modelo comercial adotado pelo Cliente.
+
+O Cliente é responsável por definir e comunicar aos seus clientes:
+
+* preços;
+* horários;
+* locais de partida;
+* duração dos serviços;
+* condições de reserva;
+* condições de cancelamento;
+* condições de pagamento;
+* características dos veículos;
+* capacidade dos veículos;
+* condições de prestação do serviço;
+* outras condições comerciais aplicáveis.
+
+## 8. Pagamentos
+
+Quando o TukFlow disponibilizar funcionalidades relacionadas com pagamentos, estas poderão depender de serviços prestados por entidades terceiras especializadas.
+
+O processamento de pagamentos poderá estar sujeito aos termos e condições e políticas de privacidade desses prestadores.
+
+Salvo indicação expressa em contrário, o TukFlow não é responsável pela execução, autorização, rejeição ou processamento financeiro de uma transação efetuada através de um prestador de pagamentos externo.
+
+O Cliente é responsável pelo cumprimento das suas obrigações fiscais, contabilísticas e legais relacionadas com os valores recebidos através da sua atividade.
+
+Durante o período de teste, o TukFlow não cobra qualquer valor pela utilização da plataforma, salvo indicação expressa em contrário.
+
+## 9. Localização e GPS
+
+Algumas funcionalidades do TukFlow poderão utilizar dados de localização e GPS, nomeadamente para permitir o acompanhamento de veículos ou condutores.
+
+A utilização destas funcionalidades depende da disponibilidade do sinal GPS, da ligação à Internet, das permissões concedidas ao dispositivo e de outros fatores técnicos.
+
+O Cliente reconhece que os dados de localização podem apresentar imprecisões, atrasos ou interrupções.
+
+O TukFlow não garante que a localização apresentada seja permanentemente exata ou esteja disponível em tempo real.
+
+O Cliente é responsável por informar os seus condutores e demais pessoas relevantes sobre a utilização de funcionalidades de localização, quando tal seja legalmente exigido.
+
+## 10. Disponibilidade do serviço
+
+O TukFlow procurará manter a plataforma disponível e funcional de forma contínua.
+
+Contudo, o Cliente reconhece que podem ocorrer interrupções temporárias resultantes de:
+
+* manutenção;
+* atualizações;
+* falhas técnicas;
+* problemas de conectividade;
+* falhas de fornecedores externos;
+* problemas de infraestrutura;
+* acontecimentos fora do controlo razoável do TukFlow;
+* situações de força maior.
+
+Sempre que razoavelmente possível, o TukFlow procurará informar previamente os Clientes sobre interrupções programadas.
+
+Durante a fase de teste, interrupções e indisponibilidades temporárias são expectáveis e não conferem ao Testador qualquer direito a compensação.
+
+## 11. Atualizações e alterações
+
+O TukFlow poderá introduzir novas funcionalidades, modificar funcionalidades existentes ou descontinuar funcionalidades, desde que tal não prejudique de forma substancial o serviço contratado.
+
+As atualizações poderão ser necessárias para melhorar a segurança, desempenho, compatibilidade ou funcionamento da plataforma.
+
+Durante a fase de teste, alterações e descontinuações de funcionalidades podem ocorrer com maior frequência e sem aviso prévio.
+
+## 12. Preços, planos e faturação
+
+A utilização do TukFlow poderá estar sujeita ao pagamento de uma subscrição, licença ou outro modelo de contratação indicado no momento da adesão.
+
+Os preços aplicáveis serão os apresentados ao Cliente no momento da contratação ou constantes da proposta/comercialização aplicável.
+
+Quando exista uma subscrição recorrente, o Cliente será informado sobre o respetivo período de faturação e condições de renovação.
+
+O TukFlow poderá alterar os preços dos seus planos mediante comunicação prévia ao Cliente, sendo que as alterações não deverão afetar períodos já pagos, salvo acordo em contrário.
+
+**Na condição de testador do sistema gratuito, não são devidos quaisquer valores** durante o período de teste, sendo a eventual contratação de um plano pago sempre precedida de proposta e aceitação expressa do Cliente.
+
+## 13. Cancelamento e cessação
+
+O Cliente poderá cancelar a sua subscrição de acordo com as condições do plano contratado.
+
+O TukFlow poderá suspender ou terminar o acesso à conta quando exista:
+
+* incumprimento grave dos presentes Termos;
+* utilização ilícita ou fraudulenta da plataforma;
+* tentativa de comprometer a segurança do sistema;
+* utilização da plataforma para fins abusivos;
+* falta de pagamento (quando aplicável);
+* utilização que possa causar danos ao TukFlow, a outros utilizadores ou a terceiros.
+
+Sempre que possível e adequado, o Cliente será informado previamente sobre a suspensão ou cessação.
+
+Na condição de testador, o acesso pode ser cessado a qualquer momento pelo TukFlow, designadamente no termo do período de teste ou por utilização contrária a estes Termos.
+
+## 14. Dados do Cliente
+
+O Cliente mantém a titularidade dos dados e conteúdos que introduzir na plataforma, sem prejuízo dos direitos necessários ao TukFlow para prestar o serviço.
+
+O Cliente é responsável por garantir que possui fundamento legal para recolher e utilizar os dados pessoais que introduz no TukFlow.
+
+Quando o TukFlow tratar dados pessoais por conta do Cliente, as partes deverão observar as regras aplicáveis à relação entre responsável pelo tratamento e subcontratante, nos termos do RGPD.
+
+## 15. Proteção de dados
+
+O tratamento de dados pessoais realizado pelo TukFlow encontra-se regulado pela respetiva Política de Privacidade.
+
+Quando o TukFlow tratar dados pessoais por conta do Cliente, o Cliente será, em regra, o responsável pelo tratamento desses dados e o TukFlow atuará como subcontratante, na medida aplicável.
+
+O TukFlow compromete-se a implementar medidas técnicas e organizativas adequadas à proteção dos dados pessoais tratados através da plataforma.
+
+Quando necessário, poderão ser estabelecidas condições adicionais de tratamento de dados através de um Acordo de Tratamento de Dados (DPA).
+
+## 16. Segurança
+
+O TukFlow procurará implementar medidas técnicas e organizativas adequadas para proteger a plataforma e os dados tratados através dela.
+
+Nenhum sistema informático ou serviço disponibilizado através da Internet pode garantir segurança absoluta.
+
+O Cliente deve utilizar dispositivos seguros, manter as suas credenciais protegidas e adotar medidas razoáveis para impedir acessos não autorizados.
+
+## 17. Propriedade intelectual
+
+A plataforma TukFlow, incluindo o seu software, código, design, interface, marca, logótipos, textos, elementos gráficos, funcionalidades e demais componentes, pertence ao TukFlow ou aos respetivos titulares.
+
+A contratação do serviço concede ao Cliente um direito limitado, não exclusivo, não transferível e revogável de utilizar a plataforma durante o período contratado e exclusivamente para os fins previstos nestes Termos.
+
+É proibido copiar, modificar, distribuir, vender, sublicenciar, descompilar, realizar engenharia reversa ou explorar comercialmente a plataforma, salvo quando expressamente permitido por lei ou autorizado pelo TukFlow.
+
+Estas limitações aplicam-se igualmente à condição de testador do sistema gratuito.
+
+## 18. Conteúdos introduzidos pelo Cliente
+
+O Cliente é responsável pelos conteúdos, imagens, textos, preços, informações comerciais, dados de veículos, dados de condutores e demais informação que introduza na plataforma.
+
+O Cliente declara que possui os direitos e autorizações necessários para utilizar esses conteúdos.
+
+O Cliente não deve introduzir conteúdos ilegais, fraudulentos, ofensivos ou que violem direitos de terceiros.
+
+## 19. Integrações e serviços de terceiros
+
+O TukFlow poderá integrar serviços externos, tais como mapas, serviços de alojamento, autenticação, notificações, pagamentos, email, SMS, análise estatística ou outras tecnologias.
+
+A disponibilidade e funcionamento dessas integrações poderá depender dos respetivos fornecedores.
+
+Quando uma integração estiver sujeita aos termos de um terceiro, o Cliente poderá também ficar sujeito às condições desse terceiro.
+
+## 20. Limitação de responsabilidade
+
+O TukFlow disponibiliza uma ferramenta tecnológica de apoio à gestão da atividade do Cliente e não garante que a utilização da plataforma origine determinado nível de reservas, vendas, receitas ou resultados comerciais.
+
+Na medida permitida pela legislação aplicável, o TukFlow não será responsável por perdas resultantes de decisões comerciais tomadas pelo Cliente, incluindo preços, horários, disponibilidade, cancelamentos, capacidade dos veículos ou condições de prestação dos serviços.
+
+O TukFlow também não será responsável por falhas exclusivamente imputáveis a serviços ou sistemas de terceiros, redes de telecomunicações, dispositivos do Cliente ou circunstâncias de força maior.
+
+Na condição de testador do sistema gratuito, e na medida permitida pela lei, a responsabilidade do TukFlow é limitada ao máximo previsto na lei, não respondendo o TukFlow por danos indiretos, lucros cessantes ou perda de dados durante a fase de teste.
+
+Nada nestes Termos exclui ou limita responsabilidades que não possam legalmente ser excluídas ou limitadas.
+
+## 21. Utilização proibida
+
+É proibido utilizar o TukFlow para:
+
+* atividades ilegais;
+* fraude;
+* tentativa de acesso não autorizado;
+* introdução de código malicioso;
+* interferência com o funcionamento da plataforma;
+* recolha não autorizada de dados de outros utilizadores;
+* tentativa de contornar mecanismos de segurança;
+* utilização que prejudique outros utilizadores;
+* qualquer finalidade contrária à lei.
+
+## 22. Exportação e acesso aos dados
+
+Sempre que tecnicamente disponível e de acordo com o plano contratado, o Cliente poderá exportar determinados dados introduzidos na plataforma.
+
+Após o término da relação contratual, os dados poderão ser conservados durante os períodos necessários ao cumprimento de obrigações legais, segurança, resolução de litígios ou defesa de direitos.
+
+Após o decurso dos períodos aplicáveis, os dados poderão ser eliminados ou anonimizados.
+
+Na condição de testador, o TukFlow poderá eliminar ou repor os dados de teste em qualquer momento, sem aviso prévio e sem qualquer responsabilidade.
+
+## 23. Alteração dos Termos
+
+O TukFlow poderá atualizar estes Termos para refletir alterações legais, técnicas, comerciais ou funcionais.
+
+Quando uma alteração seja material, o TukFlow procurará comunicar a alteração ao Cliente através de um meio adequado.
+
+A continuação da utilização do serviço após a entrada em vigor das alterações poderá constituir aceitação dos novos Termos, sem prejuízo dos direitos que legalmente assistam ao Cliente.
+
+## 24. Lei aplicável
+
+Os presentes Termos são regidos pela legislação portuguesa, salvo quando normas imperativas de outra jurisdição sejam aplicáveis.
+
+## 25. Resolução de conflitos
+
+As partes procurarão resolver de forma amigável qualquer divergência relacionada com a utilização do TukFlow.
+
+Quando não seja possível alcançar uma solução amigável, serão competentes os tribunais portugueses territorialmente competentes, sem prejuízo das regras legais imperativas aplicáveis.
+
+## 26. Contactos
+
+Para questões relacionadas com o TukFlow, os Termos de Utilização, a conta ou o serviço, o Cliente poderá contactar:
+
+**TukFlow-System**
+Entidade: Carlos Barradas
+WhatsApp: 351 965 748 022
+Email: carlosbarradas54@gmail.com
+
+## 27. Aceitação
+
+Ao criar uma conta, subscrever um plano ou utilizar o TukFlow, incluindo na condição de testador do sistema gratuito, o Cliente declara que leu e aceita os presentes Termos e Condições.
+
+Estes Termos constituem parte integrante do acordo celebrado entre o TukFlow e o Cliente.

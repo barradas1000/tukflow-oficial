@@ -149,7 +149,7 @@ window.translations = {
     "Get ready to grow — with our system, you are not just managing better, you are preparing your business to grow every day.",
   footer_brand: "TukFlow",
   footer_desc:
-    "The leading platform in light urban mobility management. Empowering TukTuk fleets worldwide.",
+    "The simple and affordable platform that turns any tuk-tuk company into a more organized and far more profitable business.",
   footer_produto: "Product",
   footer_funcionalidades: "Features",
   footer_precos: "Prices",
@@ -840,6 +840,23 @@ window.translations = {
     "Any additional information or special request...",
   "modal.reservation.confirm": "Confirm via WhatsApp",
   "modal.reservation.required": "*",
+
+  // ── Demo Modal
+  "modal_demo.badge": "TukFlow Demo",
+  "modal_demo.title": "Let's get started?",
+  "modal_demo.subtitle": "Talk directly to our team and book your personalised demo. We reply fast.",
+  "modal_demo.contact_title": "Direct contact",
+  "modal_demo.whatsapp_title": "WhatsApp — quick reply",
+  "modal_demo.whatsapp_phone": "351 965 748 022",
+  "modal_demo.email_title": "Email — TukFlow-System",
+  "modal_demo.email_address": "mail: carlosbarradas54@gmail.com",
+  "modal_demo.newsletter_title": "Newsletter",
+  "modal_demo.newsletter_desc": "Get updates, fleet management tips and TukFlow news in your inbox.",
+  "modal_demo.newsletter_placeholder": "Your best email",
+  "modal_demo.newsletter_btn": "Subscribe",
+  "modal_demo.newsletter_success": "✓ Thank you! Your subscription has been registered.",
+  "modal_demo.privacy": "Your data is safe. No spam, no sharing.",
+  "modal_demo.close": "Close",
 };
 
 
