@@ -67,11 +67,19 @@
    */
   function applyTranslations() {
     var t = window.translations || {};
-    var elements = document.querySelectorAll('[data-i18n]');
+    // Seleciona elementos com data-i18n OU variantes (placeholder, value, title, html)
+    var elements = document.querySelectorAll(
+      '[data-i18n], [data-i18n-placeholder], [data-i18n-value], [data-i18n-title], [data-i18n-html]'
+    );
 
     elements.forEach(function (el) {
-      var key = el.getAttribute('data-i18n');
-      if (!t[key]) return;
+      // Determina a chave conforme o atributo presente
+      var key = el.getAttribute('data-i18n')
+        || el.getAttribute('data-i18n-placeholder')
+        || el.getAttribute('data-i18n-value')
+        || el.getAttribute('data-i18n-title')
+        || el.getAttribute('data-i18n-html');
+      if (!key || !t[key]) return;
 
       var translation = t[key];
 
@@ -194,6 +202,9 @@
     // Load the saved language
     loadLanguageScript(currentLang, function () {
       applyTranslations();
+      // Dispatch so pages can re-render dynamic content (slots, prices, etc.)
+      var event = new CustomEvent('languageChanged', { detail: { lang: currentLang } });
+      document.dispatchEvent(event);
     });
   }
 

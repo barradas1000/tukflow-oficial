@@ -872,11 +872,498 @@ window.translations = {
   "modal_demo.email_address": "mail: carlosbarradas54@gmail.com",
   "modal_demo.newsletter_title": "Newsletter",
   "modal_demo.newsletter_desc": "Recevez des actualités, des conseils de gestion de flotte et les nouveautés TukFlow par email.",
-  "modal_demo.newsletter_placeholder": "Votre meilleur email",
+  "modal_demo.newsletter_placeholder": "Votre Email",
   "modal_demo.newsletter_btn": "S'abonner",
   "modal_demo.newsletter_success": "✓ Merci ! Votre abonnement a bien été enregistré.",
   "modal_demo.privacy": "Vos données sont en sécurité. Pas de spam, pas de partage.",
   "modal_demo.close": "Fermer",
+
+  // ── Boutons retour
+  "reserva_back_home": "Retour à l'accueil",
+
+  // ── Pages légales : Conditions et Confidentialité
+  doc_back: "Retour",
+  doc_back_site: "Retour au site",
+  doc_footer: "© 2026 TukFlow — Gestion Intelligente de TukTuks. Tous droits réservés.",
+
+  terms_title: "Conditions Générales d'Utilisation de TukFlow",
+  terms_sub: "Statut d'utilisateur testeur du système gratuit",
+  terms_updated: "Dernière mise à jour : 21-08-2026",
+  terms_h2_1: "1. Identification et objet",
+  terms_h2_2: "2. Nature du service",
+  terms_h2_3: "3. Statut d'utilisateur testeur du système gratuit",
+  terms_h2_4: "4. Responsabilité de l'activité du Client",
+  terms_h2_5: "5. Compte utilisateur",
+  terms_h2_6: "6. Utilisateurs et collaborateurs",
+  terms_h2_7: "7. Réservations et clients finaux",
+  terms_h2_8: "8. Paiements",
+  terms_h2_9: "9. Localisation et GPS",
+  terms_h2_10: "10. Disponibilité du service",
+  terms_h2_11: "11. Mises à jour et modifications",
+  terms_h2_12: "12. Prix, formules et facturation",
+  terms_h2_13: "13. Annulation et résiliation",
+  terms_h2_14: "14. Données du Client",
+  terms_h2_15: "15. Protection des données",
+  terms_h2_16: "16. Sécurité",
+  terms_h2_17: "17. Propriété intellectuelle",
+  terms_h2_18: "18. Contenus introduits par le Client",
+  terms_h2_19: "19. Intégrations et services tiers",
+  terms_h2_20: "20. Limitation de responsabilité",
+  terms_h2_21: "21. Utilisation interdite",
+  terms_h2_22: "22. Exportation et accès aux données",
+  terms_h2_23: "23. Modification des Conditions",
+  terms_h2_24: "24. Droit applicable",
+  terms_h2_25: "25. Résolution des litiges",
+  terms_h2_26: "26. Contacts",
+  terms_h2_27: "27. Acceptation",
+
+  terms_p_1:
+    "Les présentes Conditions d'Utilisation régissent l'accès et l'utilisation du système <strong>TukFlow</strong> en votre qualité d'<strong>utilisateur testeur du système gratuit</strong>, conformément aux règles légales en vigueur sur le territoire national.",
+  terms_p_2:
+    "Les présentes Conditions Générales régissent l'accès et l'utilisation de la plateforme technologique <strong>TukFlow</strong>, y compris le site web, l'application mobile, le panneau de gestion, les fonctionnalités de réservation, la gestion des conducteurs, des véhicules, des clients, de la localisation, de l'agenda et les autres fonctionnalités proposées par la plateforme.",
+  terms_p_3:
+    "TukFlow est une solution technologique destinée aux entreprises, entrepreneurs individuels et professionnels exerçant des activités liées aux Tuk Tuks, aux circuits touristiques, au transport de passagers, aux expériences touristiques ou à des activités similaires.",
+  terms_p_4:
+    'Aux fins des présentes Conditions, l\'entité ou la personne qui souscrit et utilise TukFlow sera désignée comme <strong>"Client", "Opérateur", "Utilisateur Professionnel" ou "Testeur"</strong>.',
+  terms_p_5:
+    'L\'entité responsable de l\'exploitation de TukFlow sera désignée comme <strong>"TukFlow"</strong>, "nous" ou "Prestataire", et ses données d\'identification devront figurer sur le site web et dans les informations contractuelles mises à la disposition du Client.',
+  terms_p_6:
+    "TukFlow est une plateforme logicielle fournie en tant que service (SaaS).",
+  terms_p_7:
+    "La plateforme met à disposition des outils technologiques destinés à soutenir la gestion de l'activité du Client, notamment :",
+  terms_p_8:
+    "TukFlow <strong>n'est pas, en soi, un opérateur de transport de passagers, une entreprise d'animation touristique, une agence de voyages, un voyagiste ni le prestataire des circuits ou services vendus par le Client</strong>, sauf indication expresse dans un contrat spécifique.",
+  terms_p_9:
+    "L'utilisation de TukFlow ne transfère pas à TukFlow une quelconque responsabilité légale appartenant au Client en tant qu'opérateur de l'activité.",
+  terms_p_10:
+    "L'accès à TukFlow en qualité de <strong>testeur</strong> est accordé à titre <strong>gratuit et temporaire</strong>, dans le but exclusif d'essayer, d'évaluer et de valider les fonctionnalités de la plateforme avant sa souscription.",
+  terms_p_11:
+    "En acceptant les présentes Conditions en qualité de testeur, l'Utilisateur reconnaît et accepte que :",
+  terms_p_12:
+    "Le statut de testeur ne confère aucun droit au maintien gratuit du service après la fin de la période de test, ni aucun droit à la continuité des données ou configurations effectuées pendant le test, sauf accord écrit contraire.",
+  terms_p_13:
+    "Le Client est seul responsable de la légalité, de l'organisation et de l'exécution de son activité professionnelle.",
+  terms_p_14:
+    "Il appartient exclusivement au Client de s'assurer qu'il dispose de toutes les licences, autorisations, assurances, qualifications professionnelles, véhicules légalement aptes, conducteurs habilités et autres exigences imposées par la législation applicable à son activité.",
+  terms_p_15:
+    "TukFlow ne garantit pas que le Client est légalement habilité à fournir un service donné.",
+  terms_p_16:
+    "Le Client doit utiliser la plateforme conformément à toutes les lois et réglementations applicables à son activité.",
+  terms_p_17:
+    "Pour utiliser certaines fonctionnalités de TukFlow, il peut être nécessaire de créer un compte.",
+  terms_p_18:
+    "Le Client s'engage à fournir des informations véridiques, complètes et à jour.",
+  terms_p_19:
+    "Le Client est responsable de la confidentialité de ses identifiants d'accès et de toutes les activités réalisées via son compte.",
+  terms_p_20:
+    "Dès qu'il soupçonne un accès non autorisé à son compte, le Client doit en informer immédiatement TukFlow.",
+  terms_p_21:
+    "Le Client ne doit pas partager ses identifiants avec des tiers, sauf lorsque la plateforme propose ses propres mécanismes de création d'utilisateurs supplémentaires.",
+  terms_p_22:
+    "Lorsque la formule souscrite permet la création de plusieurs utilisateurs, le Client est responsable de définir leurs niveaux d'accès et autorisations respectifs.",
+  terms_p_23:
+    "Le Client doit garantir que ses collaborateurs et utilisateurs autorisés utilisent TukFlow conformément aux présentes Conditions et à la législation applicable.",
+  terms_p_24:
+    "Les actions réalisées via les comptes associés au Client peuvent être enregistrées à des fins de sécurité, d'audit, de fonctionnement de la plateforme et de résolution de problèmes.",
+  terms_p_25:
+    "TukFlow peut fournir des outils pour recevoir, organiser et gérer les réservations effectuées par les clients de l'Opérateur.",
+  terms_p_26:
+    "L'existence d'une réservation sur la plateforme ne signifie pas que TukFlow est partie au contrat conclu entre le Client et le passager.",
+  terms_p_27:
+    "Le contrat relatif au circuit, au transport ou à l'expérience touristique est conclu entre le Client et le client final respectif, chaque fois que cela résulte du modèle commercial adopté par le Client.",
+  terms_p_28:
+    "Le Client est responsable de définir et de communiquer à ses clients :",
+  terms_p_29:
+    "Lorsque TukFlow propose des fonctionnalités liées aux paiements, celles-ci peuvent dépendre de services fournis par des tiers spécialisés.",
+  terms_p_30:
+    "Le traitement des paiements peut être soumis aux conditions générales et aux politiques de confidentialité de ces prestataires.",
+  terms_p_31:
+    "Sauf indication expresse contraire, TukFlow n'est pas responsable de l'exécution, de l'autorisation, du rejet ou du traitement financier d'une transaction effectuée via un prestataire de paiement externe.",
+  terms_p_32:
+    "Le Client est responsable du respect de ses obligations fiscales, comptables et légales liées aux montants reçus dans le cadre de son activité.",
+  terms_p_33:
+    "Pendant la période de test, TukFlow ne facture aucun montant pour l'utilisation de la plateforme, sauf indication expresse contraire.",
+  terms_p_34:
+    "Certaines fonctionnalités de TukFlow peuvent utiliser des données de localisation et GPS, notamment pour permettre le suivi des véhicules ou des conducteurs.",
+  terms_p_35:
+    "L'utilisation de ces fonctionnalités dépend de la disponibilité du signal GPS, de la connexion Internet, des autorisations accordées à l'appareil et d'autres facteurs techniques.",
+  terms_p_36:
+    "Le Client reconnaît que les données de localisation peuvent présenter des imprécisions, des retards ou des interruptions.",
+  terms_p_37:
+    "TukFlow ne garantit pas que la localisation affichée soit en permanence exacte ou disponible en temps réel.",
+  terms_p_38:
+    "Le Client est responsable d'informer ses conducteurs et les autres personnes concernées de l'utilisation des fonctionnalités de localisation, lorsque la loi l'exige.",
+  terms_p_39:
+    "TukFlow s'efforcera de maintenir la plateforme disponible et fonctionnelle de manière continue.",
+  terms_p_40:
+    "Toutefois, le Client reconnaît que des interruptions temporaires peuvent survenir en raison de :",
+  terms_p_41:
+    "Chaque fois que cela est raisonnablement possible, TukFlow s'efforcera d'informer les Clients à l'avance des interruptions programmées.",
+  terms_p_42:
+    "Pendant la phase de test, les interruptions et indisponibilités temporaires sont prévisibles et ne confèrent au Testeur aucun droit à compensation.",
+  terms_p_43:
+    "TukFlow pourra introduire de nouvelles fonctionnalités, modifier des fonctionnalités existantes ou en supprimer, dès lors que cela ne porte pas substantiellement atteinte au service souscrit.",
+  terms_p_44:
+    "Des mises à jour peuvent être nécessaires pour améliorer la sécurité, les performances, la compatibilité ou le fonctionnement de la plateforme.",
+  terms_p_45:
+    "Pendant la phase de test, les modifications et suppressions de fonctionnalités peuvent survenir plus fréquemment et sans préavis.",
+  terms_p_46:
+    "L'utilisation de TukFlow peut être soumise au paiement d'un abonnement, d'une licence ou d'un autre modèle de souscription indiqué au moment de l'adhésion.",
+  terms_p_47:
+    "Les prix applicables seront ceux présentés au Client au moment de la souscription ou figurant dans la proposition/commercialisation applicable.",
+  terms_p_48:
+    "En cas d'abonnement récurrent, le Client sera informé de la période de facturation et des conditions de renouvellement.",
+  terms_p_49:
+    "TukFlow pourra modifier les prix de ses formules moyennant information préalable du Client, les modifications ne devant pas affecter les périodes déjà payées, sauf accord contraire.",
+  terms_p_50:
+    "<strong>En tant que testeur du système gratuit, aucun montant n'est dû</strong> pendant la période de test, la souscription éventuelle d'une formule payante étant toujours précédée d'une proposition et de l'acceptation expresse du Client.",
+  terms_p_51:
+    "Le Client pourra annuler son abonnement conformément aux conditions de la formule souscrite.",
+  terms_p_52:
+    "TukFlow pourra suspendre ou résilier l'accès au compte en cas de :",
+  terms_p_53:
+    "Chaque fois que cela est possible et approprié, le Client sera informé à l'avance de la suspension ou de la résiliation.",
+  terms_p_54:
+    "En tant que testeur, l'accès peut être résilié à tout moment par TukFlow, notamment à la fin de la période de test ou en cas d'utilisation contraire aux présentes Conditions.",
+  terms_p_55:
+    "Le Client conserve la propriété des données et contenus qu'il introduit sur la plateforme, sans préjudice des droits nécessaires à TukFlow pour fournir le service.",
+  terms_p_56:
+    "Le Client est responsable de garantir qu'il dispose d'une base légale pour collecter et utiliser les données personnelles qu'il introduit dans TukFlow.",
+  terms_p_57:
+    "Lorsque TukFlow traite des données personnelles pour le compte du Client, les parties doivent respecter les règles applicables à la relation entre responsable du traitement et sous-traitant, conformément au RGPD.",
+  terms_p_58:
+    "Le traitement des données personnelles effectué par TukFlow est régi par sa Politique de Confidentialité.",
+  terms_p_59:
+    "Lorsque TukFlow traite des données personnelles pour le compte du Client, le Client sera, en règle générale, le responsable du traitement de ces données et TukFlow agira en tant que sous-traitant, dans la mesure applicable.",
+  terms_p_60:
+    "TukFlow s'engage à mettre en œuvre des mesures techniques et organisationnelles appropriées pour protéger les données personnelles traitées via la plateforme.",
+  terms_p_61:
+    "Si nécessaire, des conditions supplémentaires de traitement des données pourront être établies par le biais d'un Accord de Traitement des Données (DPA).",
+  terms_p_62:
+    "TukFlow s'efforcera de mettre en œuvre des mesures techniques et organisationnelles appropriées pour protéger la plateforme et les données traitées via celle-ci.",
+  terms_p_63:
+    "Aucun système informatique ou service fourni sur Internet ne peut garantir une sécurité absolue.",
+  terms_p_64:
+    "Le Client doit utiliser des appareils sécurisés, protéger ses identifiants et adopter des mesures raisonnables pour empêcher les accès non autorisés.",
+  terms_p_65:
+    "La plateforme TukFlow, y compris son logiciel, son code, son design, son interface, sa marque, ses logos, ses textes, ses éléments graphiques, ses fonctionnalités et autres composants, appartient à TukFlow ou aux titulaires respectifs.",
+  terms_p_66:
+    "La souscription du service accorde au Client un droit limité, non exclusif, non transférable et révocable d'utiliser la plateforme pendant la période souscrite et exclusivement aux fins prévues par les présentes Conditions.",
+  terms_p_67:
+    "Il est interdit de copier, modifier, distribuer, vendre, concéder en sous-licence, décompiler, pratiquer l'ingénierie inverse ou exploiter commercialement la plateforme, sauf autorisation expresse de la loi ou de TukFlow.",
+  terms_p_68:
+    "Ces limitations s'appliquent également au statut de testeur du système gratuit.",
+  terms_p_69:
+    "Le Client est responsable des contenus, images, textes, prix, informations commerciales, données de véhicules, données de conducteurs et autres informations qu'il introduit sur la plateforme.",
+  terms_p_70:
+    "Le Client déclare détenir les droits et autorisations nécessaires pour utiliser ces contenus.",
+  terms_p_71:
+    "Le Client ne doit pas introduire de contenus illégaux, frauduleux, offensants ou violant les droits de tiers.",
+  terms_p_72:
+    "TukFlow pourra intégrer des services externes, tels que des cartes, des services d'hébergement, d'authentification, de notifications, de paiements, d'email, de SMS, d'analyse statistique ou d'autres technologies.",
+  terms_p_73:
+    "La disponibilité et le fonctionnement de ces intégrations peuvent dépendre des fournisseurs respectifs.",
+  terms_p_74:
+    "Lorsqu'une intégration est soumise aux conditions d'un tiers, le Client peut également être soumis aux conditions de ce tiers.",
+  terms_p_75:
+    "TukFlow fournit un outil technologique d'aide à la gestion de l'activité du Client et ne garantit pas que l'utilisation de la plateforme génère un niveau déterminé de réservations, de ventes, de revenus ou de résultats commerciaux.",
+  terms_p_76:
+    "Dans la mesure permise par la législation applicable, TukFlow ne sera pas responsable des pertes résultant de décisions commerciales prises par le Client, notamment les prix, horaires, disponibilités, annulations, capacité des véhicules ou conditions de prestation des services.",
+  terms_p_77:
+    "TukFlow ne sera pas non plus responsable des défaillances exclusivement imputables à des services ou systèmes tiers, aux réseaux de télécommunications, aux appareils du Client ou à des cas de force majeure.",
+  terms_p_78:
+    "En tant que testeur du système gratuit, et dans la mesure permise par la loi, la responsabilité de TukFlow est limitée au maximum prévu par la loi, TukFlow ne répondant pas des dommages indirects, du manque à gagner ou de la perte de données pendant la phase de test.",
+  terms_p_79:
+    "Rien dans les présentes Conditions n'exclut ni ne limite les responsabilités qui ne peuvent légalement être exclues ou limitées.",
+  terms_p_80: "Il est interdit d'utiliser TukFlow pour :",
+  terms_p_81:
+    "Chaque fois que cela est techniquement disponible et selon la formule souscrite, le Client pourra exporter certaines données introduites sur la plateforme.",
+  terms_p_82:
+    "Après la fin de la relation contractuelle, les données pourront être conservées pendant les périodes nécessaires au respect des obligations légales, à la sécurité, à la résolution des litiges ou à la défense des droits.",
+  terms_p_83:
+    "À l'issue des périodes applicables, les données pourront être supprimées ou anonymisées.",
+  terms_p_84:
+    "En tant que testeur, TukFlow pourra supprimer ou réinitialiser les données de test à tout moment, sans préavis et sans aucune responsabilité.",
+  terms_p_85:
+    "TukFlow pourra mettre à jour les présentes Conditions pour refléter des changements légaux, techniques, commerciaux ou fonctionnels.",
+  terms_p_86:
+    "Lorsqu'une modification est substantielle, TukFlow s'efforcera de la communiquer au Client par un moyen approprié.",
+  terms_p_87:
+    "La poursuite de l'utilisation du service après l'entrée en vigueur des modifications pourra constituer une acceptation des nouvelles Conditions, sans préjudice des droits légalement reconnus au Client.",
+  terms_p_88:
+    "Les présentes Conditions sont régies par la législation portugaise, sauf lorsque des règles impératives d'une autre juridiction sont applicables.",
+  terms_p_89:
+    "Les parties s'efforceront de résoudre à l'amiable tout différend lié à l'utilisation de TukFlow.",
+  terms_p_90:
+    "À défaut de solution amiable, les tribunaux portugais territorialement compétents seront compétents, sans préjudice des règles légales impératives applicables.",
+  terms_p_91:
+    "Pour toute question relative à TukFlow, aux Conditions d'Utilisation, au compte ou au service, le Client pourra contacter :",
+  terms_p_92:
+    "<strong>TukFlow-System</strong><br/>Entité : Carlos Barradas<br/>WhatsApp : 351 965 748 022<br/>Email : carlosbarradas54@gmail.com",
+  terms_p_93:
+    "En créant un compte, en souscrivant une formule ou en utilisant TukFlow, y compris en tant que testeur du système gratuit, le Client déclare avoir lu et accepter les présentes Conditions Générales.",
+  terms_p_94:
+    "Les présentes Conditions font partie intégrante de l'accord conclu entre TukFlow et le Client.",
+
+  terms_ul_1:
+    "<li>gestion des réservations ;</li><li>gestion des clients ;</li><li>gestion des véhicules ;</li><li>gestion des conducteurs ;</li><li>gestion de la disponibilité ;</li><li>gestion des horaires et de l'agenda ;</li><li>suivi de la localisation, lorsque cette fonctionnalité est active ;</li><li>communication entre l'opérateur et ses clients ou conducteurs ;</li><li>gestion et consultation des informations liées aux services ;</li><li>autres fonctionnalités proposées par TukFlow.</li>",
+  terms_ul_2:
+    "<li><strong>Aucun coût n'est associé</strong> à la période de test, sauf indication expresse contraire communiquée par TukFlow ;</li><li>L'accès est accordé pour une <strong>période limitée</strong> et peut être renouvelé, modifié ou résilié à tout moment par TukFlow, avec information préalable chaque fois que cela est raisonnablement possible ;</li><li>Le système peut être en <strong>phase de développement, de test ou d'amélioration</strong>, de sorte que des fonctionnalités peuvent être ajoutées, modifiées, suspendues ou supprimées sans préavis ;</li><li>Des <strong>erreurs, pannes, interruptions ou pertes de données</strong> peuvent survenir pendant la période de test, sans que le Testeur puisse invoquer ces faits comme fondement d'une quelconque indemnisation ou responsabilité de TukFlow ;</li><li>Les données introduites pendant le test (réservations, conducteurs, véhicules, clients, localisations et autres informations) peuvent être <strong>supprimées, réinitialisées ou restaurées</strong> par TukFlow ; il est recommandé au Testeur d'utiliser, dans la mesure du possible, des données de démonstration plutôt que des données réelles sensibles ;</li><li>Le Testeur doit utiliser le système de bonne foi, <strong>signaler les erreurs et difficultés</strong> rencontrées et ne pas exploiter l'accès gratuit à des fins commerciales non autorisées ;</li><li>À la fin de la période de test, le Testeur pourra être invité à <strong>souscrire une formule payante</strong> et, à défaut de souscription, l'accès pourra être désactivé ;</li><li>TukFlow ne garantit pas que les fonctionnalités disponibles pendant le test restent inchangées ou disponibles dans la version finale du service.</li>",
+  terms_ul_3:
+    "<li>prix ;</li><li>horaires ;</li><li>lieux de départ ;</li><li>durée des services ;</li><li>conditions de réservation ;</li><li>conditions d'annulation ;</li><li>conditions de paiement ;</li><li>caractéristiques des véhicules ;</li><li>capacité des véhicules ;</li><li>conditions de prestation du service ;</li><li>autres conditions commerciales applicables.</li>",
+  terms_ul_4:
+    "<li>maintenance ;</li><li>mises à jour ;</li><li>pannes techniques ;</li><li>problèmes de connectivité ;</li><li>défaillances de fournisseurs externes ;</li><li>problèmes d'infrastructure ;</li><li>événements échappant au contrôle raisonnable de TukFlow ;</li><li>cas de force majeure.</li>",
+  terms_ul_5:
+    "<li>manquement grave aux présentes Conditions ;</li><li>utilisation illicite ou frauduleuse de la plateforme ;</li><li>tentative de compromettre la sécurité du système ;</li><li>utilisation de la plateforme à des fins abusives ;</li><li>défaut de paiement (le cas échéant) ;</li><li>utilisation susceptible de causer un préjudice à TukFlow, à d'autres utilisateurs ou à des tiers.</li>",
+  terms_ul_6:
+    "<li>activités illégales ;</li><li>fraude ;</li><li>tentative d'accès non autorisé ;</li><li>introduction de code malveillant ;</li><li>interférence avec le fonctionnement de la plateforme ;</li><li>collecte non autorisée de données d'autres utilisateurs ;</li><li>tentative de contourner les mécanismes de sécurité ;</li><li>utilisation nuisant à d'autres utilisateurs ;</li><li>toute finalité contraire à la loi.</li>",
+
+  priv_title: "Politique de Confidentialité",
+  priv_sub: "Plateforme TukFlow — utilisateurs testeurs du système gratuit",
+  priv_updated: "Dernière mise à jour : 21-08-2026",
+  priv_h2_1: "1. Responsable du traitement",
+  priv_h2_2: "2. Données personnelles collectées",
+  priv_h2_3: "3. Finalités du traitement",
+  priv_h2_4: "4. Base juridique",
+  priv_h2_5: "5. Données de localisation et GPS",
+  priv_h2_6: "6. Conservation des données",
+  priv_h2_7: "7. Partage des données avec des tiers",
+  priv_h2_8: "8. Droits de la personne concernée",
+  priv_h2_9: "9. Sécurité des données",
+  priv_h2_10: "10. Newsletter et communications",
+  priv_h2_11: "11. Données des mineurs",
+  priv_h2_12: "12. Modifications de la présente Politique",
+  priv_h2_13: "13. Contacts",
+
+  priv_p_1:
+    'La présente Politique de Confidentialité décrit la manière dont <strong>TukFlow</strong> ("nous", "Prestataire") collecte, utilise, conserve et protège les données personnelles des utilisateurs de la plateforme, y compris les utilisateurs agissant en tant que <strong>testeurs du système gratuit</strong>.',
+  priv_p_2:
+    "TukFlow s'engage à traiter les données personnelles conformément au Règlement Général sur la Protection des Données (RGPD) et aux autres législations applicables sur le territoire portugais.",
+  priv_p_3: "Le responsable du traitement des données personnelles est :",
+  priv_contact:
+    '<p style="margin-bottom:4px;"><strong>TukFlow-System</strong></p><p style="margin-bottom:4px;">Entité : Carlos Barradas</p><p style="margin-bottom:4px;">WhatsApp : 351 965 748 022</p><p style="margin-bottom:0;">Email : carlosbarradas54@gmail.com</p>',
+  priv_p_4:
+    "TukFlow peut collecter et traiter les catégories suivantes de données personnelles :",
+  priv_ul_1:
+    "<li><strong>Données d'identification et de contact :</strong> nom, email, numéro de téléphone/WhatsApp ;</li><li><strong>Données de compte et d'authentification :</strong> identifiants d'accès, profil utilisateur, autorisations et niveaux d'accès ;</li><li><strong>Données de gestion de l'activité :</strong> informations sur les conducteurs, véhicules, réservations, clients, horaires et disponibilités introduites par l'utilisateur sur la plateforme ;</li><li><strong>Données de localisation :</strong> lorsque la fonctionnalité de localisation/GPS est active, des données de positionnement des véhicules ou des conducteurs peuvent être collectées ;</li><li><strong>Données techniques et d'utilisation :</strong> journaux d'accès, adresse IP, type d'appareil, système d'exploitation, interactions avec la plateforme et journaux d'erreurs (app_logs) ;</li><li><strong>Données de communication :</strong> messages échangés via la plateforme ou les canaux d'assistance.</li>",
+  priv_p_5: "Les données personnelles sont traitées aux fins suivantes :",
+  priv_ul_2:
+    "<li>création et gestion du compte utilisateur ;</li><li>fourniture et fonctionnement des services de la plateforme (réservations, gestion des conducteurs, véhicules, clients, disponibilité, localisation) ;</li><li>support technique et assistance à l'utilisateur ;</li><li>sécurité, prévention de la fraude et résolution des problèmes techniques ;</li><li>respect des obligations légales et réglementaires ;</li><li>amélioration continue de la plateforme, par l'analyse de l'utilisation (dans la mesure du possible, avec des données anonymisées) ;</li><li>communications liées au service, y compris les informations sur la période de test et l'éventuelle souscription.</li>",
+  priv_p_6: "Le traitement des données personnelles repose sur la base juridique suivante :",
+  priv_ul_3:
+    "<li>le <strong>consentement</strong> de la personne concernée, le cas échéant ;</li><li>l'<strong>exécution du contrat</strong> ou les démarches précontractuelles (y compris l'accès en tant que testeur du système gratuit) ;</li><li>l'<strong>intérêt légitime</strong> de TukFlow dans la sécurité, le fonctionnement et l'amélioration de la plateforme ;</li><li>le <strong>respect des obligations légales</strong> auxquelles TukFlow est soumis.</li>",
+  priv_p_7:
+    "Lorsque la fonctionnalité de localisation est active, les données de positionnement sont utilisées exclusivement pour permettre le suivi des véhicules et des conducteurs dans le cadre de l'activité de l'utilisateur.",
+  priv_p_8:
+    "L'utilisateur est responsable d'informer ses conducteurs et les autres personnes concernées de l'utilisation de ces fonctionnalités, dans les conditions légalement exigées.",
+  priv_p_9:
+    "Les données de localisation peuvent présenter des imprécisions, des retards ou des interruptions, selon le signal GPS, la connexion Internet et les autorisations de l'appareil.",
+  priv_p_10:
+    "Les données personnelles ne sont conservées que pendant la période nécessaire aux finalités pour lesquelles elles ont été collectées, notamment :",
+  priv_ul_4:
+    "<li>pendant la durée du compte ou de la période de test ;</li><li>pendant les délais légalement exigés (notamment les obligations fiscales et comptables) ;</li><li>pendant la période nécessaire à la sécurité, à la résolution des litiges ou à la défense des droits.</li>",
+  priv_p_11:
+    "En tant que testeur, les données introduites pendant le test peuvent être supprimées ou réinitialisées par TukFlow à tout moment ; l'utilisation de données de démonstration est recommandée.",
+  priv_p_12:
+    "À l'issue des périodes applicables, les données sont supprimées ou anonymisées.",
+  priv_p_13:
+    "TukFlow ne vend ni ne loue les données personnelles à des tiers.",
+  priv_p_14:
+    "Les données peuvent être partagées avec des prestataires de services agissant pour le compte de TukFlow (sous-traitants), notamment :",
+  priv_ul_5:
+    "<li>services d'hébergement et d'infrastructure (cloud) ;</li><li>services de base de données et d'authentification ;</li><li>services de cartographie et de localisation ;</li><li>services de notifications, d'email et de SMS ;</li><li>services de paiement (le cas échéant).</li>",
+  priv_p_15:
+    "Ces prestataires ne traitent les données que conformément aux instructions de TukFlow et dans le cadre des finalités décrites dans la présente Politique.",
+  priv_p_16:
+    "Les données peuvent également être divulguées lorsque la loi, une décision de justice ou une autorité compétente l'exige.",
+  priv_p_17: "Conformément au RGPD, la personne concernée a le droit de :",
+  priv_ul_6:
+    '<li>accéder à ses données personnelles ;</li><li>rectifier des données inexactes ou incomplètes ;</li><li>demander l\'effacement des données ("droit à l\'oubli") ;</li><li>demander la limitation du traitement ;</li><li>demander la portabilité des données ;</li><li>s\'opposer au traitement, dans certaines circonstances ;</li><li>retirer son consentement à tout moment, sans affecter la licéité du traitement effectué antérieurement ;</li><li>introduire une réclamation auprès de la Commission Nationale de Protection des Données (CNPD).</li>',
+  priv_p_18:
+    "Pour exercer ces droits, la personne concernée doit contacter TukFlow via les coordonnées indiquées à la section 1 de la présente Politique.",
+  priv_p_19:
+    "TukFlow met en œuvre des mesures techniques et organisationnelles appropriées pour protéger les données personnelles contre tout accès non autorisé, altération, divulgation ou destruction.",
+  priv_p_20:
+    "Aucun système informatique ou service fourni sur Internet ne peut garantir une sécurité absolue. L'utilisateur doit utiliser des appareils sécurisés et protéger ses identifiants.",
+  priv_p_21:
+    "Si l'utilisateur s'abonne à la newsletter, TukFlow pourra envoyer des communications contenant des actualités, des conseils de gestion de flotte et des nouveautés, toujours avec la possibilité d'annuler l'abonnement à tout moment.",
+  priv_p_22:
+    "Le consentement à l'envoi de communications peut être retiré à tout moment via le lien de désinscription inclus dans chaque communication ou par contact direct.",
+  priv_p_23:
+    "La plateforme TukFlow s'adresse à des utilisateurs professionnels et ne vise pas les mineurs de moins de 18 ans. TukFlow ne collecte pas intentionnellement de données personnelles de mineurs.",
+  priv_p_24:
+    "TukFlow pourra mettre à jour la présente Politique de Confidentialité pour refléter des changements légaux, techniques ou fonctionnels.",
+  priv_p_25:
+    "Lorsqu'une modification est substantielle, TukFlow s'efforcera de la communiquer par un moyen approprié. La poursuite de l'utilisation du service après l'entrée en vigueur des modifications pourra constituer une acceptation des nouvelles conditions, sans préjudice des droits légalement applicables.",
+  priv_p_26:
+    "Pour toute question relative à la présente Politique de Confidentialité ou au traitement des données personnelles, l'utilisateur pourra contacter :",
+
+
+  // ── Page App TukFlow
+  "app_como_badge": "Aperçu",
+  "app_como_card1_d": "Le GPS tourne en arrière-plan (Foreground Service) et envoie la position du tuk-tuk à la carte du backoffice — même écran verrouillé.",
+  "app_como_card1_t": "Localisation en temps réel",
+  "app_como_card2_d": "Le conducteur se marque Libre ou Occupé (avec heure de libération prévue). Le backoffice voit en temps réel qui est disponible pour de nouvelles réservations.",
+  "app_como_card2_t": "Disponibilité",
+  "app_como_card3_d": "Début et fin de trajet avec distance, durée et itinéraire. Tout est enregistré dans l'historique et le panneau d'administration.",
+  "app_como_card3_t": "Trajets et historique",
+  "app_como_intro": "L'app du conducteur a été conçue pour être simple : activez le GPS, marquez la disponibilité, faites le trajet et le système s'occupe du reste — localisation, historique, synchronisation et rapports.",
+  "app_como_title": "Une app, trois grands blocs",
+  "app_cta_subtitle": "Le conducteur s'allume, le tuk-tuk apparaît sur la carte, les trajets sont enregistrés et le gérant contrôle tout dans le backoffice. <span style=\"color:#91BFD2;font-weight:700;\">Aussi simple que ça.</span>",
+  "app_cta_title": "Prêt à voir l'app en action ?",
+  "app_cta_voltar": "Retour à la page d'accueil",
+  "app_flutuante_voltar": "Retour à l'accueil",
+  "app_fluxo_1d": "Le conducteur se connecte avec e-mail et mot de passe (Supabase Auth). L'app charge le profil et valide l'enregistrement du conducteur en base. Support complet du mode sombre et multilingue (PT, EN, ES, FR et plus).",
+  "app_fluxo_1t": "Connexion sécurisée",
+  "app_fluxo_2d": "Au démarrage, l'app vérifie quel tuk-tuk est associé au conducteur (persistance 12 heures). Le conducteur peut changer de véhicule à tout moment d'une touche.",
+  "app_fluxo_2t": "Sélection du TukTuk",
+  "app_fluxo_3d": "Le conducteur active le « Système Actif ». L'app demande les permissions de localisation, démarre le service en premier plan et commence à envoyer la position à la carte en temps réel.",
+  "app_fluxo_3t": "Activer le système (GPS)",
+  "app_fluxo_4d": "Libre ou Occupé ? Si occupé, le conducteur indique jusqu'à quand. Le backoffice et la carte publique savent immédiatement qui peut accepter de nouvelles réservations.",
+  "app_fluxo_4t": "Définir la disponibilité",
+  "app_fluxo_5d": "Démarrer le trajet → carte active avec temps, distance et itinéraire. Terminer le trajet → le système calcule distance, durée et vitesse moyenne et enregistre tout dans Supabase.",
+  "app_fluxo_5t": "Faire le trajet",
+  "app_fluxo_6d": "Tous les trajets sont dans l'historique avec pagination. À la déconnexion, l'app génère un résumé du jour. Le gérant voit tout dans le panneau backoffice.",
+  "app_fluxo_6t": "Historique et rapports",
+  "app_fluxo_badge": "Étape par étape",
+  "app_fluxo_diagrama_nota": "Pas de connexion ? L'app stocke jusqu'à 100 positions (~30 Ko) dans une file locale et synchronise quand le réseau revient.",
+  "app_fluxo_diagrama_t": "Architecture de synchronisation",
+  "app_fluxo_intro": "Du login à la fin du trajet — le flux complet dans l'app, tel qu'il est implémenté sur le terrain.",
+  "app_fluxo_title": "La journée de travail d'un conducteur",
+  "app_footer_como": "Comment ça marche",
+  "app_footer_copyright": "© 2026 TukFlow — Gestion Intelligente des TukTuks. Tous droits réservés.",
+  "app_footer_fluxo": "Flux",
+  "app_footer_func": "Fonctionnalités",
+  "app_footer_principal": "Page d'accueil",
+  "app_footer_tec": "Technologie",
+  "app_func_1d": "Foreground Service garantit l'envoi continu de la position, même écran verrouillé. Le gérant voit le tuk-tuk bouger sur la carte du backoffice.",
+  "app_func_1t": "Suivi GPS en temps réel",
+  "app_func_2d": "Bouton qui montre au conducteur sa position exacte dans un popup — idéal pour convenir de points de rencontre avec les clients ou vérifier le signal GPS.",
+  "app_func_2t": "\"Où suis-je maintenant\"",
+  "app_func_3d": "Bouton « Synchroniser maintenant » + file hors ligne de 100 positions. Si le signal échoue, rien n'est perdu — les données sont envoyées quand le réseau revient.",
+  "app_func_3t": "Synchronisation intelligente",
+  "app_func_4d": "Interrupteur d'état clair avec indicateurs visuels par couleur (vert = valide, orange = expiré). Une touche pour commencer ou terminer le quart.",
+  "app_func_4t": "Système Actif / Inactif",
+  "app_func_5d": "Liste paginée de tous les trajets avec distance, durée et itinéraire. État vide convivial et détail de chaque trajet en une touche.",
+  "app_func_5t": "Historique des trajets",
+  "app_func_6d": "Accès rapide au panneau d'administration directement depuis l'app — le gérant suit la carte, les conducteurs et les réservations sans changer d'appareil.",
+  "app_func_6t": "Raccourci Backoffice",
+  "app_func_7d": "Toute l'interface en plusieurs langues (PT, EN, ES, FR…). Chaque conducteur utilise l'app dans sa langue sans affecter le reste du système.",
+  "app_func_7t": "Multilingue",
+  "app_func_8d": "Moins de reflets la nuit, meilleure lecture au soleil. Le thème sombre est disponible dans toute l'app, y compris l'écran de connexion.",
+  "app_func_8t": "Mode sombre",
+  "app_func_badge": "Fonctionnalités",
+  "app_func_intro": "Des fonctionnalités pensées pour le quotidien du conducteur et le contrôle du gérant.",
+  "app_func_title": "Tout ce que fait l'app",
+  "app_hero_subtitle": "Le GPS dans la poche du conducteur, l'entreprise sur votre écran. L'app enregistre la localisation en temps réel, gère la disponibilité, contrôle les trajets et communique avec le backoffice — tout synchronisé avec Supabase.",
+  "app_hero_title": "Comment ça marche",
+  "app_hero_title_highlight": "App TukFlow",
+  "app_nav_como": "Comment ça marche",
+  "app_nav_fluxo": "Flux de l'app",
+  "app_nav_func": "Fonctionnalités",
+  "app_nav_porque": "Pourquoi ?",
+  "app_nav_tec": "Technologie",
+  "app_nav_terreno": "En Action",
+  "app_porque_badge": "Pourquoi une app ?",
+  "app_porque_card1_d": "Chaque conducteur apparaît sur la carte du backoffice avec sa position mise à jour. Vous savez qui est libre, qui est occupé et où se trouve chaque véhicule — sans appels.",
+  "app_porque_card1_t": "Fin des conducteurs \"invisibles\"",
+  "app_porque_card2_d": "\"Le tuk-tuk arrive quand ?\" — vous répondez avec la position réelle du véhicule le plus proche, pas une supposition. Client satisfait, réservation conclue.",
+  "app_porque_card2_t": "Réponses rapides aux clients",
+  "app_porque_card3_d": "Distance parcourue, durée, itinéraire et conducteur. Historique complet pour analyser la productivité, facturer avec rigueur et savoir exactement ce que la flotte a fait.",
+  "app_porque_card3_t": "Chaque trajet est enregistré",
+  "app_porque_card4_d": "Si quelque chose arrive, il y a une trace : où était le véhicule, à quelle heure, avec quel conducteur. Protège l'entreprise, le client et le conducteur.",
+  "app_porque_card4_t": "Sécurité et responsabilité",
+  "app_porque_intro": "Sans app, le gérant d'une entreprise de tuk-tuks dépend d'appels, de messages et de la parole du conducteur pour savoir où est la flotte. Avec TukFlow, chaque véhicule apparaît sur la carte en temps réel — et le gérant prend des décisions avec des données, pas des suppositions.",
+  "app_porque_title": "Où est votre tuk-tuk ?",
+  "app_porque_title_highlight": "Savoir en temps réel change l'entreprise.",
+  "app_tec_1d": "File intelligente avec limite de 100 positions (~30 Ko) protège la mémoire de l'appareil et garantit qu'aucune position n'est perdue dans les zones sans couverture.",
+  "app_tec_1t": "Fonctionne hors ligne",
+  "app_tec_2d": "Écran dédié à l'optimisation de la batterie et gestion des tâches en arrière-plan pour que le GPS dure tout le quart sans vider le téléphone.",
+  "app_tec_2t": "Optimisation de la batterie",
+  "app_tec_3d": "Cycle de vie sûr avec autoDispose : timers, abonnements et canaux Realtime sont nettoyés automatiquement à la fermeture de l'écran.",
+  "app_tec_3t": "Sans fuites mémoire",
+  "app_tec_4d": "Résumé quotidien généré à la déconnexion + logs d'erreur envoyés à app_logs. Le gérant sait ce qui s'est passé à chaque quart.",
+  "app_tec_4t": "Rapports automatiques",
+  "app_tec_badge": "Technologie",
+  "app_tec_intro": "Architecture hybride moderne (Riverpod + Provider), backend Supabase et fonctionnement garanti même sans réseau.",
+  "app_tec_title": "Conçue pour durer et évoluer",
+  "app_terreno_1d": "État du système, disponibilité et accès aux trajets — tout dans un écran unique et simple.",
+  "app_terreno_1t": "Écran du conducteur",
+  "app_terreno_2d": "Chaque tuk-tuk apparaît sur la carte du backoffice avec sa position mise à jour en temps réel.",
+  "app_terreno_2t": "Carte en temps réel",
+  "app_terreno_3d": "La même information dans la poche du conducteur, avec des indicateurs clairs d'état et de connexion.",
+  "app_terreno_3t": "Sur le téléphone",
+  "app_terreno_4d": "Vue centrale du gérant : conducteurs, trajets, réservations et disponibilité au même endroit.",
+  "app_terreno_4t": "Panneau d'administration",
+  "app_terreno_5d": "L'itinéraire réel de chaque trajet est enregistré — distance, points et vitesse moyenne.",
+  "app_terreno_5t": "Suivi d'itinéraire",
+  "app_terreno_6d": "Toute la flotte sur une carte : qui est libre, occupé et où se trouve chaque véhicule.",
+  "app_terreno_6t": "Flotte sur la carte",
+  "app_terreno_badge": "En action",
+  "app_terreno_title": "L'app en action",
+  "app_voltar": "Retour",
+  "app_voltar_principal": "← Retour à la page d'accueil",
+
+  // ── Page de réservation
+  reserva_page_title: "Demande de Réservation – Tuk Tuk Milfontes",
+  reserva_request_title: "Demande de Réservation",
+  reserva_request_subtitle: "Remplissez les informations et confirmez via WhatsApp",
+  reserva_step1_title: "Sélectionnez la Date et l'Heure",
+  reserva_date_label: "Date Souhaitée *",
+  reserva_time_label: "Heure Souhaitée *",
+  reserva_time_available: "Créneau Disponible !",
+  reserva_step2_title: "Vos Coordonnées",
+  reserva_locked_notice: "Sélectionnez d'abord la date et l'heure",
+  reserva_name_label: "Nom Complet *",
+  reserva_name_placeholder: "Votre nom complet",
+  reserva_email_label: "Email *",
+  reserva_email_placeholder: "votre@email.com",
+  reserva_phone_label: "Téléphone *",
+  reserva_phone_placeholder: "Ex : +351912345678",
+  reserva_phone_hint: "WhatsApp avec indicatif du pays",
+  reserva_phone_warning:
+    "⚠️ Veuillez inclure l'indicatif international (ex. : <strong>+351</strong> pour le Portugal) dans le numéro WhatsApp afin de garantir la bonne réception de la confirmation.",
+  reserva_pax_label: "Nombre de Personnes",
+  reserva_pax_1: "1 personne",
+  reserva_pax_2: "2 personnes",
+  reserva_pax_3: "3 personnes",
+  reserva_pax_4: "4 personnes",
+  reserva_tour_label: "Type de Circuit *",
+  reserva_tour_select: "Sélectionnez un circuit…",
+  reserva_tour_classic: "Circuit Classique : Village et Points de Vue",
+  reserva_tour_panoramic: "Circuit Panoramique : Littoral",
+  reserva_tour_sunset: "Circuit Coucher de Soleil : Heure Dorée",
+  reserva_price_label: "💰 Prix estimé",
+  reserva_price_sub: "Inclut jusqu'à 2 personnes",
+  reserva_price_includes: "Inclut jusqu'à 2 personnes",
+  reserva_price_extra_singular: "{n} personne supplémentaire × €{v}",
+  reserva_price_extra_plural: "{n} personnes supplémentaires × €{v}",
+  reserva_message_label: "Message Supplémentaire",
+  reserva_message_desc: "Ce champ permet au client d'ajouter un message supplémentaire.",
+  reserva_message_placeholder: "Toute information complémentaire ou demande spéciale…",
+  reserva_submit_btn: "Confirmer via WhatsApp",
+  reserva_slot_empty: "Sélectionnez une date pour voir les créneaux disponibles",
+  reserva_alert_fill: "Veuillez remplir tous les champs obligatoires.",
+  reserva_guide_title: "Éléments de l'Interface",
+  reserva_guide_header_title: "En-tête",
+  reserva_guide_header_desc: "Titre et résumé de la réservation.",
+  reserva_guide_datetime_title: "Date et Heure",
+  reserva_guide_datetime_desc: "Sélectionnez le jour et un créneau disponible.",
+  reserva_guide_dados_title: "Vos Coordonnées",
+  reserva_guide_dados_desc: "Remplissez vos coordonnées et les détails du circuit.",
+  reserva_guide_whatsapp_title: "Confirmer WhatsApp",
+  reserva_guide_whatsapp_desc: "Envoyez la demande de réservation en un clic.",
+  reserva_guide_message_title: "Message Supplémentaire",
+  reserva_guide_message_desc: "Champ permettant au client d'écrire un message supplémentaire.",
+  reserva_guide_ver: "VOIR",
+  reserva_wa_header: "🛺 *Nouvelle Demande de Réservation*",
+  reserva_wa_date: "📅 Date",
+  reserva_wa_time: "🕐 Heure",
+  reserva_wa_people: "👥 Personnes",
+  reserva_wa_tour: "🗺️ Circuit",
+  reserva_wa_price: "💰 Prix estimé",
+  reserva_wa_name: "👤 Nom",
+  reserva_wa_email: "📧 Email",
+  reserva_wa_phone: "📱 Téléphone",
+  reserva_wa_message: "💬 Message",
 };
-
-

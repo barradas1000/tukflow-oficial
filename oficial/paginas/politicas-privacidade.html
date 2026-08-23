@@ -84,20 +84,39 @@
             padding: 20px 22px;
             margin-top: 8px;
         }
+        .lang-select {
+            border: 1.5px solid #e2e8f0;
+            background: #fff;
+            color: #334155;
+            font-size: .8rem;
+            font-weight: 700;
+            border-radius: 10px;
+            padding: 8px 10px;
+            cursor: pointer;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
     </style>
 </head>
 <body>
 
 <!-- ═══════════ HEADER ═══════════ -->
 <header class="glass-nav" style="position:fixed;top:0;width:100%;z-index:50;">
-    <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 24px;max-width:1200px;margin:0 auto;">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 24px;max-width:1200px;margin:0 auto;">
         <a href="../index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
             <img src="../public/tukflow-icon-3d-transp.png" alt="TukFlow" style="height:36px;width:36px;object-fit:contain;border-radius:50%;"/>
             <span style="font-family:Manrope,sans-serif;font-weight:900;font-size:1.25rem;color:#1b7aa3;letter-spacing:-.03em;">TukFlow</span>
         </a>
-        <a href="../index.html" class="btn-back">
-            <span class="material-symbols-outlined" style="font-size:17px;">arrow_back</span> Voltar
-        </a>
+        <div style="display:flex;align-items:center;gap:12px;">
+            <select id="langSelect" class="lang-select" onchange="if(window.TukFlowTranslator){TukFlowTranslator.switchLanguage(this.value)}">
+                <option value="pt">PT</option>
+                <option value="en">EN</option>
+                <option value="es">ES</option>
+                <option value="fr">FR</option>
+            </select>
+            <a href="../index.html" class="btn-back">
+                <span class="material-symbols-outlined" style="font-size:17px;">arrow_back</span> <span data-i18n="doc_back">Voltar</span>
+            </a>
+        </div>
     </div>
 </header>
 
@@ -105,28 +124,28 @@
 <main style="padding-top:80px;">
     <div class="doc-container">
         <div class="doc-card">
-            <h1>Políticas de Privacidade</h1>
-            <p class="doc-sub">Plataforma TukFlow — utilizadores testadores do sistema gratuito</p>
+            <h1 data-i18n="priv_title">Políticas de Privacidade</h1>
+            <p class="doc-sub" data-i18n="priv_sub">Plataforma TukFlow — utilizadores testadores do sistema gratuito</p>
             <div class="last-updated">
                 <span class="material-symbols-outlined" style="font-size:15px;">update</span>
-                Última atualização: 21-08-2026
+                <span data-i18n="priv_updated">Última atualização: 21-08-2026</span>
             </div>
 
-            <p>A presente Política de Privacidade descreve a forma como o <strong>TukFlow</strong> ("nós", "Prestador") recolhe, utiliza, conserva e protege os dados pessoais dos utilizadores da plataforma, incluindo os utilizadores na condição de <strong>testadores do sistema gratuito</strong>.</p>
-            <p>O TukFlow compromete-se a tratar os dados pessoais em conformidade com o Regulamento Geral sobre a Proteção de Dados (RGPD) e demais legislação aplicável em território português.</p>
+            <p data-i18n-html="priv_p_1">A presente Política de Privacidade descreve a forma como o <strong>TukFlow</strong> ("nós", "Prestador") recolhe, utiliza, conserva e protege os dados pessoais dos utilizadores da plataforma, incluindo os utilizadores na condição de <strong>testadores do sistema gratuito</strong>.</p>
+            <p data-i18n="priv_p_2">O TukFlow compromete-se a tratar os dados pessoais em conformidade com o Regulamento Geral sobre a Proteção de Dados (RGPD) e demais legislação aplicável em território português.</p>
 
-            <h2>1. Responsável pelo tratamento</h2>
-            <p>O responsável pelo tratamento dos dados pessoais é:</p>
-            <div class="contact-block">
+            <h2 data-i18n="priv_h2_1">1. Responsável pelo tratamento</h2>
+            <p data-i18n="priv_p_3">O responsável pelo tratamento dos dados pessoais é:</p>
+            <div class="contact-block" data-i18n-html="priv_contact">
                 <p style="margin-bottom:4px;"><strong>TukFlow-System</strong></p>
                 <p style="margin-bottom:4px;">Entidade: Carlos Barradas</p>
                 <p style="margin-bottom:4px;">WhatsApp: 351 965 748 022</p>
                 <p style="margin-bottom:0;">Email: carlosbarradas54@gmail.com</p>
             </div>
 
-            <h2>2. Dados pessoais recolhidos</h2>
-            <p>O TukFlow pode recolher e tratar as seguintes categorias de dados pessoais:</p>
-            <ul>
+            <h2 data-i18n="priv_h2_2">2. Dados pessoais recolhidos</h2>
+            <p data-i18n="priv_p_4">O TukFlow pode recolher e tratar as seguintes categorias de dados pessoais:</p>
+            <ul data-i18n-html="priv_ul_1">
                 <li><strong>Dados de identificação e contacto:</strong> nome, email, número de telefone/WhatsApp;</li>
                 <li><strong>Dados de conta e autenticação:</strong> credenciais de acesso, perfil de utilizador, permissões e níveis de acesso;</li>
                 <li><strong>Dados de gestão da atividade:</strong> informação sobre condutores, veículos, reservas, clientes, horários e disponibilidade introduzida pelo utilizador na plataforma;</li>
@@ -135,9 +154,9 @@
                 <li><strong>Dados de comunicação:</strong> mensagens trocadas através da plataforma ou dos canais de suporte.</li>
             </ul>
 
-            <h2>3. Finalidades do tratamento</h2>
-            <p>Os dados pessoais são tratados para as seguintes finalidades:</p>
-            <ul>
+            <h2 data-i18n="priv_h2_3">3. Finalidades do tratamento</h2>
+            <p data-i18n="priv_p_5">Os dados pessoais são tratados para as seguintes finalidades:</p>
+            <ul data-i18n-html="priv_ul_2">
                 <li>criação e gestão da conta de utilizador;</li>
                 <li>prestação e funcionamento dos serviços da plataforma (reservas, gestão de condutores, veículos, clientes, disponibilidade, localização);</li>
                 <li>suporte técnico e assistência ao utilizador;</li>
@@ -147,46 +166,46 @@
                 <li>comunicações relacionadas com o serviço, incluindo informações sobre o período de teste e eventual contratação.</li>
             </ul>
 
-            <h2>4. Fundamento jurídico</h2>
-            <p>O tratamento de dados pessoais tem como fundamento jurídico:</p>
-            <ul>
+            <h2 data-i18n="priv_h2_4">4. Fundamento jurídico</h2>
+            <p data-i18n="priv_p_6">O tratamento de dados pessoais tem como fundamento jurídico:</p>
+            <ul data-i18n-html="priv_ul_3">
                 <li>o <strong>consentimento</strong> do titular dos dados, quando aplicável;</li>
                 <li>a <strong>execução do contrato</strong> ou diligências pré-contratuais (incluindo o acesso como testador do sistema gratuito);</li>
                 <li>o <strong>interesse legítimo</strong> do TukFlow na segurança, funcionamento e melhoria da plataforma;</li>
                 <li>o <strong>cumprimento de obrigações legais</strong> a que o TukFlow esteja sujeito.</li>
             </ul>
 
-            <h2>5. Dados de localização e GPS</h2>
-            <p>Quando a funcionalidade de localização estiver ativa, os dados de posicionamento são utilizados exclusivamente para permitir o acompanhamento de veículos e condutores no âmbito da atividade do utilizador.</p>
-            <p>O utilizador é responsável por informar os seus condutores e demais pessoas relevantes sobre a utilização destas funcionalidades, nos termos legalmente exigidos.</p>
-            <p>Os dados de localização podem apresentar imprecisões, atrasos ou interrupções, dependendo do sinal GPS, da ligação à Internet e das permissões do dispositivo.</p>
+            <h2 data-i18n="priv_h2_5">5. Dados de localização e GPS</h2>
+            <p data-i18n="priv_p_7">Quando a funcionalidade de localização estiver ativa, os dados de posicionamento são utilizados exclusivamente para permitir o acompanhamento de veículos e condutores no âmbito da atividade do utilizador.</p>
+            <p data-i18n="priv_p_8">O utilizador é responsável por informar os seus condutores e demais pessoas relevantes sobre a utilização destas funcionalidades, nos termos legalmente exigidos.</p>
+            <p data-i18n="priv_p_9">Os dados de localização podem apresentar imprecisões, atrasos ou interrupções, dependendo do sinal GPS, da ligação à Internet e das permissões do dispositivo.</p>
 
-            <h2>6. Conservação dos dados</h2>
-            <p>Os dados pessoais são conservados apenas durante o período necessário às finalidades para que foram recolhidos, designadamente:</p>
-            <ul>
+            <h2 data-i18n="priv_h2_6">6. Conservação dos dados</h2>
+            <p data-i18n="priv_p_10">Os dados pessoais são conservados apenas durante o período necessário às finalidades para que foram recolhidos, designadamente:</p>
+            <ul data-i18n-html="priv_ul_4">
                 <li>durante a vigência da conta ou do período de teste;</li>
                 <li>durante os prazos legalmente exigidos (nomeadamente obrigações fiscais e contabilísticas);</li>
                 <li>durante o período necessário à segurança, resolução de litígios ou defesa de direitos.</li>
             </ul>
-            <p>Na condição de testador, os dados introduzidos durante o teste podem ser eliminados ou repostos pelo TukFlow em qualquer momento, recomendando-se a utilização de dados de demonstração.</p>
-            <p>Após o decurso dos períodos aplicáveis, os dados são eliminados ou anonimizados.</p>
+            <p data-i18n="priv_p_11">Na condição de testador, os dados introduzidos durante o teste podem ser eliminados ou repostos pelo TukFlow em qualquer momento, recomendando-se a utilização de dados de demonstração.</p>
+            <p data-i18n="priv_p_12">Após o decurso dos períodos aplicáveis, os dados são eliminados ou anonimizados.</p>
 
-            <h2>7. Partilha de dados com terceiros</h2>
-            <p>O TukFlow não vende nem aluga dados pessoais a terceiros.</p>
-            <p>Os dados podem ser partilhados com prestadores de serviços que atuam por conta do TukFlow (subcontratantes), nomeadamente:</p>
-            <ul>
+            <h2 data-i18n="priv_h2_7">7. Partilha de dados com terceiros</h2>
+            <p data-i18n="priv_p_13">O TukFlow não vende nem aluga dados pessoais a terceiros.</p>
+            <p data-i18n="priv_p_14">Os dados podem ser partilhados com prestadores de serviços que atuam por conta do TukFlow (subcontratantes), nomeadamente:</p>
+            <ul data-i18n-html="priv_ul_5">
                 <li>serviços de alojamento e infraestrutura (cloud);</li>
                 <li>serviços de base de dados e autenticação;</li>
                 <li>serviços de mapas e localização;</li>
                 <li>serviços de notificações, email e SMS;</li>
                 <li>serviços de pagamento (quando aplicável).</li>
             </ul>
-            <p>Estes prestadores apenas tratam os dados de acordo com as instruções do TukFlow e no âmbito das finalidades descritas nesta Política.</p>
-            <p>Os dados podem ainda ser divulgados quando exigido por lei, ordem judicial ou autoridade competente.</p>
+            <p data-i18n="priv_p_15">Estes prestadores apenas tratam os dados de acordo com as instruções do TukFlow e no âmbito das finalidades descritas nesta Política.</p>
+            <p data-i18n="priv_p_16">Os dados podem ainda ser divulgados quando exigido por lei, ordem judicial ou autoridade competente.</p>
 
-            <h2>8. Direitos do titular dos dados</h2>
-            <p>Nos termos do RGPD, o titular dos dados tem direito a:</p>
-            <ul>
+            <h2 data-i18n="priv_h2_8">8. Direitos do titular dos dados</h2>
+            <p data-i18n="priv_p_17">Nos termos do RGPD, o titular dos dados tem direito a:</p>
+            <ul data-i18n-html="priv_ul_6">
                 <li>aceder aos seus dados pessoais;</li>
                 <li>retificar dados inexatos ou incompletos;</li>
                 <li>solicitar o apagamento dos dados ("direito a ser esquecido");</li>
@@ -196,26 +215,26 @@
                 <li>retirar o consentimento a qualquer momento, sem comprometer a licitude do tratamento efetuado anteriormente;</li>
                 <li>apresentar reclamação junto da Comissão Nacional de Proteção de Dados (CNPD).</li>
             </ul>
-            <p>Para exercer estes direitos, o titular deve contactar o TukFlow através dos contactos indicados na secção 1 desta Política.</p>
+            <p data-i18n="priv_p_18">Para exercer estes direitos, o titular deve contactar o TukFlow através dos contactos indicados na secção 1 desta Política.</p>
 
-            <h2>9. Segurança dos dados</h2>
-            <p>O TukFlow implementa medidas técnicas e organizativas adequadas para proteger os dados pessoais contra acesso não autorizado, alteração, divulgação ou destruição.</p>
-            <p>Nenhum sistema informático ou serviço disponibilizado através da Internet pode garantir segurança absoluta. O utilizador deve utilizar dispositivos seguros e manter as suas credenciais protegidas.</p>
+            <h2 data-i18n="priv_h2_9">9. Segurança dos dados</h2>
+            <p data-i18n="priv_p_19">O TukFlow implementa medidas técnicas e organizativas adequadas para proteger os dados pessoais contra acesso não autorizado, alteração, divulgação ou destruição.</p>
+            <p data-i18n="priv_p_20">Nenhum sistema informático ou serviço disponibilizado através da Internet pode garantir segurança absoluta. O utilizador deve utilizar dispositivos seguros e manter as suas credenciais protegidas.</p>
 
-            <h2>10. Newsletter e comunicações</h2>
-            <p>Caso o utilizador subscreva a newsletter, o TukFlow poderá enviar comunicações com atualizações, dicas de gestão de frotas e novidades, sempre com a possibilidade de cancelar a subscrição a qualquer momento.</p>
-            <p>O consentimento para o envio de comunicações pode ser retirado a qualquer momento através do link de cancelamento incluído em cada comunicação ou por contacto direto.</p>
+            <h2 data-i18n="priv_h2_10">10. Newsletter e comunicações</h2>
+            <p data-i18n="priv_p_21">Caso o utilizador subscreva a newsletter, o TukFlow poderá enviar comunicações com atualizações, dicas de gestão de frotas e novidades, sempre com a possibilidade de cancelar a subscrição a qualquer momento.</p>
+            <p data-i18n="priv_p_22">O consentimento para o envio de comunicações pode ser retirado a qualquer momento através do link de cancelamento incluído em cada comunicação ou por contacto direto.</p>
 
-            <h2>11. Dados de menores</h2>
-            <p>A plataforma TukFlow destina-se a utilizadores profissionais e não é dirigida a menores de 18 anos. O TukFlow não recolhe intencionalmente dados pessoais de menores.</p>
+            <h2 data-i18n="priv_h2_11">11. Dados de menores</h2>
+            <p data-i18n="priv_p_23">A plataforma TukFlow destina-se a utilizadores profissionais e não é dirigida a menores de 18 anos. O TukFlow não recolhe intencionalmente dados pessoais de menores.</p>
 
-            <h2>12. Alterações a esta Política</h2>
-            <p>O TukFlow poderá atualizar esta Política de Privacidade para refletir alterações legais, técnicas ou funcionais.</p>
-            <p>Quando uma alteração seja material, o TukFlow procurará comunicar a alteração através de um meio adequado. A continuação da utilização do serviço após a entrada em vigor das alterações poderá constituir aceitação das novas condições, sem prejuízo dos direitos legalmente aplicáveis.</p>
+            <h2 data-i18n="priv_h2_12">12. Alterações a esta Política</h2>
+            <p data-i18n="priv_p_24">O TukFlow poderá atualizar esta Política de Privacidade para refletir alterações legais, técnicas ou funcionais.</p>
+            <p data-i18n="priv_p_25">Quando uma alteração seja material, o TukFlow procurará comunicar a alteração através de um meio adequado. A continuação da utilização do serviço após a entrada em vigor das alterações poderá constituir aceitação das novas condições, sem prejuízo dos direitos legalmente aplicáveis.</p>
 
-            <h2>13. Contactos</h2>
-            <p>Para qualquer questão relacionada com a presente Política de Privacidade ou com o tratamento de dados pessoais, o utilizador poderá contactar:</p>
-            <div class="contact-block">
+            <h2 data-i18n="priv_h2_13">13. Contactos</h2>
+            <p data-i18n="priv_p_26">Para qualquer questão relacionada com a presente Política de Privacidade ou com o tratamento de dados pessoais, o utilizador poderá contactar:</p>
+            <div class="contact-block" data-i18n-html="priv_contact">
                 <p style="margin-bottom:4px;"><strong>TukFlow-System</strong></p>
                 <p style="margin-bottom:4px;">Entidade: Carlos Barradas</p>
                 <p style="margin-bottom:4px;">WhatsApp: 351 965 748 022</p>
@@ -224,7 +243,7 @@
 
             <div style="display:flex;justify-content:center;margin-top:44px;padding-top:28px;border-top:1px solid #e2e8f0;">
                 <a href="../index.html" class="btn-back">
-                    <span class="material-symbols-outlined" style="font-size:17px;">arrow_back</span> Voltar ao site
+                    <span class="material-symbols-outlined" style="font-size:17px;">arrow_back</span> <span data-i18n="doc_back_site">Voltar ao site</span>
                 </a>
             </div>
         </div>
@@ -234,9 +253,32 @@
 <!-- ═══════════ FOOTER ═══════════ -->
 <footer style="background:#0f2744;padding:40px 24px 28px;">
     <div style="max-width:1100px;margin:0 auto;text-align:center;">
-        <p style="color:rgba(255,255,255,.38);font-size:.78rem;">© 2026 TukFlow — Gestão Inteligente de TukTuks. Todos os direitos reservados.</p>
+        <p style="color:rgba(255,255,255,.38);font-size:.78rem;" data-i18n="doc_footer">© 2026 TukFlow — Gestão Inteligente de TukTuks. Todos os direitos reservados.</p>
     </div>
 </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        try {
+            var lang = localStorage.getItem('tukflow_lang') || localStorage.getItem('lang') || 'pt';
+            var sel = document.getElementById('langSelect');
+            if (sel) sel.value = lang;
+        } catch (e) {}
+        document.addEventListener('languageChanged', function(e) {
+            var lang = (e.detail && e.detail.lang) || 'pt';
+            var sel = document.getElementById('langSelect');
+            if (sel) sel.value = lang;
+            var titles = {
+                pt: 'Políticas de Privacidade | TukFlow',
+                en: 'Privacy Policy | TukFlow',
+                es: 'Política de Privacidad | TukFlow',
+                fr: 'Politique de Confidentialité | TukFlow'
+            };
+            document.title = titles[lang] || titles.pt;
+        });
+    });
+</script>
+<script src="../languages/translator.js"></script>
 
 </body>
 </html>

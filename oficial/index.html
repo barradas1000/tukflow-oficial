@@ -5,6 +5,23 @@
     <link rel="icon" type="image/png" href="public/favicon_tukflow.png"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>TukFlow | Gestão Inteligente de TukTuks</title>
+    <!-- Open Graph -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="TukFlow"/>
+    <meta property="og:url" content="https://tukflow-backoffice.vercel.app/"/>
+    <meta property="og:title" content="TukFlow | Gestão Inteligente de TukTuks"/>
+    <meta property="og:description" content="A plataforma que transforma qualquer empresa de tuk-tuk num negócio mais organizado e lucrativo: gestão de reservas, condutores, veículos e localização em tempo real."/>
+    <meta property="og:image" content="https://tukflow-backoffice.vercel.app/tukflow-opengraft.webp"/>
+    <meta property="og:image:type" content="image/webp"/>
+    <meta property="og:image:width" content="1451"/>
+    <meta property="og:image:height" content="1084"/>
+    <meta property="og:locale" content="pt_PT"/>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="TukFlow | Gestão Inteligente de TukTuks"/>
+    <meta name="twitter:description" content="A plataforma que transforma qualquer empresa de tuk-tuk num negócio mais organizado e lucrativo: gestão de reservas, condutores, veículos e localização em tempo real."/>
+    <meta name="twitter:image" content="https://tukflow-backoffice.vercel.app/tukflow-opengraft.webp"/>
+    <link rel="canonical" href="https://tukflow-backoffice.vercel.app/"/>
     <script>
         (function() {
             try {
@@ -495,9 +512,6 @@
                     <a href="paginas/pagina-traking.html" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;color:#475569;font-size:.84rem;text-decoration:none;" onmouseover="this.style.background='#f8fafc'" onmouseout="this.style.background='none'" data-i18n="tuk_no_map">
                         <span class="material-symbols-outlined" style="font-size:17px;color:#94a3b8;">map</span> Tuk no Map
                     </a>
-                    <a href="pagina-mapa-condutores.html" style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;color:#475569;font-size:.84rem;text-decoration:none;" onmouseover="this.style.background='#f8fafc'" onmouseout="this.style.background='none'" data-i18n="condutores_no_mapa">
-                        <span class="material-symbols-outlined" style="font-size:17px;color:#94a3b8;">groups</span> Condutores no Mapa
-                    </a>
                 </div>
             </div>
 
@@ -597,7 +611,6 @@
             <a href="paginas/pagina-reservas.html" style="display:block;padding:12px 16px;border-radius:12px;color:#475569;font-size:.88rem;text-decoration:none;" onmouseover="this.style.background='#f8fafc'" onmouseout="this.style.background='none'" data-i18n="reservas_ativas">Reservas Ativas</a>
             <a href="paginas/pagina-convite.html" style="display:block;padding:12px 16px;border-radius:12px;color:#475569;font-size:.88rem;text-decoration:none;" onmouseover="this.style.background='#f8fafc'" onmouseout="this.style.background='none'" data-i18n="gestao_condutores">Gestão de Condutores</a>
             <a href="paginas/pagina-traking.html" style="display:block;padding:12px 16px;border-radius:12px;color:#475569;font-size:.88rem;text-decoration:none;" onmouseover="this.style.background='#f8fafc'" onmouseout="this.style.background='none'" data-i18n="tuk_no_map">Tuk no Map</a>
-            <a href="pagina-mapa-condutores.html" style="display:block;padding:12px 16px;border-radius:12px;color:#475569;font-size:.88rem;text-decoration:none;" onmouseover="this.style.background='#f8fafc'" onmouseout="this.style.background='none'" data-i18n="condutores_no_mapa">Condutores no Mapa</a>
             <a href="#" style="display:block;padding:12px 16px;border-radius:12px;color:#475569;font-size:.88rem;text-decoration:none;" onmouseover="this.style.background='#f8fafc'" onmouseout="this.style.background='none'" data-i18n="gestao_admin">Gestão Admin</a>
             <a href="#" style="display:block;padding:12px 16px;border-radius:12px;color:#475569;font-size:.88rem;text-decoration:none;" onmouseover="this.style.background='#f8fafc'" onmouseout="this.style.background='none'" data-i18n="gestao_frota">Gestão de Frota</a>
         </div>
@@ -1308,8 +1321,8 @@
                     WhatsApp: 351 965 748 022
                 </a>
                 <a href="mailto:carlosbarradas54@gmail.com" style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.72);font-size:.88rem;text-decoration:none;">
-                    <span class="material-symbols-outlined" style="font-size:19px;color:#FFCB2E;">mail</span>
-                    mail: carlosbarradas54@gmail.com
+                    <span class="material-symbols-outlined" style="font-size:19px;color:#FFCB2E;">Email</span>
+                    Email: carlosbarradas54@gmail.com
                 </a>
             </div>
 
@@ -1380,7 +1393,7 @@
             <p style="font-family:Manrope,sans-serif;font-weight:800;color:#0f2744;font-size:.95rem;margin-bottom:6px;" data-i18n="modal_demo.newsletter_title">Newsletter</p>
             <p style="color:#64748b;font-size:.82rem;line-height:1.55;margin-bottom:12px;" data-i18n="modal_demo.newsletter_desc">Receba atualizações, dicas de gestão de frotas e novidades TukFlow no seu email.</p>
             <form onsubmit="subscribeNewsletter(event)" style="display:flex;gap:10px;">
-                <input id="newsletterEmail" type="email" required placeholder="O seu melhor email" data-i18n-placeholder="modal_demo.newsletter_placeholder"
+                <input id="newsletterEmail" type="email" required placeholder="Seu Email" data-i18n-placeholder="modal_demo.newsletter_placeholder"
                        style="flex:1;min-width:0;padding:13px 16px;border-radius:13px;border:1.5px solid #e2e8f0;font-family:'Plus Jakarta Sans',sans-serif;font-size:.88rem;color:#1e293b;outline:none;"
                        onfocus="this.style.borderColor='#FFB300';"
                        onblur="this.style.borderColor='#e2e8f0';"/>
