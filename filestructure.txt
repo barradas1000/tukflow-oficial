@@ -6,6 +6,7 @@
     |-- project.json
     |-- README.txt
 |-- .vercelignore
+|-- formulário-contatos.txt
 |-- gif
     |-- trajeto-tuktuk-lisboa-roteiro.md
 |-- global.css
@@ -16,7 +17,7 @@
     |-- pt.js
     |-- translator.js
 |-- oficial
-    |-- app_launcher_icon.jpg
+    |-- app-tukflow.html
     |-- banner-goto-map.webp
     |-- exelente-noticia.jpg
     |-- imagem-interativo.png
@@ -28,17 +29,22 @@
     |-- pagina-marketing-apresenta-sistema.js
     |-- pagina-tuktuk-milfontes.jpg
     |-- paginas
+        |-- contato-mkt-tukflow.html
         |-- pagina-convite.html
         |-- pagina-disponibilidade.html
         |-- pagina-mapa-condutores.html
         |-- pagina-painel-admin.html
         |-- pagina-reservas.html
         |-- pagina-traking.html
+        |-- politicas-privacidade.html
+        |-- termos-condicoes.html
+        |-- termos-condicoes.txt
         |-- tuktuk-milfontes-replica.html
     |-- painel-admin.png
     |-- por-do-sol-praia-malhao.webp
     |-- public
         |-- calendar.gif
+        |-- carlosbarradas-cartão digital.webp
         |-- dashboard.gif
         |-- driver.gif
         |-- favicon_tukflow.png
@@ -50,8 +56,6 @@
         |-- tukflow-icon-3d-2.png
         |-- tukflow-icon-3d-3.png
         |-- tukflow-icon-3d-transp.png
-        |-- tukflow-icon-laranja.png
-        |-- tukflow-icon-sem-fundo.jpeg
         |-- tukflow_apenas_texto_e_seta.png
         |-- tuktuk-amarelo.png
         |-- tuktuk-movie-site.mp4
@@ -59,6 +63,10 @@
     |-- reserva.html
     |-- trajeto_lisboa_na_pagina.gif
     |-- tuk-mapa-onde-estou.jpeg
+    |-- tukflow-opengraft.webp
+    |-- tukflow_final_suave_com_mapa.mp4
+    |-- tukflow_loop.gif
+    |-- tukflow_loop_otimizado.gif
     |-- Video-Tuktuk-Pagina-Marketing.mp4
 |-- package-lock.json
 |-- package.json
